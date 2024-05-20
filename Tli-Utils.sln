@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tli-Utils", "Tli-Utils\Tli-Utils.csproj", "{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CBA4EE3-6970-40D0-8307-4C1B0C31B67C}
+	EndGlobalSection
+EndGlobal
