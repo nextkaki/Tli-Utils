@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tli-Utils", "Tli-Utils\Tli-Utils.csproj", "{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Tli Utils Installer", "Tli Utils Installer\Tli Utils Installer.vdproj", "{98E01446-7B8D-4342-94C8-001C9EBFA0C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}.Release|x64.Build.0 = Release|x64
 		{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}.Release|x86.ActiveCfg = Release|x86
 		{37B151DF-3FA7-48C8-8EA5-262EB1EBEACE}.Release|x86.Build.0 = Release|x86
+		{98E01446-7B8D-4342-94C8-001C9EBFA0C8}.Debug|Any CPU.ActiveCfg = Debug
+		{98E01446-7B8D-4342-94C8-001C9EBFA0C8}.Debug|x64.ActiveCfg = Debug
+		{98E01446-7B8D-4342-94C8-001C9EBFA0C8}.Debug|x86.ActiveCfg = Debug
+		{98E01446-7B8D-4342-94C8-001C9EBFA0C8}.Release|Any CPU.ActiveCfg = Release
+		{98E01446-7B8D-4342-94C8-001C9EBFA0C8}.Release|x64.ActiveCfg = Release
+		{98E01446-7B8D-4342-94C8-001C9EBFA0C8}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

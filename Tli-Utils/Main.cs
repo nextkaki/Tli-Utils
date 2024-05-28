@@ -5,6 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
+using System.Reflection;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,60 +41,70 @@ namespace Tli_Utils
             {
                 mainTab.TabPages.Add(tabPage);
             }
+            Version version = Assembly.GetExecutingAssembly().GetName().Version;
+            lblVersion.Text = $"버전: {version}";
 
             txtBaseFreezeTime.Text = DefineValues.BASE_FREEZE_TIME.ToString();
             txtCatPer.Text = DefineValues.BASE_CAT_TRIGGER_PERCENT.ToString();
             txtCatCool.Text = DefineValues.BASE_CAT_TRIGGER_COOLTIME.ToString();
             txtCatCnt.Text = DefineValues.BASE_CAT_TRIGGER_CNT.ToString();
+
+            btnCool.Tag = DefineValues.TAB_COOLTIME;
+            btnFreeze.Tag = DefineValues.TAB_FREEZE;
+            btnLightningShadow.Tag = DefineValues.TAB_LIGHTNING_SHADOW;
+            btnFrostRampage.Tag = DefineValues.TAB_FROSTFIRE_RAMPAGE;
+            btnNewGod.Tag = DefineValues.TAB_NEW_GOD;
+            btnActivation.Tag = DefineValues.TAB_ACTIVATION;
+        }
+
+        private void BtnTab_Click(object sender, EventArgs e)
+        {
+            MetroTile btn = sender as MetroTile;
+            if (btn != null && btn.Tag != null)
+            {
+                int tabIndex = (int)btn.Tag;
+                mainTab.SelectedIndex = tabIndex;
+            }
         }
 
 
         private void txtMyCoolTime_TextChanged(object sender, EventArgs e)
         {
-            string text = txtMyCoolTime.Text.Trim();
-            // 공백 문자 제거
-            text = text.Replace(" ", "");
-            if(text.Length == 0 || text == ""){ 
+            MetroTextBox textBox = sender as MetroTextBox;
+            if (textBox != null)
+            {
+                if (Common.IsNumericInputValid(textBox))
+                {
+                    string text = textBox.Text.Trim();
+                    decimal dMyCoolTime = string.IsNullOrEmpty(text) ? 0 : Convert.ToDecimal(text);
+                    string strRef = txtRefCoolTime.Text.Trim();
+                    decimal dRef = string.IsNullOrEmpty(strRef) ? 0 : Convert.ToDecimal(strRef);
 
-            }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(text, @"^[0-9]*\.?[0-9]*$"))
-            {
-                MessageBox.Show("숫자만 입력 가능합니다.");
-                return;
-            }
-            else
-            {
-                decimal dMyCoolTime = string.IsNullOrEmpty(text) ? 0 : Convert.ToDecimal(text);
-                string strRef = txtRefCoolTime.Text.Trim();
-                decimal dRef = string.IsNullOrEmpty(strRef) ? 0 : Convert.ToDecimal(strRef);
-                
-                decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
-                txtResultCoolTime.Text = dRtnValue.ToString("F2");
-                calcNeedCoolTime();
-                checkCoolYN();
+                    decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
+                    txtResultCoolTime.Text = dRtnValue.ToString("F2");
+                    calcNeedCoolTime();
+                    checkCoolYN();
+                }
             }
         }
 
         private void txtRefCoolTime_TextChanged(object sender, EventArgs e)
         {
-            string text = txtRefCoolTime.Text.Trim();
-            // 공백 문자 제거
-            text = text.Replace(" ", "");
-            if (!System.Text.RegularExpressions.Regex.IsMatch(text, @"^[0-9]*\.?[0-9]*$"))
+            MetroTextBox textBox = sender as MetroTextBox;
+            if (textBox != null)
             {
-                MessageBox.Show("숫자만 입력 가능합니다.");
-                return;
-            }
-            else
-            {
-                decimal dRef = string.IsNullOrEmpty(text) ? 0 : Convert.ToDecimal(text);
-                string strMycool = txtMyCoolTime.Text.Trim();
-                decimal dMyCoolTime = string.IsNullOrEmpty(strMycool) ? 0 : Convert.ToDecimal(strMycool);
+                if (Common.IsNumericInputValid(textBox))
+                {
+                    string text = textBox.Text.Trim();
+                    decimal dRef = string.IsNullOrEmpty(text) ? 0 : Convert.ToDecimal(text);
+                    string strMycool = txtMyCoolTime.Text.Trim();
+                    decimal dMyCoolTime = string.IsNullOrEmpty(strMycool) ? 0 : Convert.ToDecimal(strMycool);
 
-                decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
-                txtResultCoolTime.Text = dRtnValue.ToString("F2");
-                calcNeedCoolTime();
-                checkCoolYN();
+                    decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
+                    txtResultCoolTime.Text = dRtnValue.ToString("F2");
+                    calcNeedCoolTime();
+                    checkCoolYN();
+                }
             }
         }
         public decimal calcCoolTime(decimal myCool, decimal refCool)
@@ -111,18 +124,14 @@ namespace Tli_Utils
 
         private void txtTargetCool_TextChanged(object sender, EventArgs e)
         {
-            string strNeedCool = txtTargetCool.Text.Trim();
-            // 공백 문자 제거
-            strNeedCool = strNeedCool.Replace(" ", "");
-            if (!System.Text.RegularExpressions.Regex.IsMatch(strNeedCool, @"^[0-9]*\.?[0-9]*$"))
+            MetroTextBox textBox = sender as MetroTextBox;
+            if (textBox != null)
             {
-                MessageBox.Show("숫자만 입력 가능합니다.");
-                return;
-            }
-            else
-            {
-                calcNeedCoolTime();
-                checkCoolYN();
+                if (Common.IsNumericInputValid(textBox))
+                {
+                    calcNeedCoolTime();
+                    checkCoolYN();
+                }
             }
         }
         public void calcNeedCoolTime()
@@ -143,19 +152,15 @@ namespace Tli_Utils
         {
             decimal dResultCool = string.IsNullOrEmpty(txtResultCoolTime.Text.Trim()) ? 0 : Convert.ToDecimal(txtResultCoolTime.Text.Trim());
             decimal dTargetCool = string.IsNullOrEmpty(txtTargetCool.Text.Trim()) ? 0 : Convert.ToDecimal(txtTargetCool.Text.Trim());
-            if (dResultCool == dTargetCool) { 
+            if (dResultCool == dTargetCool) {
                 txtYNCool.Text = DefineValues.NOT_NEED;
                 txtYNCool.ForeColor = Color.Green;
             }
-            else { 
+            else {
                 txtYNCool.Text = DefineValues.NEED;
                 txtYNCool.ForeColor = Color.Red;
             }
 
-        }
-        private void btnCool_Click(object sender, EventArgs e)
-        {
-            mainTab.SelectedIndex = DefineValues.TAB_COOLTIME;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -166,32 +171,29 @@ namespace Tli_Utils
         private void txtAddFreezeTime1_TextChanged(object sender, EventArgs e)
         {
             decimal dSum = 0;
-            MetroTextBox[] txtFreezeTimes = { txtAddFreezeTime1, txtAddFreezeTime2, txtAddFreezeTime3, txtAddFreezeTime4, txtAddFreezeTime5};
+            MetroTextBox[] txtFreezeTimes = { txtAddFreezeTime1, txtAddFreezeTime2, txtAddFreezeTime3, txtAddFreezeTime4, txtAddFreezeTime5 };
             foreach (MetroTextBox control in txtFreezeTimes)
             {
-                string strText = control.Text.Trim();
-                strText = strText.Replace(" ", "");
-                
-                if (!System.Text.RegularExpressions.Regex.IsMatch(strText, @"^[0-9]*\.?[0-9]*$"))
+                if (control != null)
                 {
-                    MessageBox.Show("숫자만 입력 가능합니다.");
-                    return;
-                }
-                else
-                {
-                    strText = string.IsNullOrEmpty(strText) ? "0" : strText;
-                    dSum += Decimal.Parse(strText);
+                    if (Common.IsNumericInputValid(control))
+                    {
+                        string strText = control.Text.Trim();
+                        strText = strText.Replace(" ", "");
+                        strText = string.IsNullOrEmpty(strText) ? "0" : strText;
+                        dSum += Decimal.Parse(strText);
+                    }
                 }
             }
             calcFreeze(dSum);
         }
         public void calcFreeze(decimal _dSum)
         {
-            decimal dSum = (_dSum/100.0m) + 1.0m;
+            decimal dSum = (_dSum / 100.0m) + 1.0m;
             decimal dResultFreezeTime = DefineValues.BASE_FREEZE_TIME * dSum;
             txtResultFreezeTime.Text = dResultFreezeTime.ToString("F2");
             decimal dArcticCnt = dResultFreezeTime / 0.2m;
-            if(dArcticCnt > 20)
+            if (dArcticCnt > 20)
             {
                 dArcticCnt = 20;
             }
@@ -200,43 +202,31 @@ namespace Tli_Utils
 
         }
 
-        private void btnFreeze_Click(object sender, EventArgs e)
-        {
-            mainTab.SelectedIndex = DefineValues.TAB_FREEZE;
-        }
-
-        private void btnLightningShadow_Click(object sender, EventArgs e)
-        {
-            mainTab.SelectedIndex = DefineValues.TAB_Lightning_Shadow;
-        }
-
         private void txtMovePerLS_TextChanged(object sender, EventArgs e)
         {
-            string strText = txtMovePerLS.Text.Trim();
-            strText = strText.Replace(" ", "");
-            if (!System.Text.RegularExpressions.Regex.IsMatch(strText, @"^[0-9]*\.?[0-9]*$"))
+            MetroTextBox textBox = sender as MetroTextBox;
+            if (textBox != null)
             {
-                MessageBox.Show("숫자만 입력 가능합니다.");
-                return;
-            }
-            else
-            {
-                decimal dMovePer = string.IsNullOrEmpty(strText) ? 0 : Convert.ToDecimal(strText);
-                decimal sToM = (1.0m + (dMovePer/100.0m)) * 6.0m;
-                decimal mToS = 1.0m / sToM;
-                txtStoMLS.Text = sToM.ToString("F2");
-                txtMtoSLS.Text = mToS.ToString("F2");
-                if (cbFast.Checked)
+                if (Common.IsNumericInputValid(textBox))
                 {
-                    txtSpeedPerSkill.Enabled = false;
-                    txtSpeedPerSkill.Text = txtStoMLS.Text.Trim();
+                    string strText = textBox.Text.Trim();
+                    decimal dMovePer = string.IsNullOrEmpty(strText) ? 0 : Convert.ToDecimal(strText);
+                    decimal sToM = (1.0m + (dMovePer / 100.0m)) * 6.0m;
+                    decimal mToS = 1.0m / sToM;
+                    txtStoMLS.Text = sToM.ToString("F2");
+                    txtMtoSLS.Text = mToS.ToString("F2");
+                    if (cbFast.Checked)
+                    {
+                        txtSpeedPerSkill.Enabled = false;
+                        txtSpeedPerSkill.Text = txtStoMLS.Text.Trim();
+                    }
                 }
             }
         }
 
         private void cbFast_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbFast.Checked)
+            if (cbFast.Checked)
             {
                 txtSpeedPerSkill.Enabled = false;
                 txtSpeedPerSkill.Text = txtStoMLS.Text.Trim();
@@ -251,29 +241,131 @@ namespace Tli_Utils
         private void txtSpeedPerSkill_TextChanged(object sender, EventArgs e)
         {
             MetroTextBox textBox = sender as MetroTextBox;
-            string textValue = textBox.Text;
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textValue, @"^[0-9]*\.?[0-9]*$"))
+            if (textBox != null)
             {
-                MessageBox.Show("숫자만 입력 가능합니다.");
-                return;
+                if (Common.IsNumericInputValid(textBox))
+                {
+                    decimal dSpeedPerSkill = string.IsNullOrEmpty(txtSpeedPerSkill.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtSpeedPerSkill.Text.Trim());
+                    decimal dCatPer = string.IsNullOrEmpty(txtCatPer.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatPer.Text.Trim());
+                    decimal dCatCool = string.IsNullOrEmpty(txtCatCool.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatCool.Text.Trim());
+                    decimal dCatCnt = string.IsNullOrEmpty(txtCatCnt.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatCnt.Text.Trim());
+                    if (dSpeedPerSkill <= 0) dSpeedPerSkill = 1.0m;
+                    if (dCatPer <= 0) dCatPer = 1.0m;
+                    if (dCatCool <= 0) dCatCool = 1.0m;
+                    if (dCatCnt <= 0) dCatCnt = 1.0m;
+
+                    txtResultSkill.Text = (dSpeedPerSkill * 4.0m).ToString("F2");
+                    decimal resultCatMaxTrigger = 4.0m / dCatCool;
+                    txtCatMaxTrigger.Text = resultCatMaxTrigger.ToString("F2");
+                    decimal resultCatExpectTrigger = resultCatMaxTrigger * (dCatPer / 100.0m);
+                    txtCatExpectTrigger.Text = resultCatExpectTrigger.ToString("F2");
+                    txtCatResultTrigger.Text = (resultCatExpectTrigger * dCatCnt).ToString("F2");
+                }
+            }
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/@Kaki_TV");
+        }
+
+        private void metroLink2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://chzzk.naver.com/8eac3d6cdac51bbceb794196cd4e6a15");
+        }
+
+        private void metroLink4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/nextkaki/Tli-Utils");
+        }
+
+        private void txtRampageCool_TextChanged(object sender, EventArgs e)
+        {
+            MetroTextBox textBox = sender as MetroTextBox;
+            if (textBox != null)
+            {
+                if (Common.IsNumericInputValid(textBox))
+                {
+                    decimal dRate = 1 / (1 + (decimal.Parse(textBox.Text.Trim()) / 100.0m));
+                    decimal dResultRapageCool = DefineValues.BASE_FROSTFIRE_RAMPAGE_COOL * dRate;
+                    txtResultRampageCool.Text = dResultRapageCool.ToString("F2");
+                    calcRampage();
+                }
+            }
+        }
+
+        private void txtRampageDuration_TextChanged(object sender, EventArgs e)
+        {
+            MetroTextBox textBox = sender as MetroTextBox;
+            if (textBox != null)
+            {
+                if (Common.IsNumericInputValid(textBox))
+                {
+                    decimal dResultRapageDuration = DefineValues.BASE_FROSTFIRE_RAMPAGE_DURATION * (1 + (decimal.Parse(textBox.Text.Trim()) / 100.0m));
+                    txtResultRampageDuration.Text = dResultRapageDuration.ToString("F2");
+                    calcRampage();
+                }
+            }
+        }
+
+        public void calcRampage()
+        {
+            decimal dRampageCool = decimal.Parse(txtResultRampageCool.Text.Trim());
+            decimal dRampageDuration = decimal.Parse(txtResultRampageDuration.Text.Trim());
+            decimal dResult = dRampageCool - dRampageDuration;
+            if (dResult > 0)
+            {
+                lblResultRampage.Text = dResult.ToString("F2") + "만큼 지속시간이 필요하다.\r\n쿨타임 or 스킬 효과 지속시간을 챙겨주세요.";
             }
             else
             {
-                decimal dSpeedPerSkill = string.IsNullOrEmpty(txtSpeedPerSkill.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtSpeedPerSkill.Text.Trim());
-                decimal dCatPer = string.IsNullOrEmpty(txtCatPer.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatPer.Text.Trim());
-                decimal dCatCool = string.IsNullOrEmpty(txtCatCool.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatCool.Text.Trim());
-                decimal dCatCnt = string.IsNullOrEmpty(txtCatCnt.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatCnt.Text.Trim());
-                if (dSpeedPerSkill <= 0) dSpeedPerSkill = 1.0m;
-                if (dCatPer <= 0) dCatPer = 1.0m;
-                if (dCatCool <= 0) dCatCool = 1.0m;
-                if (dCatCnt <= 0) dCatCnt = 1.0m;
+                lblResultRampage.Text = "스킬 효과 지속시간이 충분합니다.";
+            }
+        }
 
-                txtResultSkill.Text = (dSpeedPerSkill * 4.0m).ToString("F2");
-                decimal resultCatMaxTrigger = 4.0m / dCatCool;
-                txtCatMaxTrigger.Text = resultCatMaxTrigger.ToString("F2");
-                decimal resultCatExpectTrigger = resultCatMaxTrigger * (dCatPer / 100.0m);
-                txtCatExpectTrigger.Text = resultCatExpectTrigger.ToString("F2");
-                txtCatResultTrigger.Text = (resultCatExpectTrigger * dCatCnt).ToString("F2");
+        private void txtNewGod_TextChanged(object sender, EventArgs e)
+        {
+            calcNewGod();
+        }
+
+     
+        public void calcNewGod()
+        {
+            MetroTextBox[] txtNewGod = { txtNewGodPoint, txtNewGodCnt, txtNewGodEtcEffect};
+            bool bPass = true;
+            foreach (MetroTextBox control in txtNewGod) {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                decimal dPoint = decimal.Parse(txtNewGod[0].Text.Trim());
+                decimal dBasePoint = dPoint * 100.0m;
+                txtExNewGodPoint.Text = dBasePoint.ToString("F2");
+                dPoint = dPoint / 100.0m;
+
+                decimal dCnt = decimal.Parse(txtNewGod[1].Text.Trim());
+                if(dCnt >= 0 )
+                {
+                    bool bPeacefulRealm = cbPeacefulRealm.Checked; //만계의 일상
+                    decimal dRateRealm = bPeacefulRealm ? 0.20m : 0;
+                    decimal dRatePoint = dCnt * 0.20m;
+                    decimal dEtcEffect = decimal.Parse(txtNewGod[2].Text.Trim());
+                    dEtcEffect = dEtcEffect / 100.0m;
+                    decimal dTotalRate = dRateRealm + dRatePoint + dEtcEffect;
+
+                    txtEachEffect.Text = (dBasePoint * (1 + dTotalRate)).ToString("F2");
+                    txtTotalEffect.Text = (dBasePoint * (1 + dTotalRate) * dCnt).ToString("F2");
+                }
             }
         }
     }
