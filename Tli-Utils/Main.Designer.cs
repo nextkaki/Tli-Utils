@@ -31,9 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.mainTab = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLink4 = new MetroFramework.Controls.MetroLink();
-            this.metroLink2 = new MetroFramework.Controls.MetroLink();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.btnLanguge = new System.Windows.Forms.Button();
+            this.metroLabel37 = new MetroFramework.Controls.MetroLabel();
+            this.lblVersion = new MetroFramework.Controls.MetroLink();
+            this.linkGithub = new MetroFramework.Controls.MetroLink();
+            this.linkCzz = new MetroFramework.Controls.MetroLink();
+            this.linkYoutube = new MetroFramework.Controls.MetroLink();
             this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
             this.btnActivation = new MetroFramework.Controls.MetroTile();
             this.btnNewGod = new MetroFramework.Controls.MetroTile();
@@ -43,7 +46,7 @@
             this.btnCool = new MetroFramework.Controls.MetroTile();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.btnMain0 = new MetroFramework.Controls.MetroTile();
             this.cbPeacefulRealm = new MetroFramework.Controls.MetroCheckBox();
             this.txtTotalEffect = new MetroFramework.Controls.MetroTextBox();
             this.txtEachEffect = new MetroFramework.Controls.MetroTextBox();
@@ -59,6 +62,7 @@
             this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.btnMain1 = new MetroFramework.Controls.MetroTile();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
@@ -78,6 +82,7 @@
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.btnMain2 = new MetroFramework.Controls.MetroTile();
             this.txtMtoSLS = new MetroFramework.Controls.MetroTextBox();
             this.txtStoMLS = new MetroFramework.Controls.MetroTextBox();
             this.txtCatCnt = new MetroFramework.Controls.MetroTextBox();
@@ -102,19 +107,21 @@
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.cbFast = new MetroFramework.Controls.MetroCheckBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.btnMain3 = new MetroFramework.Controls.MetroTile();
             this.txtNeedCool = new MetroFramework.Controls.MetroTextBox();
             this.txtYNCool = new MetroFramework.Controls.MetroTextBox();
             this.txtResultCoolTime = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.lb_wc = new MetroFramework.Controls.MetroLabel();
+            this.lb_rc = new MetroFramework.Controls.MetroLabel();
+            this.lb_gsc = new MetroFramework.Controls.MetroLabel();
+            this.lb_rsc = new MetroFramework.Controls.MetroLabel();
             this.txtRefCoolTime = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.lb_scc = new MetroFramework.Controls.MetroLabel();
             this.txtTargetCool = new MetroFramework.Controls.MetroTextBox();
             this.txtMyCoolTime = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lb_mcrr = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.btnMain4 = new MetroFramework.Controls.MetroTile();
             this.lblResultRampage = new MetroFramework.Controls.MetroLabel();
             this.txtResultRampageDuration = new MetroFramework.Controls.MetroTextBox();
             this.txtRampageDuration = new MetroFramework.Controls.MetroTextBox();
@@ -124,13 +131,8 @@
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
             this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
+            this.btnMain5 = new MetroFramework.Controls.MetroTile();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
-            this.lblVersion = new MetroFramework.Controls.MetroLink();
             this.mainTab.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
@@ -155,16 +157,18 @@
             this.mainTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTab.Location = new System.Drawing.Point(0, 0);
             this.mainTab.Name = "mainTab";
-            this.mainTab.SelectedIndex = 0;
+            this.mainTab.SelectedIndex = 5;
             this.mainTab.Size = new System.Drawing.Size(1008, 729);
             this.mainTab.TabIndex = 0;
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.btnLanguge);
+            this.metroTabPage1.Controls.Add(this.metroLabel37);
             this.metroTabPage1.Controls.Add(this.lblVersion);
-            this.metroTabPage1.Controls.Add(this.metroLink4);
-            this.metroTabPage1.Controls.Add(this.metroLink2);
-            this.metroTabPage1.Controls.Add(this.metroLink1);
+            this.metroTabPage1.Controls.Add(this.linkGithub);
+            this.metroTabPage1.Controls.Add(this.linkCzz);
+            this.metroTabPage1.Controls.Add(this.linkYoutube);
             this.metroTabPage1.Controls.Add(this.metroLabel27);
             this.metroTabPage1.Controls.Add(this.btnActivation);
             this.metroTabPage1.Controls.Add(this.btnNewGod);
@@ -180,38 +184,71 @@
             this.metroTabPage1.Text = "가이드";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             // 
-            // metroLink4
+            // btnLanguge
             // 
-            this.metroLink4.AutoSize = true;
-            this.metroLink4.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.metroLink4.Location = new System.Drawing.Point(406, 655);
-            this.metroLink4.Name = "metroLink4";
-            this.metroLink4.Size = new System.Drawing.Size(113, 31);
-            this.metroLink4.TabIndex = 5;
-            this.metroLink4.Text = "Github";
-            this.metroLink4.Click += new System.EventHandler(this.metroLink4_Click);
+            this.btnLanguge.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnLanguge.Location = new System.Drawing.Point(891, 46);
+            this.btnLanguge.Name = "btnLanguge";
+            this.btnLanguge.Size = new System.Drawing.Size(76, 32);
+            this.btnLanguge.TabIndex = 10;
+            this.btnLanguge.Text = "한 글";
+            this.btnLanguge.UseVisualStyleBackColor = true;
+            this.btnLanguge.Click += new System.EventHandler(this.Language_CheckedChanged);
             // 
-            // metroLink2
+            // metroLabel37
             // 
-            this.metroLink2.AutoSize = true;
-            this.metroLink2.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.metroLink2.Location = new System.Drawing.Point(287, 655);
-            this.metroLink2.Name = "metroLink2";
-            this.metroLink2.Size = new System.Drawing.Size(113, 31);
-            this.metroLink2.TabIndex = 5;
-            this.metroLink2.Text = "치지직";
-            this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click);
+            this.metroLabel37.AutoSize = true;
+            this.metroLabel37.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel37.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel37.Location = new System.Drawing.Point(891, 18);
+            this.metroLabel37.Name = "metroLabel37";
+            this.metroLabel37.Size = new System.Drawing.Size(98, 25);
+            this.metroLabel37.TabIndex = 7;
+            this.metroLabel37.Text = "한글 / Eng";
             // 
-            // metroLink1
+            // lblVersion
             // 
-            this.metroLink1.AutoSize = true;
-            this.metroLink1.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.metroLink1.Location = new System.Drawing.Point(168, 655);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.Size = new System.Drawing.Size(113, 31);
-            this.metroLink1.TabIndex = 4;
-            this.metroLink1.Text = "유튜브";
-            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.lblVersion.Location = new System.Drawing.Point(891, 655);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(113, 31);
+            this.lblVersion.TabIndex = 5;
+            this.lblVersion.Text = "1207";
+            this.lblVersion.Click += new System.EventHandler(this.metroLink4_Click);
+            // 
+            // linkGithub
+            // 
+            this.linkGithub.AutoSize = true;
+            this.linkGithub.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.linkGithub.Location = new System.Drawing.Point(406, 655);
+            this.linkGithub.Name = "linkGithub";
+            this.linkGithub.Size = new System.Drawing.Size(113, 31);
+            this.linkGithub.TabIndex = 5;
+            this.linkGithub.Text = "Github";
+            this.linkGithub.Click += new System.EventHandler(this.metroLink4_Click);
+            // 
+            // linkCzz
+            // 
+            this.linkCzz.AutoSize = true;
+            this.linkCzz.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.linkCzz.Location = new System.Drawing.Point(287, 655);
+            this.linkCzz.Name = "linkCzz";
+            this.linkCzz.Size = new System.Drawing.Size(113, 31);
+            this.linkCzz.TabIndex = 5;
+            this.linkCzz.Text = "치지직";
+            this.linkCzz.Click += new System.EventHandler(this.metroLink2_Click);
+            // 
+            // linkYoutube
+            // 
+            this.linkYoutube.AutoSize = true;
+            this.linkYoutube.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.linkYoutube.Location = new System.Drawing.Point(168, 655);
+            this.linkYoutube.Name = "linkYoutube";
+            this.linkYoutube.Size = new System.Drawing.Size(113, 31);
+            this.linkYoutube.TabIndex = 4;
+            this.linkYoutube.Text = "유튜브";
+            this.linkYoutube.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // metroLabel27
             // 
@@ -299,7 +336,7 @@
             // metroTabPage6
             // 
             this.metroTabPage6.Controls.Add(this.pictureBox1);
-            this.metroTabPage6.Controls.Add(this.metroTile4);
+            this.metroTabPage6.Controls.Add(this.btnMain0);
             this.metroTabPage6.Controls.Add(this.cbPeacefulRealm);
             this.metroTabPage6.Controls.Add(this.txtTotalEffect);
             this.metroTabPage6.Controls.Add(this.txtEachEffect);
@@ -335,18 +372,18 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // metroTile4
+            // btnMain0
             // 
-            this.metroTile4.Location = new System.Drawing.Point(898, 4);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(99, 40);
-            this.metroTile4.TabIndex = 6;
-            this.metroTile4.Text = "메인으로";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile4.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnMain0.Location = new System.Drawing.Point(898, 4);
+            this.btnMain0.Name = "btnMain0";
+            this.btnMain0.Size = new System.Drawing.Size(99, 40);
+            this.btnMain0.TabIndex = 6;
+            this.btnMain0.Text = "메인으로";
+            this.btnMain0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain0.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain0.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain0.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnMain0.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // cbPeacefulRealm
             // 
@@ -517,7 +554,7 @@
             // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.metroTile6);
+            this.metroTabPage3.Controls.Add(this.btnMain1);
             this.metroTabPage3.Controls.Add(this.metroLabel13);
             this.metroTabPage3.Controls.Add(this.metroLabel12);
             this.metroTabPage3.Controls.Add(this.metroLabel11);
@@ -543,6 +580,19 @@
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "동결 계산기";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
+            // 
+            // btnMain1
+            // 
+            this.btnMain1.Location = new System.Drawing.Point(898, 4);
+            this.btnMain1.Name = "btnMain1";
+            this.btnMain1.Size = new System.Drawing.Size(99, 40);
+            this.btnMain1.TabIndex = 7;
+            this.btnMain1.Text = "메인으로";
+            this.btnMain1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnMain1.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // metroLabel13
             // 
@@ -753,7 +803,7 @@
             // 
             // metroTabPage4
             // 
-            this.metroTabPage4.Controls.Add(this.metroTile1);
+            this.metroTabPage4.Controls.Add(this.btnMain2);
             this.metroTabPage4.Controls.Add(this.txtMtoSLS);
             this.metroTabPage4.Controls.Add(this.txtStoMLS);
             this.metroTabPage4.Controls.Add(this.txtCatCnt);
@@ -784,6 +834,19 @@
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "라이트닝 쉐도우";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
+            // 
+            // btnMain2
+            // 
+            this.btnMain2.Location = new System.Drawing.Point(898, 4);
+            this.btnMain2.Name = "btnMain2";
+            this.btnMain2.Size = new System.Drawing.Size(99, 40);
+            this.btnMain2.TabIndex = 100;
+            this.btnMain2.Text = "메인으로";
+            this.btnMain2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnMain2.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // txtMtoSLS
             // 
@@ -1070,19 +1133,19 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.metroTile2);
+            this.metroTabPage2.Controls.Add(this.btnMain3);
             this.metroTabPage2.Controls.Add(this.txtNeedCool);
             this.metroTabPage2.Controls.Add(this.txtYNCool);
             this.metroTabPage2.Controls.Add(this.txtResultCoolTime);
-            this.metroTabPage2.Controls.Add(this.metroLabel6);
-            this.metroTabPage2.Controls.Add(this.metroLabel5);
-            this.metroTabPage2.Controls.Add(this.metroLabel4);
-            this.metroTabPage2.Controls.Add(this.metroLabel3);
+            this.metroTabPage2.Controls.Add(this.lb_wc);
+            this.metroTabPage2.Controls.Add(this.lb_rc);
+            this.metroTabPage2.Controls.Add(this.lb_gsc);
+            this.metroTabPage2.Controls.Add(this.lb_rsc);
             this.metroTabPage2.Controls.Add(this.txtRefCoolTime);
-            this.metroTabPage2.Controls.Add(this.metroLabel2);
+            this.metroTabPage2.Controls.Add(this.lb_scc);
             this.metroTabPage2.Controls.Add(this.txtTargetCool);
             this.metroTabPage2.Controls.Add(this.txtMyCoolTime);
-            this.metroTabPage2.Controls.Add(this.metroLabel1);
+            this.metroTabPage2.Controls.Add(this.lb_mcrr);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 36);
             this.metroTabPage2.Name = "metroTabPage2";
@@ -1090,6 +1153,19 @@
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "쿨타임 계산기";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
+            // 
+            // btnMain3
+            // 
+            this.btnMain3.Location = new System.Drawing.Point(898, 4);
+            this.btnMain3.Name = "btnMain3";
+            this.btnMain3.Size = new System.Drawing.Size(99, 40);
+            this.btnMain3.TabIndex = 7;
+            this.btnMain3.Text = "메인으로";
+            this.btnMain3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnMain3.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // txtNeedCool
             // 
@@ -1128,49 +1204,49 @@
             this.txtResultCoolTime.Text = "0";
             this.txtResultCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // metroLabel6
+            // lb_wc
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(412, 170);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(148, 25);
-            this.metroLabel6.TabIndex = 2;
-            this.metroLabel6.Text = "쿨타임 필요 여부";
+            this.lb_wc.AutoSize = true;
+            this.lb_wc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_wc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_wc.Location = new System.Drawing.Point(412, 170);
+            this.lb_wc.Name = "lb_wc";
+            this.lb_wc.Size = new System.Drawing.Size(148, 25);
+            this.lb_wc.TabIndex = 2;
+            this.lb_wc.Text = "쿨타임 필요 여부";
             // 
-            // metroLabel5
+            // lb_rc
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(412, 97);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(137, 25);
-            this.metroLabel5.TabIndex = 2;
-            this.metroLabel5.Text = "필요 쿨타임(%)";
+            this.lb_rc.AutoSize = true;
+            this.lb_rc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_rc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_rc.Location = new System.Drawing.Point(412, 97);
+            this.lb_rc.Name = "lb_rc";
+            this.lb_rc.Size = new System.Drawing.Size(137, 25);
+            this.lb_rc.TabIndex = 2;
+            this.lb_rc.Text = "필요 쿨타임(%)";
             // 
-            // metroLabel4
+            // lb_gsc
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(372, 24);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(177, 25);
-            this.metroLabel4.TabIndex = 2;
-            this.metroLabel4.Text = "목표) 스킬 쿨타임(s)";
+            this.lb_gsc.AutoSize = true;
+            this.lb_gsc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_gsc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_gsc.Location = new System.Drawing.Point(372, 24);
+            this.lb_gsc.Name = "lb_gsc";
+            this.lb_gsc.Size = new System.Drawing.Size(177, 25);
+            this.lb_gsc.TabIndex = 2;
+            this.lb_gsc.Text = "목표) 스킬 쿨타임(s)";
             // 
-            // metroLabel3
+            // lb_rsc
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(141, 170);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(155, 25);
-            this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "결과) 스킬 쿨타임";
+            this.lb_rsc.AutoSize = true;
+            this.lb_rsc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_rsc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_rsc.Location = new System.Drawing.Point(141, 170);
+            this.lb_rsc.Name = "lb_rsc";
+            this.lb_rsc.Size = new System.Drawing.Size(155, 25);
+            this.lb_rsc.TabIndex = 2;
+            this.lb_rsc.Text = "결과) 스킬 쿨타임";
             // 
             // txtRefCoolTime
             // 
@@ -1183,16 +1259,16 @@
             this.txtRefCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRefCoolTime.TextChanged += new System.EventHandler(this.txtRefCoolTime_TextChanged);
             // 
-            // metroLabel2
+            // lb_scc
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(108, 97);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(188, 25);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "계산할 스킬 쿨타임(s)";
+            this.lb_scc.AutoSize = true;
+            this.lb_scc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_scc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_scc.Location = new System.Drawing.Point(108, 97);
+            this.lb_scc.Name = "lb_scc";
+            this.lb_scc.Size = new System.Drawing.Size(188, 25);
+            this.lb_scc.TabIndex = 2;
+            this.lb_scc.Text = "계산할 스킬 쿨타임(s)";
             // 
             // txtTargetCool
             // 
@@ -1216,20 +1292,20 @@
             this.txtMyCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMyCoolTime.TextChanged += new System.EventHandler(this.txtMyCoolTime_TextChanged);
             // 
-            // metroLabel1
+            // lb_mcrr
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(34, 24);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(262, 25);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "가방)나의 쿨타임 회복 속도(%)";
+            this.lb_mcrr.AutoSize = true;
+            this.lb_mcrr.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_mcrr.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_mcrr.Location = new System.Drawing.Point(34, 24);
+            this.lb_mcrr.Name = "lb_mcrr";
+            this.lb_mcrr.Size = new System.Drawing.Size(262, 25);
+            this.lb_mcrr.TabIndex = 2;
+            this.lb_mcrr.Text = "가방)나의 쿨타임 회복 속도(%)";
             // 
             // metroTabPage5
             // 
-            this.metroTabPage5.Controls.Add(this.metroTile7);
+            this.metroTabPage5.Controls.Add(this.btnMain4);
             this.metroTabPage5.Controls.Add(this.lblResultRampage);
             this.metroTabPage5.Controls.Add(this.txtResultRampageDuration);
             this.metroTabPage5.Controls.Add(this.txtRampageDuration);
@@ -1245,6 +1321,19 @@
             this.metroTabPage5.TabIndex = 4;
             this.metroTabPage5.Text = "얼음불 폭주";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
+            // 
+            // btnMain4
+            // 
+            this.btnMain4.Location = new System.Drawing.Point(898, 4);
+            this.btnMain4.Name = "btnMain4";
+            this.btnMain4.Size = new System.Drawing.Size(99, 40);
+            this.btnMain4.TabIndex = 7;
+            this.btnMain4.Text = "메인으로";
+            this.btnMain4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnMain4.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lblResultRampage
             // 
@@ -1339,7 +1428,7 @@
             // 
             // metroTabPage7
             // 
-            this.metroTabPage7.Controls.Add(this.metroTile8);
+            this.metroTabPage7.Controls.Add(this.btnMain5);
             this.metroTabPage7.HorizontalScrollbarBarColor = true;
             this.metroTabPage7.Location = new System.Drawing.Point(4, 36);
             this.metroTabPage7.Name = "metroTabPage7";
@@ -1348,86 +1437,23 @@
             this.metroTabPage7.Text = "촉발체 계산";
             this.metroTabPage7.VerticalScrollbarBarColor = true;
             // 
+            // btnMain5
+            // 
+            this.btnMain5.Location = new System.Drawing.Point(898, 4);
+            this.btnMain5.Name = "btnMain5";
+            this.btnMain5.Size = new System.Drawing.Size(99, 40);
+            this.btnMain5.TabIndex = 8;
+            this.btnMain5.Text = "메인으로";
+            this.btnMain5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain5.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnMain5.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = null;
             this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // metroTile6
-            // 
-            this.metroTile6.Location = new System.Drawing.Point(898, 4);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(99, 40);
-            this.metroTile6.TabIndex = 7;
-            this.metroTile6.Text = "메인으로";
-            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile6.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.Location = new System.Drawing.Point(898, 4);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(99, 40);
-            this.metroTile1.TabIndex = 100;
-            this.metroTile1.Text = "메인으로";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile1.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.Location = new System.Drawing.Point(898, 4);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(99, 40);
-            this.metroTile2.TabIndex = 7;
-            this.metroTile2.Text = "메인으로";
-            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile2.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // metroTile7
-            // 
-            this.metroTile7.Location = new System.Drawing.Point(898, 4);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(99, 40);
-            this.metroTile7.TabIndex = 7;
-            this.metroTile7.Text = "메인으로";
-            this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile7.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile7.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile7.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile7.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // metroTile8
-            // 
-            this.metroTile8.Location = new System.Drawing.Point(898, 4);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(99, 40);
-            this.metroTile8.TabIndex = 8;
-            this.metroTile8.Text = "메인으로";
-            this.metroTile8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile8.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile8.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile8.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.lblVersion.Location = new System.Drawing.Point(891, 655);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(113, 31);
-            this.lblVersion.TabIndex = 5;
-            this.lblVersion.Text = "1207";
-            this.lblVersion.Click += new System.EventHandler(this.metroLink4_Click);
             // 
             // Main
             // 
@@ -1467,17 +1493,17 @@
         private MetroFramework.Controls.MetroTabControl mainTab;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lb_mcrr;
         private MetroFramework.Controls.MetroTextBox txtResultCoolTime;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel lb_rsc;
         private MetroFramework.Controls.MetroTextBox txtRefCoolTime;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel lb_scc;
         private MetroFramework.Controls.MetroTextBox txtMyCoolTime;
         private MetroFramework.Controls.MetroTextBox txtNeedCool;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel lb_rc;
+        private MetroFramework.Controls.MetroLabel lb_gsc;
         private MetroFramework.Controls.MetroTextBox txtTargetCool;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel lb_wc;
         private MetroFramework.Controls.MetroTextBox txtYNCool;
         public MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroTile btnCool;
@@ -1526,9 +1552,9 @@
         private MetroFramework.Controls.MetroTextBox txtCatMaxTrigger;
         private MetroFramework.Controls.MetroLabel metroLabel26;
         private MetroFramework.Controls.MetroLabel metroLabel25;
-        private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroLink linkYoutube;
         private MetroFramework.Controls.MetroLabel metroLabel27;
-        private MetroFramework.Controls.MetroLink metroLink2;
+        private MetroFramework.Controls.MetroLink linkCzz;
         private MetroFramework.Controls.MetroTabPage metroTabPage5;
         private MetroFramework.Controls.MetroLink metroLink3;
         private MetroFramework.Controls.MetroTextBox txtResultRampageDuration;
@@ -1537,11 +1563,11 @@
         private MetroFramework.Controls.MetroTextBox txtResultRampageCool;
         private MetroFramework.Controls.MetroTextBox txtRampageCool;
         private MetroFramework.Controls.MetroLabel metroLabel28;
-        private MetroFramework.Controls.MetroLink metroLink4;
+        private MetroFramework.Controls.MetroLink linkGithub;
         private MetroFramework.Controls.MetroTile btnFrostRampage;
         private MetroFramework.Controls.MetroLabel lblResultRampage;
         private MetroFramework.Controls.MetroTabPage metroTabPage6;
-        private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroTile btnMain0;
         private MetroFramework.Controls.MetroCheckBox cbPeacefulRealm;
         private MetroFramework.Controls.MetroTextBox txtTotalEffect;
         private MetroFramework.Controls.MetroTextBox txtEachEffect;
@@ -1560,12 +1586,14 @@
         private MetroFramework.Controls.MetroTextBox txtExNewGodPoint;
         private MetroFramework.Controls.MetroTile btnActivation;
         private MetroFramework.Controls.MetroTabPage metroTabPage7;
-        private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroTile metroTile8;
+        private MetroFramework.Controls.MetroTile btnMain1;
+        private MetroFramework.Controls.MetroTile btnMain2;
+        private MetroFramework.Controls.MetroTile btnMain3;
+        private MetroFramework.Controls.MetroTile btnMain4;
+        private MetroFramework.Controls.MetroTile btnMain5;
         private MetroFramework.Controls.MetroLink lblVersion;
+        private MetroFramework.Controls.MetroLabel metroLabel37;
+        private System.Windows.Forms.Button btnLanguge;
     }
 }
 

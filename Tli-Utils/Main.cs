@@ -4,22 +4,28 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Security.Policy;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tli_Utils.Properties;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Tli_Utils
 {
     public partial class Main : Form
     {
+        bool gLanguageKor = true;
+
         public Main()
         {
             InitializeComponent();
+            LoadResources();
             log4net.Config.XmlConfigurator.Configure();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MinimumSize = new System.Drawing.Size(1024, 768);
@@ -30,19 +36,82 @@ namespace Tli_Utils
             init();
         }
 
+        private void ToggleLanguage()
+        {
+            if (gLanguageKor)
+            {
+                gLanguageKor = true;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ko-KR");
+            }
+            else
+            {
+                gLanguageKor = false;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            }
+            ReloadUI();
+            LoadResources();
+        }
+        private void LoadResources()
+        {
+            //가이드 메인 버튼
+            btnCool.Text = Language.calcCool;
+            btnActivation.Text = Language.calcActivationMediumSkill;
+            btnFreeze.Text = Language.calcFreeze;
+            btnFrostRampage.Text = Language.FrostRampage;
+            btnLightningShadow.Text = Language.Lightning_Shadow;
+            btnNewGod.Text = Language.calcNewGod;
+
+            //가이드 하단
+            linkYoutube.Text = Language.strYoutube;
+            linkCzz.Text = Language.strCzz;
+            linkGithub.Text = Language.strGithub;
+
+            //메인가기
+            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain2, btnMain3, btnMain4, btnMain5, };
+            foreach (var goHome in arrGoHome)
+            {
+                if (goHome != null) {
+                    goHome.Text = Language.strGoMain;
+                }
+            }
+
+            //쿨타임 탭
+            lb_mcrr.Text = Language.tab_1_My_cooldown_recovery_rate;
+            lb_scc.Text = Language.tab_1_Skill_cooldown_calculate;
+            lb_rsc.Text = Language.tab_1_Result_Skill_Cooldown;
+            lb_gsc.Text = Language.tab_1_Goal_Skill_Cooldown;
+            lb_rc.Text = Language.tab_1_Required_Cooldown;
+            lb_wc.Text = Language.tab_1_Whether_cooldown;
+        }
+
+        private void ReloadUI()
+        {
+            Controls.Clear();
+            InitializeComponent();
+            init();
+        }
+
         public void init()
         {
+            if (gLanguageKor)
+                btnLanguge.Text = "한 글";
+            else
+                btnLanguge.Text = "Eng";
+
             var sortedPages = mainTab.TabPages.Cast<TabPage>()
                 .OrderBy(tp => tp.Name)
                 .ToList();
 
             mainTab.TabPages.Clear();
-            foreach (var tabPage in sortedPages)
+            for (int i = 0; i < sortedPages.Count; i++)
             {
+                var tabPage = sortedPages[i];
+                tabPage.Text = GetTabPageText(i);
                 mainTab.TabPages.Add(tabPage);
             }
+
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
-            lblVersion.Text = $"버전: {version}";
+            lblVersion.Text = $"Ver: {version}";
 
             txtBaseFreezeTime.Text = DefineValues.BASE_FREEZE_TIME.ToString();
             txtCatPer.Text = DefineValues.BASE_CAT_TRIGGER_PERCENT.ToString();
@@ -55,6 +124,21 @@ namespace Tli_Utils
             btnFrostRampage.Tag = DefineValues.TAB_FROSTFIRE_RAMPAGE;
             btnNewGod.Tag = DefineValues.TAB_NEW_GOD;
             btnActivation.Tag = DefineValues.TAB_ACTIVATION;
+        }
+
+        private string GetTabPageText(int index)
+        {
+            switch (index)
+            {
+                case 0: return Language.tab_0;
+                case 1: return Language.tab_1;
+                case 2: return Language.tab_2;
+                case 3: return Language.tab_3;
+                case 4: return Language.tab_4;
+                case 5: return Language.tab_5;
+                case 6: return Language.tab_6;
+                default: return $"Tab {index + 1}";
+            }
         }
 
         private void BtnTab_Click(object sender, EventArgs e)
@@ -368,5 +452,16 @@ namespace Tli_Utils
                 }
             }
         }
+
+        private void Language_CheckedChanged(object sender, EventArgs e)
+        {
+            if (gLanguageKor) 
+                gLanguageKor = false;
+            else
+                gLanguageKor = true;
+
+            ToggleLanguage();
+        }
+
     }
 }
