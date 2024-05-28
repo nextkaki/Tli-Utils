@@ -2,9 +2,10 @@
 <div align="center">
    <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" />
    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnextkaki%2FTli-Utils&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
-  <img src="https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg" />
 </div>
 
+![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
+![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
 ## 소개
 ```
@@ -21,6 +22,9 @@
 - 쿨타임 계산기
 - 동결 지속시간 계산기(프로즌 하트, 극한)
 - 라이트닝 쉐도우 특성 계산기
+- 얼음불 폭주 계산기
+- 질서 혼란 계산기
+- 촉발체 계산(예정)
 
 ## 라이센스
 - **MIT License**
