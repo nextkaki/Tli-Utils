@@ -232,11 +232,157 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   Final freeze duration (s)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_2_Final_freeze_duration {
+            get {
+                return ResourceManager.GetString("tab_2_Final_freeze_duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Freeze default duration (s)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_2_Freeze_default_duration {
+            get {
+                return ResourceManager.GetString("tab_2_Freeze_default_duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Gain Arctic when freezing. Up to 20과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_2_Gain_Extreme_when_freezing {
+            get {
+                return ResourceManager.GetString("tab_2_Gain_Extreme_when_freezing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Owned freeze duration (%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_2_Owned_freeze_duration {
+            get {
+                return ResourceManager.GetString("tab_2_Owned_freeze_duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Lightning Shadow과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_3 {
             get {
                 return ResourceManager.GetString("tab_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Bag) Attack/Cast Speed과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_bag_attack_cast_speed {
+            get {
+                return ResourceManager.GetString("tab_3_bag_attack_cast_speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Distance traveled in 1 second (M)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_Distance_traveled_in_1_second {
+            get {
+                return ResourceManager.GetString("tab_3_Distance_traveled_in_1_second", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Estimated number of triggers과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_Estimated_number_of_triggers {
+            get {
+                return ResourceManager.GetString("tab_3_Estimated_number_of_triggers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   [Feline Figure] Cooldown과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_ff_Cooldown {
+            get {
+                return ResourceManager.GetString("tab_3_ff_Cooldown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   [Feline Figure] Count과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_ff_Count {
+            get {
+                return ResourceManager.GetString("tab_3_ff_Count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   [Feline Figure] Trigger Chance (%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_ff_trigger_chance {
+            get {
+                return ResourceManager.GetString("tab_3_ff_trigger_chance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Maximum number of [Feline Figure] activations in 4 seconds과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_Maximum_number_of_ff_activations_in_4_seconds {
+            get {
+                return ResourceManager.GetString("tab_3_Maximum_number_of_ff_activations_in_4_seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   My movement speed (%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_My_movement_speed {
+            get {
+                return ResourceManager.GetString("tab_3_My_movement_speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Time taken to move 1M (s)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_Time_taken_to_move_1M {
+            get {
+                return ResourceManager.GetString("tab_3_Time_taken_to_move_1M", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Total number of attacks in 4 seconds과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_Total_number_of_attacks_in_4_seconds {
+            get {
+                return ResourceManager.GetString("tab_3_Total_number_of_attacks_in_4_seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Total number of [Feline Figure] [shock counts] in 4 seconds
+        ///(Number of Static Meteor Shock Counts)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_Total_number_of_ff__shock_counts__in_4_seconds_Number_of_Static_Meteor_Shock_Counts_ {
+            get {
+                return ResourceManager.GetString("tab_3_Total_number_of_ff_[shock_counts]_in_4_seconds(Number_of_Static_Meteor_Shoc" +
+                        "k_Counts)", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Use Talent [Lightning Fast].과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_3_Use_Talent_Lightning_Fast {
+            get {
+                return ResourceManager.GetString("tab_3_Use_Talent_Lightning_Fast", resourceCulture);
             }
         }
         
@@ -250,11 +396,104 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   Frostfire Rampage, base cooldown 11 seconds, duration 5 seconds과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_4_Frostfire_Rampage_exp {
+            get {
+                return ResourceManager.GetString("tab_4_Frostfire_Rampage_exp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   My Cooldown Recovery Rate (%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_4_My_Cooldown_Recovery_Rate {
+            get {
+                return ResourceManager.GetString("tab_4_My_Cooldown_Recovery_Rate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   My Skill Effect Duration (%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_4_My_Skill_Effect_Duration {
+            get {
+                return ResourceManager.GetString("tab_4_My_Skill_Effect_Duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Order/Chaos Calc과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_5 {
             get {
                 return ResourceManager.GetString("tab_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   At 100 points for each slab, % effectiveness과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_At_points_for_each_slab {
+            get {
+                return ResourceManager.GetString("tab_5_At_points_for_each_slab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Numbers 1,4 are affected by 2 and have an effect of 40%.
+        ///2,3 are influenced by 3, so the effect is 60%.
+        ///Please do your own sums as the effectiveness
+        ///% is different for each location.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_explain {
+            get {
+                return ResourceManager.GetString("tab_5_explain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Number of neighboring slabs (20% effect)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_Number_of_neighboring_slabs {
+            get {
+                return ResourceManager.GetString("tab_5_Number_of_neighboring_slabs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Other &lt;New God Effect %&gt;.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_Other_God_Talent_Effect {
+            get {
+                return ResourceManager.GetString("tab_5_Other_God_Talent_Effect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Peaceful Realm Use (+25% Order Effect)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_Peaceful_Realm_Use {
+            get {
+                return ResourceManager.GetString("tab_5_Peaceful_Realm_Use", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Percentage of &lt;option&gt; per 1 point of Order/Chaos과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_Percentage_of_option_per_1_point_of_Order_Chaos {
+            get {
+                return ResourceManager.GetString("tab_5_Percentage_of_option_per_1_point_of_Order_Chaos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Total effect % of all slabs combined과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_Total_effect_of_all_slabs_combined {
+            get {
+                return ResourceManager.GetString("tab_5_Total_effect_of_all_slabs_combined", resourceCulture);
             }
         }
         

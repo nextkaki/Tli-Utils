@@ -174,14 +174,96 @@
   <data name="tab_2" xml:space="preserve">
     <value>Freeze Calc</value>
   </data>
+  <data name="tab_2_Final_freeze_duration" xml:space="preserve">
+    <value>Final freeze duration (s)</value>
+  </data>
+  <data name="tab_2_Freeze_default_duration" xml:space="preserve">
+    <value>Freeze default duration (s)</value>
+  </data>
+  <data name="tab_2_Gain_Extreme_when_freezing" xml:space="preserve">
+    <value>Gain Arctic when freezing. Up to 20</value>
+  </data>
+  <data name="tab_2_Owned_freeze_duration" xml:space="preserve">
+    <value>Owned freeze duration (%)</value>
+  </data>
   <data name="tab_3" xml:space="preserve">
     <value>Lightning Shadow</value>
+  </data>
+  <data name="tab_3_bag_attack_cast_speed" xml:space="preserve">
+    <value>Bag) Attack/Cast Speed</value>
+  </data>
+  <data name="tab_3_Distance_traveled_in_1_second" xml:space="preserve">
+    <value>Distance traveled in 1 second (M)</value>
+  </data>
+  <data name="tab_3_Estimated_number_of_triggers" xml:space="preserve">
+    <value>Estimated number of triggers</value>
+  </data>
+  <data name="tab_3_ff_Cooldown" xml:space="preserve">
+    <value>[Feline Figure] Cooldown</value>
+  </data>
+  <data name="tab_3_ff_Count" xml:space="preserve">
+    <value>[Feline Figure] Count</value>
+  </data>
+  <data name="tab_3_ff_trigger_chance" xml:space="preserve">
+    <value>[Feline Figure] Trigger Chance (%)</value>
+  </data>
+  <data name="tab_3_Maximum_number_of_ff_activations_in_4_seconds" xml:space="preserve">
+    <value>Maximum number of [Feline Figure] activations in 4 seconds</value>
+  </data>
+  <data name="tab_3_My_movement_speed" xml:space="preserve">
+    <value>My movement speed (%)</value>
+  </data>
+  <data name="tab_3_Time_taken_to_move_1M" xml:space="preserve">
+    <value>Time taken to move 1M (s)</value>
+  </data>
+  <data name="tab_3_Total_number_of_attacks_in_4_seconds" xml:space="preserve">
+    <value>Total number of attacks in 4 seconds</value>
+  </data>
+  <data name="tab_3_Total_number_of_ff_[shock_counts]_in_4_seconds(Number_of_Static_Meteor_Shock_Counts)" xml:space="preserve">
+    <value>Total number of [Feline Figure] [shock counts] in 4 seconds
+(Number of Static Meteor Shock Counts)</value>
+  </data>
+  <data name="tab_3_Use_Talent_Lightning_Fast" xml:space="preserve">
+    <value>Use Talent [Lightning Fast].</value>
   </data>
   <data name="tab_4" xml:space="preserve">
     <value>Frostfire Rampage</value>
   </data>
+  <data name="tab_4_Frostfire_Rampage_exp" xml:space="preserve">
+    <value>Frostfire Rampage, base cooldown 11 seconds, duration 5 seconds</value>
+  </data>
+  <data name="tab_4_My_Cooldown_Recovery_Rate" xml:space="preserve">
+    <value>My Cooldown Recovery Rate (%)</value>
+  </data>
+  <data name="tab_4_My_Skill_Effect_Duration" xml:space="preserve">
+    <value>My Skill Effect Duration (%)</value>
+  </data>
   <data name="tab_5" xml:space="preserve">
     <value>Order/Chaos Calc</value>
+  </data>
+  <data name="tab_5_At_points_for_each_slab" xml:space="preserve">
+    <value>At 100 points for each slab, % effectiveness</value>
+  </data>
+  <data name="tab_5_explain" xml:space="preserve">
+    <value>Numbers 1,4 are affected by 2 and have an effect of 40%.
+2,3 are influenced by 3, so the effect is 60%.
+Please do your own sums as the effectiveness
+% is different for each location.</value>
+  </data>
+  <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
+    <value>Number of neighboring slabs (20% effect)</value>
+  </data>
+  <data name="tab_5_Other_God_Talent_Effect" xml:space="preserve">
+    <value>Other &lt;New God Effect %&gt;.</value>
+  </data>
+  <data name="tab_5_Peaceful_Realm_Use" xml:space="preserve">
+    <value>Peaceful Realm Use (+25% Order Effect)</value>
+  </data>
+  <data name="tab_5_Percentage_of_option_per_1_point_of_Order_Chaos" xml:space="preserve">
+    <value>Percentage of &lt;option&gt; per 1 point of Order/Chaos</value>
+  </data>
+  <data name="tab_5_Total_effect_of_all_slabs_combined" xml:space="preserve">
+    <value>Total effect % of all slabs combined</value>
   </data>
   <data name="tab_6" xml:space="preserve">
     <value>Activation Medium Skill</value>

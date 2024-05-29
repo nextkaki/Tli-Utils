@@ -82,6 +82,40 @@ namespace Tli_Utils
             lb_gsc.Text = Language.tab_1_Goal_Skill_Cooldown;
             lb_rc.Text = Language.tab_1_Required_Cooldown;
             lb_wc.Text = Language.tab_1_Whether_cooldown;
+
+            //동결 계산기
+            lb_fdd.Text = Language.tab_2_Freeze_default_duration;
+            lb_ffd.Text = Language.tab_2_Final_freeze_duration;
+            lb_ofd.Text = Language.tab_2_Owned_freeze_duration;
+            lb_gewf.Text = Language.tab_2_Gain_Extreme_when_freezing;
+
+            //라이트닝 쉐도우
+            lb_bacs.Text = Language.tab_3_bag_attack_cast_speed;
+            lb_fftc.Text = Language.tab_3_ff_trigger_chance;
+            lb_ffcd.Text = Language.tab_3_ff_Cooldown;
+            lb_ffc.Text = Language.tab_3_ff_Count;
+            lb_tna4.Text = Language.tab_3_Total_number_of_attacks_in_4_seconds;
+            lb_mnffa4.Text = Language.tab_3_Maximum_number_of_ff_activations_in_4_seconds;
+            lb_ent.Text = Language.tab_3_Estimated_number_of_triggers;
+            lb_tnoffsc.Text = Language.tab_3_Total_number_of_ff__shock_counts__in_4_seconds_Number_of_Static_Meteor_Shock_Counts_;
+            lb_mms.Text = Language.tab_3_My_movement_speed;
+            lb_dts.Text = Language.tab_3_Distance_traveled_in_1_second;
+            lb_ttm.Text = Language.tab_3_Time_taken_to_move_1M;
+            cbFast.Text = Language.tab_3_Use_Talent_Lightning_Fast;
+
+            //얼음불 폭주
+            lb_fre.Text = Language.tab_4_Frostfire_Rampage_exp;
+            lb_t4_mcrr.Text = Language.tab_4_My_Cooldown_Recovery_Rate;
+            lb_msed.Text = Language.tab_4_My_Skill_Effect_Duration;
+
+            //질서혼란 계산기
+            lb_popp.Text = Language.tab_5_Percentage_of_option_per_1_point_of_Order_Chaos;
+            lb_nns.Text = Language.tab_5_Number_of_neighboring_slabs;
+            lb_ogte.Text = Language.tab_5_Other_God_Talent_Effect;
+            cbPeacefulRealm.Text = Language.tab_5_Peaceful_Realm_Use;
+            lb_apes.Text = Language.tab_5_At_points_for_each_slab;
+            lb_teasc.Text = Language.tab_5_Total_effect_of_all_slabs_combined;
+            lb_explain.Text = Language.tab_5_explain;
         }
 
         private void ReloadUI()
@@ -291,6 +325,9 @@ namespace Tli_Utils
             MetroTextBox textBox = sender as MetroTextBox;
             if (textBox != null)
             {
+                if (!cbFast.Checked) return;
+                if (!textBox.Enabled) return;
+
                 if (Common.IsNumericInputValid(textBox))
                 {
                     string strText = textBox.Text.Trim();
@@ -327,6 +364,9 @@ namespace Tli_Utils
             MetroTextBox textBox = sender as MetroTextBox;
             if (textBox != null)
             {
+                if (string.IsNullOrEmpty(textBox.Text) || textBox.Text == "0") return;
+                if (!textBox.Enabled) return;
+
                 if (Common.IsNumericInputValid(textBox))
                 {
                     decimal dSpeedPerSkill = string.IsNullOrEmpty(txtSpeedPerSkill.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtSpeedPerSkill.Text.Trim());
@@ -399,11 +439,17 @@ namespace Tli_Utils
             decimal dResult = dRampageCool - dRampageDuration;
             if (dResult > 0)
             {
-                lblResultRampage.Text = dResult.ToString("F2") + "만큼 지속시간이 필요하다.\r\n쿨타임 or 스킬 효과 지속시간을 챙겨주세요.";
+                if (gLanguageKor)
+                    lblResultRampage.Text = dResult.ToString("F2") + "만큼 지속시간이 필요하다.\r\n쿨타임 or 스킬 효과 지속시간을 챙겨주세요.";
+                else
+                    lblResultRampage.Text = dResult.ToString("F2") + " duration is required.\r\nIncrease the cooldown or skill effect duration.";
             }
             else
             {
-                lblResultRampage.Text = "스킬 효과 지속시간이 충분합니다.";
+                if (gLanguageKor)
+                    lblResultRampage.Text = "스킬 효과 지속시간이 충분합니다.";
+                else
+                    lblResultRampage.Text = "Skill effect duration is long enough.";
             }
         }
 
@@ -463,5 +509,9 @@ namespace Tli_Utils
             ToggleLanguage();
         }
 
+        private void cbPeacefulRealm_CheckedChanged(object sender, EventArgs e)
+        {
+            calcNewGod();
+        }
     }
 }
