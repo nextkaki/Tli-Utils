@@ -8,10 +8,9 @@
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
 ## 소개(Introduce)
-```
-KR) 토치라이트 인피니트 게임의 편의, 편리를 위한 계산기 프로그램 이며, 기존 구글 엑셀 링크를 제공했으나 수식의 번거로움이 발생. 그래서, 프로그램 개발 진행.
-EN) This is a calculator program for the convenience of Torchlight Infinite game players. Previously, we provided a Google Sheets link, but it caused inconvenience due to the complexity of the formulas. Therefore, we developed a dedicated program.
-```
+- KR) 토치라이트 인피니트 게임의 편의, 편리를 위한 계산기 프로그램 이며, 기존 구글 엑셀 링크를 제공했으나 수식의 번거로움이 발생. 그래서, 프로그램 개발 진행.
+- EN) This is a calculator program for the convenience of Torchlight Infinite game players. Previously, we provided a Google Sheets link, but it caused inconvenience due to the complexity of the formulas. Therefore, we developed a dedicated program.
+
 
 ## 개발 목표 및 신념(Development goals and beliefs)
 - 게임 이용 시, 계산이 필요한 시점에 유저 편리, 편의성을 위함.(For user convenience and ease of use at times when the game requires math.)
