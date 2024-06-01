@@ -505,5 +505,77 @@ namespace Tli_Utils {
                 return ResourceManager.GetString("tab_6", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Additional Character Cast Speed(%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Add_Character_Cast_Speed {
+            get {
+                return ResourceManager.GetString("tab_6_Add_Character_Cast_Speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Calculating Wind Rhythm과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Calculating_Wind_Rhythm {
+            get {
+                return ResourceManager.GetString("tab_6_Calculating_Wind_Rhythm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Character Cast Speed(%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Character_Cast_Speed {
+            get {
+                return ResourceManager.GetString("tab_6_Character_Cast_Speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Character Cooldown Recovery Rate(%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Character_Cooldown_Recovery_Rate {
+            get {
+                return ResourceManager.GetString("tab_6_Character_Cooldown_Recovery_Rate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Combined Wind Rhythm Cast Speed(%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Combined_Wind_Rhythm_Cast_Speed {
+            get {
+                return ResourceManager.GetString("tab_6_Combined_Wind_Rhythm_Cast_Speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Final Trigger Cooldown과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Final_Trigger_Cooldown {
+            get {
+                return ResourceManager.GetString("tab_6_Final_Trigger_Cooldown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Number of casts per second과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Number_of_casts_per_second {
+            get {
+                return ResourceManager.GetString("tab_6_Number_of_casts_per_second", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Wind Rhythm Cooldown(s)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_Wind_Rhythm_Cooldown {
+            get {
+                return ResourceManager.GetString("tab_6_Wind_Rhythm_Cooldown", resourceCulture);
+            }
+        }
     }
 }

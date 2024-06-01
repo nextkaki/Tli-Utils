@@ -267,4 +267,28 @@
   <data name="tab_6" xml:space="preserve">
     <value>촉발체 계산</value>
   </data>
+  <data name="tab_6_Add_Character_Cast_Speed" xml:space="preserve">
+    <value>캐릭터 시전속도 추가(별도)(%)</value>
+  </data>
+  <data name="tab_6_Calculating_Wind_Rhythm" xml:space="preserve">
+    <value>질풍율동 계산</value>
+  </data>
+  <data name="tab_6_Character_Cast_Speed" xml:space="preserve">
+    <value>캐릭터 시전속도(%)</value>
+  </data>
+  <data name="tab_6_Character_Cooldown_Recovery_Rate" xml:space="preserve">
+    <value>캐릭터 쿹타임 회복속도(%)</value>
+  </data>
+  <data name="tab_6_Combined_Wind_Rhythm_Cast_Speed" xml:space="preserve">
+    <value>질풍율동 시전속도 합산(%)</value>
+  </data>
+  <data name="tab_6_Final_Trigger_Cooldown" xml:space="preserve">
+    <value>최종 발동 쿨타임</value>
+  </data>
+  <data name="tab_6_Number_of_casts_per_second" xml:space="preserve">
+    <value>1초 시전 횟수</value>
+  </data>
+  <data name="tab_6_Wind_Rhythm_Cooldown" xml:space="preserve">
+    <value>질풍율동 쿨타임(s)</value>
+  </data>
 </root>

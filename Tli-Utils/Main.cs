@@ -116,6 +116,16 @@ namespace Tli_Utils
             lb_apes.Text = Language.tab_5_At_points_for_each_slab;
             lb_teasc.Text = Language.tab_5_Total_effect_of_all_slabs_combined;
             lb_explain.Text = Language.tab_5_explain;
+
+            //촉발체 계산기
+            lb_title_cwr.Text = Language.tab_6_Calculating_Wind_Rhythm;
+            lb_wrc.Text = Language.tab_6_Wind_Rhythm_Cooldown;
+            lb_cwrcs.Text = Language.tab_6_Combined_Wind_Rhythm_Cast_Speed;
+            lb_ccs.Text = Language.tab_6_Character_Cast_Speed;
+            lb_accs.Text = Language.tab_6_Add_Character_Cast_Speed;
+            lb_ccrr.Text = Language.tab_6_Character_Cooldown_Recovery_Rate;
+            lb_ftc.Text = Language.tab_6_Final_Trigger_Cooldown;
+            lb_ncps.Text = Language.tab_6_Number_of_casts_per_second;
         }
 
         private void ReloadUI()
@@ -325,7 +335,7 @@ namespace Tli_Utils
             MetroTextBox textBox = sender as MetroTextBox;
             if (textBox != null)
             {
-                if (!cbFast.Checked) return;
+                //if (!cbFast.Checked) return;
                 if (!textBox.Enabled) return;
 
                 if (Common.IsNumericInputValid(textBox))
@@ -349,13 +359,13 @@ namespace Tli_Utils
         {
             if (cbFast.Checked)
             {
-                txtSpeedPerSkill.Enabled = false;
+                //txtSpeedPerSkill.Enabled = false;
                 txtSpeedPerSkill.Text = txtStoMLS.Text.Trim();
             }
             else
             {
                 txtSpeedPerSkill.Text = "0";
-                txtSpeedPerSkill.Enabled = true;
+                //txtSpeedPerSkill.Enabled = true;
             }
         }
 
@@ -512,6 +522,54 @@ namespace Tli_Utils
         private void cbPeacefulRealm_CheckedChanged(object sender, EventArgs e)
         {
             calcNewGod();
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://game.naver.com/lounge/Torchlight_Infinite/home");
+        }
+        private void txtActivation_TextChanged(object sender, EventArgs e)
+        {
+            calcWindRhythm();
+        }
+        public void calcWindRhythm()
+        {
+            MetroTextBox[] txtWind = { txtWindCool, txtWindCastSum, txtPlayerCast, txtPlayerCastAdd, txtPlayerCool };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtWind)
+            {
+                if (control != null) { 
+                    if (!Common.IsNumericInputValid(control)) {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else { 
+                    bPass = false;
+                }
+            }
+            if(bPass)
+            {
+                int nPlayerCast = int.Parse(txtPlayerCast.Text.Trim());
+                int nPlayerCastAdd = int.Parse(txtPlayerCastAdd.Text.Trim());
+                int nResultCast = nPlayerCast + nPlayerCastAdd;
+
+                int nWindCastValue = int.Parse(txtWindCastSum.Text.Trim());
+
+                int nResultWindCool = nResultCast * (nWindCastValue/100);
+
+                int nPlayerCool = int.Parse(txtPlayerCool.Text.Trim());
+                decimal dResultBaseCool = (decimal)(nResultWindCool + nPlayerCool) / 100 ;
+                
+                decimal dRateCool = Common.getCoolDown(dResultBaseCool);
+                decimal dWindCool = decimal.Parse(txtWindCool.Text.Trim());
+
+                decimal dResultCool = dWindCool * dRateCool;
+                if(dResultCool > 0)
+                {
+                    txtWindResultCool.Text = dResultCool.ToString("F2");
+                    txtWindTotalCast.Text = (1 / dResultCool).ToString("F2");
+                }
+            }
         }
     }
 }

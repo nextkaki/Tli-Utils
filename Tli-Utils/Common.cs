@@ -28,11 +28,24 @@ namespace Tli_Utils
                 return false;
             }
 
-            if (!Regex.IsMatch(strText, @"^[0-9]*\.?[0-9]*$"))
+            // 마이너스만 있는지 체크
+            if (strText == "-")
+            {
+                return false;
+            }
+
+            if (!Regex.IsMatch(strText, @"^-?[0-9]*\.?[0-9]*$"))
             {
                 return false;
             }
             return true;
+        }
+
+        public static decimal getCoolDown(decimal _ref)
+        {
+            decimal rtnValue = 0.0m;
+            rtnValue = (1.0m / (1.0m + _ref));
+            return rtnValue;
         }
     }
 }

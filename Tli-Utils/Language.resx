@@ -268,4 +268,28 @@ Please do your own sums as the effectiveness
   <data name="tab_6" xml:space="preserve">
     <value>Activation Medium Skill</value>
   </data>
+  <data name="tab_6_Add_Character_Cast_Speed" xml:space="preserve">
+    <value>Additional Character Cast Speed(%)</value>
+  </data>
+  <data name="tab_6_Calculating_Wind_Rhythm" xml:space="preserve">
+    <value>Calculating Wind Rhythm</value>
+  </data>
+  <data name="tab_6_Character_Cast_Speed" xml:space="preserve">
+    <value>Character Cast Speed(%)</value>
+  </data>
+  <data name="tab_6_Character_Cooldown_Recovery_Rate" xml:space="preserve">
+    <value>Character Cooldown Recovery Rate(%)</value>
+  </data>
+  <data name="tab_6_Combined_Wind_Rhythm_Cast_Speed" xml:space="preserve">
+    <value>Combined Wind Rhythm Cast Speed(%)</value>
+  </data>
+  <data name="tab_6_Final_Trigger_Cooldown" xml:space="preserve">
+    <value>Final Trigger Cooldown</value>
+  </data>
+  <data name="tab_6_Number_of_casts_per_second" xml:space="preserve">
+    <value>Number of casts per second</value>
+  </data>
+  <data name="tab_6_Wind_Rhythm_Cooldown" xml:space="preserve">
+    <value>Wind Rhythm Cooldown(s)</value>
+  </data>
 </root>
