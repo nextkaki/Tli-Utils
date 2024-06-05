@@ -24,6 +24,7 @@
 - 질서 혼란 계산기(Order Chaos Calculator)
 - 언어 변경 기능(Change languages)
 - 촉발체 계산기(질풍율동)
+- 아머 대미지 관통 계산기
 
 ## 라이센스
 - **MIT License**
