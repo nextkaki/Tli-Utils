@@ -129,6 +129,9 @@
   <data name="calcNewGod" xml:space="preserve">
     <value>Order/Chaos Calc</value>
   </data>
+  <data name="Calculating Armor Reduction" xml:space="preserve">
+    <value>Calculating Armor Reduction</value>
+  </data>
   <data name="FrostRampage" xml:space="preserve">
     <value>Frostfire Rampage</value>
   </data>
@@ -291,5 +294,77 @@ Please do your own sums as the effectiveness
   </data>
   <data name="tab_6_Wind_Rhythm_Cooldown" xml:space="preserve">
     <value>Wind Rhythm Cooldown(s)</value>
+  </data>
+  <data name="tab_7" xml:space="preserve">
+    <value>Calculating Armor Reduction</value>
+  </data>
+  <data name="tab_7_500b" xml:space="preserve">
+    <value>Max 500 billion</value>
+  </data>
+  <data name="tab_7_500m" xml:space="preserve">
+    <value>500 million</value>
+  </data>
+  <data name="tab_7_50b" xml:space="preserve">
+    <value>50 billion</value>
+  </data>
+  <data name="tab_7_50m" xml:space="preserve">
+    <value>50 million</value>
+  </data>
+  <data name="tab_7_5b" xml:space="preserve">
+    <value>5 billion</value>
+  </data>
+  <data name="tab_7_Enemy)_Elemental_Damage_Reduction_Rate_by_Resistance" xml:space="preserve">
+    <value>Enemy) Elemental Damage Reduction Rate by Resistance</value>
+  </data>
+  <data name="tab_7_Enemy)_Non-Physical_Damage_Reduction_Rate_by_Armor" xml:space="preserve">
+    <value>Enemy) Non-Physical Damage Reduction Rate by Armor</value>
+  </data>
+  <data name="tab_7_Enemy)_Physical_Damage_Reduction_Rate_by_Armor" xml:space="preserve">
+    <value>Enemy) Physical Damage Reduction Rate by Armor</value>
+  </data>
+  <data name="tab_7_Expected)_Final_Damage" xml:space="preserve">
+    <value>Expected) Final Damage (Physical/Non-Phy)</value>
+  </data>
+  <data name="tab_7_explain1" xml:space="preserve">
+    <value>Enemy Level Input Changes Monster Armor Value. // Monster Max Level 90</value>
+  </data>
+  <data name="tab_7_explain2" xml:space="preserve">
+    <value>Enter "Expected Value" for User Base Damage. Unit is 1,000 (Thousands)</value>
+  </data>
+  <data name="tab_7_Final)_Monster_Elemental_Damage_Multiplier" xml:space="preserve">
+    <value>Final) Monster Elemental Damage Multiplier</value>
+  </data>
+  <data name="tab_7_Final)_Monster_Physical_Damage_Multiplier" xml:space="preserve">
+    <value>Final) Monster Physical Damage Multiplier</value>
+  </data>
+  <data name="tab_7_Final_Calculation_Result" xml:space="preserve">
+    <value>Final Calculation Result</value>
+  </data>
+  <data name="tab_7_Monster_Armor_Value" xml:space="preserve">
+    <value>Monster Armor Value</value>
+  </data>
+  <data name="tab_7_Monster_Base_Resistance" xml:space="preserve">
+    <value>Monster Base Resistance</value>
+  </data>
+  <data name="tab_7_Monster_Level" xml:space="preserve">
+    <value>Monster Level</value>
+  </data>
+  <data name="tab_7_User)_Armor_Non-Physical_Damage_Reduction" xml:space="preserve">
+    <value>User) Armor Non-Physical Damage Reduction</value>
+  </data>
+  <data name="tab_7_User)_Armor_Physical_Damage_Reduction" xml:space="preserve">
+    <value>User) Armor Physical Damage Reduction</value>
+  </data>
+  <data name="tab_7_User_Armor_Damage_Penetration" xml:space="preserve">
+    <value>User Armor Damage Penetration</value>
+  </data>
+  <data name="tab_7_User_Armor_Value" xml:space="preserve">
+    <value>User Armor Value</value>
+  </data>
+  <data name="tab_7_User_Base_Damage" xml:space="preserve">
+    <value>User Base Damage (Thousands)</value>
+  </data>
+  <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
+    <value>User Resistance Penetration</value>
   </data>
 </root>

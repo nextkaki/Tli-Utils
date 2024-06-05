@@ -97,6 +97,15 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   Calculating Armor Reduction과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string Calculating_Armor_Reduction {
+            get {
+                return ResourceManager.GetString("Calculating Armor Reduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Frostfire Rampage과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string FrostRampage {
@@ -575,6 +584,222 @@ namespace Tli_Utils {
         public static string tab_6_Wind_Rhythm_Cooldown {
             get {
                 return ResourceManager.GetString("tab_6_Wind_Rhythm_Cooldown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Calculating Armor Reduction과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7 {
+            get {
+                return ResourceManager.GetString("tab_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Max 500 billion과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_500b {
+            get {
+                return ResourceManager.GetString("tab_7_500b", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   500 million과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_500m {
+            get {
+                return ResourceManager.GetString("tab_7_500m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   50 billion과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_50b {
+            get {
+                return ResourceManager.GetString("tab_7_50b", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   50 million과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_50m {
+            get {
+                return ResourceManager.GetString("tab_7_50m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   5 billion과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_5b {
+            get {
+                return ResourceManager.GetString("tab_7_5b", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enemy) Elemental Damage Reduction Rate by Resistance과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Enemy__Elemental_Damage_Reduction_Rate_by_Resistance {
+            get {
+                return ResourceManager.GetString("tab_7_Enemy)_Elemental_Damage_Reduction_Rate_by_Resistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enemy) Non-Physical Damage Reduction Rate by Armor과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Enemy__Non_Physical_Damage_Reduction_Rate_by_Armor {
+            get {
+                return ResourceManager.GetString("tab_7_Enemy)_Non-Physical_Damage_Reduction_Rate_by_Armor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enemy) Physical Damage Reduction Rate by Armor과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Enemy__Physical_Damage_Reduction_Rate_by_Armor {
+            get {
+                return ResourceManager.GetString("tab_7_Enemy)_Physical_Damage_Reduction_Rate_by_Armor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Expected) Final Damage (Physical/Non-Phy)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Expected__Final_Damage {
+            get {
+                return ResourceManager.GetString("tab_7_Expected)_Final_Damage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enemy Level Input Changes Monster Armor Value. // Monster Max Level 90과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_explain1 {
+            get {
+                return ResourceManager.GetString("tab_7_explain1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enter &quot;Expected Value&quot; for User Base Damage. Unit is 1,000 (Thousands)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_explain2 {
+            get {
+                return ResourceManager.GetString("tab_7_explain2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Final) Monster Elemental Damage Multiplier과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Final__Monster_Elemental_Damage_Multiplier {
+            get {
+                return ResourceManager.GetString("tab_7_Final)_Monster_Elemental_Damage_Multiplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Final) Monster Physical Damage Multiplier과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Final__Monster_Physical_Damage_Multiplier {
+            get {
+                return ResourceManager.GetString("tab_7_Final)_Monster_Physical_Damage_Multiplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Final Calculation Result과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Final_Calculation_Result {
+            get {
+                return ResourceManager.GetString("tab_7_Final_Calculation_Result", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Monster Armor Value과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Monster_Armor_Value {
+            get {
+                return ResourceManager.GetString("tab_7_Monster_Armor_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Monster Base Resistance과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Monster_Base_Resistance {
+            get {
+                return ResourceManager.GetString("tab_7_Monster_Base_Resistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Monster Level과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_Monster_Level {
+            get {
+                return ResourceManager.GetString("tab_7_Monster_Level", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   User) Armor Non-Physical Damage Reduction과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_User__Armor_Non_Physical_Damage_Reduction {
+            get {
+                return ResourceManager.GetString("tab_7_User)_Armor_Non-Physical_Damage_Reduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   User) Armor Physical Damage Reduction과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_User__Armor_Physical_Damage_Reduction {
+            get {
+                return ResourceManager.GetString("tab_7_User)_Armor_Physical_Damage_Reduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   User Armor Damage Penetration과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_User_Armor_Damage_Penetration {
+            get {
+                return ResourceManager.GetString("tab_7_User_Armor_Damage_Penetration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   User Armor Value과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_User_Armor_Value {
+            get {
+                return ResourceManager.GetString("tab_7_User_Armor_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   User Base Damage (Thousands)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_User_Base_Damage {
+            get {
+                return ResourceManager.GetString("tab_7_User_Base_Damage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   User Resistance Penetration과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_7_User_Resistance_Penetration {
+            get {
+                return ResourceManager.GetString("tab_7_User_Resistance_Penetration", resourceCulture);
             }
         }
     }

@@ -47,5 +47,37 @@ namespace Tli_Utils
             rtnValue = (1.0m / (1.0m + _ref));
             return rtnValue;
         }
+
+        public static decimal getUserArmorPhysicalDamageReduction(int _armour, int _monsterlv)
+        {
+            decimal rtnValue = 0.0m;
+            decimal dArmor = (decimal)_armour;
+            rtnValue = dArmor / ((0.9m * dArmor) + 3000 + (300 * _monsterlv));
+            return rtnValue;
+        }
+        public static decimal getUserArmorNonPhysicalDamageReduction(decimal _ref)
+        {
+            decimal rtnValue = 0.0m;
+            rtnValue = _ref * 0.6m;
+            return rtnValue;
+        }
+        public static decimal getMonsterArmorPhysicalDamageReduction(int _armour)
+        {
+            decimal rtnValue = 0.0m;
+            decimal dArmor = (decimal)_armour;
+            rtnValue = dArmor / ((0.9m * dArmor) + 30000);
+            return rtnValue;
+        }
+        public static int CalculateArmor(int level, int maxLevel, int minArmor, int maxArmor)
+        {
+            return minArmor + ((int)(maxArmor - minArmor) / (maxLevel - 1)) * (level - 1);
+        }
+        public static string removeComma(string _ref)
+        {
+            string rtnValue = "";
+            rtnValue = _ref.Replace(",", "");
+            return rtnValue;
+        }
+
     }
 }

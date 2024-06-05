@@ -11,6 +11,9 @@ namespace Tli_Utils
         public static readonly string NEED = "필요";
         public static readonly string NOT_NEED = "불필요";
 
+        public static readonly int BASE_MAX_MONSTER_LEVEL = 90;
+        public static readonly int BASE_MIN_MONSTER_ARMOR = 0;
+        public static readonly int BASE_MAX_MONSTER_ARMOR = 27273;
 
         public static readonly int TAB_MAIN = 0;
         public static readonly int TAB_COOLTIME = 1;
@@ -19,6 +22,7 @@ namespace Tli_Utils
         public static readonly int TAB_FROSTFIRE_RAMPAGE = 4;
         public static readonly int TAB_NEW_GOD = 5;
         public static readonly int TAB_ACTIVATION = 6;
+        public static readonly int TAB_ARMOR_CALC = 7;
 
         public static readonly int BASE_CAT_TRIGGER_PERCENT = 30;
         public static readonly decimal BASE_CAT_TRIGGER_COOLTIME = 0.5m;

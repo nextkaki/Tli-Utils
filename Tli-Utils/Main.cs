@@ -21,6 +21,7 @@ namespace Tli_Utils
     public partial class Main : Form
     {
         bool gLanguageKor = true;
+        int[] gMonsterArmorByLevel = new int[DefineValues.BASE_MAX_MONSTER_LEVEL];
 
         public Main()
         {
@@ -60,6 +61,7 @@ namespace Tli_Utils
             btnFrostRampage.Text = Language.FrostRampage;
             btnLightningShadow.Text = Language.Lightning_Shadow;
             btnNewGod.Text = Language.calcNewGod;
+            btnArmorCalc.Text = Language.Calculating_Armor_Reduction;
 
             //가이드 하단
             linkYoutube.Text = Language.strYoutube;
@@ -67,7 +69,7 @@ namespace Tli_Utils
             linkGithub.Text = Language.strGithub;
 
             //메인가기
-            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain2, btnMain3, btnMain4, btnMain5, };
+            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain2, btnMain3, btnMain4, btnMain5, btnMain6 };
             foreach (var goHome in arrGoHome)
             {
                 if (goHome != null) {
@@ -126,6 +128,32 @@ namespace Tli_Utils
             lb_ccrr.Text = Language.tab_6_Character_Cooldown_Recovery_Rate;
             lb_ftc.Text = Language.tab_6_Final_Trigger_Cooldown;
             lb_ncps.Text = Language.tab_6_Number_of_casts_per_second;
+
+            //아머 감면 계산기
+            lbl_armor_explain1.Text = Language.tab_7_explain1;
+            lbl_armor_explain2.Text = Language.tab_7_explain2;
+            lbl_uav.Text = Language.tab_7_User_Armor_Value;
+            lbl_ml.Text = Language.tab_7_Monster_Level;
+            lbl_mav.Text = Language.tab_7_Monster_Armor_Value;
+            lbl_mbr.Text = Language.tab_7_Monster_Base_Resistance;
+            lbl_uadp.Text = Language.tab_7_User_Armor_Damage_Penetration;
+            lbl_urp.Text = Language.tab_7_User_Resistance_Penetration;
+            lbl_fd.Text = Language.tab_7_Expected__Final_Damage;
+            lbl_apdr.Text = Language.tab_7_User__Armor_Physical_Damage_Reduction;
+            lbl_anpdr.Text = Language.tab_7_User__Armor_Non_Physical_Damage_Reduction;
+            lbl_fcr.Text = Language.tab_7_Final_Calculation_Result;
+            lbl_eapdr.Text = Language.tab_7_Enemy__Physical_Damage_Reduction_Rate_by_Armor;
+            lbl_eanpdr.Text = Language.tab_7_Enemy__Non_Physical_Damage_Reduction_Rate_by_Armor;
+            lbl_eedrr.Text = Language.tab_7_Enemy__Elemental_Damage_Reduction_Rate_by_Resistance;
+            lbl_fpdmm.Text = Language.tab_7_Final__Monster_Physical_Damage_Multiplier;
+            lbl_fmedm.Text = Language.tab_7_Final__Monster_Elemental_Damage_Multiplier;
+            lbl_ubd.Text = Language.tab_7_User_Base_Damage;
+            btn_50m.Text = Language.tab_7_50m;
+            btn_500m.Text = Language.tab_7_500m;
+            btn_5b.Text = Language.tab_7_5b;
+            btn_50b.Text = Language.tab_7_50b;
+            btn_500b.Text = Language.tab_7_50b;
+
         }
 
         private void ReloadUI()
@@ -168,6 +196,22 @@ namespace Tli_Utils
             btnFrostRampage.Tag = DefineValues.TAB_FROSTFIRE_RAMPAGE;
             btnNewGod.Tag = DefineValues.TAB_NEW_GOD;
             btnActivation.Tag = DefineValues.TAB_ACTIVATION;
+            btnArmorCalc.Tag = DefineValues.TAB_ARMOR_CALC;
+
+            createMonsterArmor();
+        }
+        private void createMonsterArmor()
+        {
+            for (int level = 1; level <= DefineValues.BASE_MAX_MONSTER_LEVEL; level++)
+            {
+                gMonsterArmorByLevel[level - 1] =
+                    Common.CalculateArmor(
+                        level,
+                        DefineValues.BASE_MAX_MONSTER_LEVEL,
+                        DefineValues.BASE_MIN_MONSTER_ARMOR,
+                        DefineValues.BASE_MAX_MONSTER_ARMOR
+                        );
+            }
         }
 
         private string GetTabPageText(int index)
@@ -181,6 +225,8 @@ namespace Tli_Utils
                 case 4: return Language.tab_4;
                 case 5: return Language.tab_5;
                 case 6: return Language.tab_6;
+                case 7: return Language.tab_7;
+
                 default: return $"Tab {index + 1}";
             }
         }
@@ -569,6 +615,100 @@ namespace Tli_Utils
                     txtWindResultCool.Text = dResultCool.ToString("F2");
                     txtWindTotalCast.Text = (1 / dResultCool).ToString("F2");
                 }
+            }
+        }
+
+        private void calcArmor(object sender, EventArgs e)
+        {
+            MetroTextBox[] txtArmor = { txtUserArmor, txtMonsterLv };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtArmor)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                int nUserArmor = int.Parse(txtUserArmor.Text.Trim());
+                int nMonsterLv = int.Parse(txtMonsterLv.Text.Trim());
+                nMonsterLv = nMonsterLv > 90 ? 90 : nMonsterLv;
+                nMonsterLv = nMonsterLv < 1 ? 1 : nMonsterLv;
+                txtMonsterArmor.Text = gMonsterArmorByLevel[nMonsterLv-1].ToString();
+
+                decimal dResultPhyReduceDmg = Common.getUserArmorPhysicalDamageReduction(nUserArmor,nMonsterLv);
+                decimal dResultNonPhyReduceDmg = Common.getUserArmorNonPhysicalDamageReduction(dResultPhyReduceDmg);
+                txtUserPhyReduce.Text = (dResultPhyReduceDmg * 100).ToString("F2") + "%";
+                txtUserNonPhyReduce.Text = (dResultNonPhyReduceDmg * 100).ToString("F2") + "%";
+            }
+        }
+
+        private void calcArmorDmg(object sender, EventArgs e)
+        {
+            MetroTextBox[] txtArmorDmg = { txtMonsterBaseResist,txtUserArmorPen,txtUserResistPen,txtUserBaseDmg };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtArmorDmg)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                int nMonsterArmor = int.Parse(txtMonsterArmor.Text.Trim());
+                decimal dMonsterArmorPercent = Common.getMonsterArmorPhysicalDamageReduction(nMonsterArmor);
+                decimal dUserArmorPen = decimal.Parse(txtUserArmorPen.Text.Trim());
+
+                decimal dResultMonsterPhyReduce = dMonsterArmorPercent - (dUserArmorPen / 100.0m);
+                txtMonsterArmorPhyReduce.Text = (dResultMonsterPhyReduce * 100).ToString("F2") + "%";
+
+                decimal dResultMonsterNonPhyReduce = (dMonsterArmorPercent * 0.6m) - (dUserArmorPen / 100.0m);
+                txtMonsterArmorNonPhyReduce.Text = (dResultMonsterNonPhyReduce * 100).ToString("F2") + "%";
+
+                decimal dUserResistPen = decimal.Parse(txtUserResistPen.Text.Trim());
+                decimal dMonsterResist = decimal.Parse(txtMonsterBaseResist.Text.Trim());
+                decimal dResultMonsterResistReduce = dMonsterResist - dUserResistPen;
+                txtMonsterResistReduce.Text = dResultMonsterResistReduce.ToString("F2") + "%";
+
+                decimal dFinalPhyReduce = (1 - dResultMonsterPhyReduce) -1;
+                txtMonsterFinalPhyReduce.Text = ((1 + dFinalPhyReduce)*100).ToString("F2") + "%";
+                
+                decimal dFinalNonPhyReduce =
+                    (1 - dResultMonsterNonPhyReduce) * (1 - (dResultMonsterResistReduce/100)) - 1;
+                txtMonsterFinalNonPhyReduce.Text = ((1 + dFinalNonPhyReduce)*100).ToString("F2") + "%";
+
+                string _strUserBaseDmg = Common.removeComma(txtUserBaseDmg.Text.Trim());
+                decimal dBaseUserDmg = decimal.Parse(_strUserBaseDmg);
+                dBaseUserDmg *= 1000;
+                txtFinalExpectPhyDmg.Text = (dBaseUserDmg * (1 + dFinalPhyReduce)).ToString("N0");
+                txtFinalExpectEleDmg.Text = (dBaseUserDmg * (1 + dFinalNonPhyReduce)).ToString("N0");
+            }
+        }
+
+        private void setBaseUserDmg_Click(object sender, EventArgs e)
+        {
+            // 클릭된 버튼의 Tag 속성을 사용하여 처리
+            MetroTile dmgBtn = sender as MetroTile;
+            if (dmgBtn != null)
+            {
+                int value = Convert.ToInt32(dmgBtn.Tag);
+                txtUserBaseDmg.Text = value.ToString();
             }
         }
     }

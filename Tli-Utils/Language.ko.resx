@@ -129,6 +129,9 @@
   <data name="calcNewGod" xml:space="preserve">
     <value>질서혼란 계산</value>
   </data>
+  <data name="Calculating Armor Reduction" xml:space="preserve">
+    <value>아머 감면 계산</value>
+  </data>
   <data name="FrostRampage" xml:space="preserve">
     <value>얼음불 폭주</value>
   </data>
@@ -290,5 +293,77 @@
   </data>
   <data name="tab_6_Wind_Rhythm_Cooldown" xml:space="preserve">
     <value>질풍율동 쿨타임(s)</value>
+  </data>
+  <data name="tab_7" xml:space="preserve">
+    <value>아머 감면 계산</value>
+  </data>
+  <data name="tab_7_500b" xml:space="preserve">
+    <value>최대(5천억)</value>
+  </data>
+  <data name="tab_7_500m" xml:space="preserve">
+    <value>5억</value>
+  </data>
+  <data name="tab_7_50b" xml:space="preserve">
+    <value>500억</value>
+  </data>
+  <data name="tab_7_50m" xml:space="preserve">
+    <value>5천만</value>
+  </data>
+  <data name="tab_7_5b" xml:space="preserve">
+    <value>50억</value>
+  </data>
+  <data name="tab_7_Enemy)_Elemental_Damage_Reduction_Rate_by_Resistance" xml:space="preserve">
+    <value>적)저항에 의한 원소 대미지 감소율</value>
+  </data>
+  <data name="tab_7_Enemy)_Non-Physical_Damage_Reduction_Rate_by_Armor" xml:space="preserve">
+    <value>적)아머에 의한 비물리 대미지 감소율</value>
+  </data>
+  <data name="tab_7_Enemy)_Physical_Damage_Reduction_Rate_by_Armor" xml:space="preserve">
+    <value>적)아머에 의한 물리 대미지 감소율</value>
+  </data>
+  <data name="tab_7_Expected)_Final_Damage" xml:space="preserve">
+    <value>예상)최종 대미지(물리/비물리)</value>
+  </data>
+  <data name="tab_7_explain1" xml:space="preserve">
+    <value>적 레벨 입력 시 몬스터 아머 수치 변경 됨. // 몬스터 최대 레벨 90</value>
+  </data>
+  <data name="tab_7_explain2" xml:space="preserve">
+    <value>유저 기본 대미지는 "예상 값"을 입력해 주세요. 단위는 1,000 (1천)</value>
+  </data>
+  <data name="tab_7_Final)_Monster_Elemental_Damage_Multiplier" xml:space="preserve">
+    <value>최종) 몬스터가 받는 원소 대미지 배율</value>
+  </data>
+  <data name="tab_7_Final)_Monster_Physical_Damage_Multiplier" xml:space="preserve">
+    <value>최종) 몬스터가 받는 물리 대미지 배율</value>
+  </data>
+  <data name="tab_7_Final_Calculation_Result" xml:space="preserve">
+    <value>최종 계산 결과</value>
+  </data>
+  <data name="tab_7_Monster_Armor_Value" xml:space="preserve">
+    <value>몬스터 아머 수치</value>
+  </data>
+  <data name="tab_7_Monster_Base_Resistance" xml:space="preserve">
+    <value>몬스터 기본 저항</value>
+  </data>
+  <data name="tab_7_Monster_Level" xml:space="preserve">
+    <value>몬스터 레벨</value>
+  </data>
+  <data name="tab_7_User)_Armor_Non-Physical_Damage_Reduction" xml:space="preserve">
+    <value>유저)아머 비물리 대미지 감면</value>
+  </data>
+  <data name="tab_7_User)_Armor_Physical_Damage_Reduction" xml:space="preserve">
+    <value>유저)아머 물리 대미지 감면</value>
+  </data>
+  <data name="tab_7_User_Armor_Damage_Penetration" xml:space="preserve">
+    <value>유저 아머 대미지 관통</value>
+  </data>
+  <data name="tab_7_User_Armor_Value" xml:space="preserve">
+    <value>유저 아머 수치</value>
+  </data>
+  <data name="tab_7_User_Base_Damage" xml:space="preserve">
+    <value>유저 기본 대미지(천)</value>
+  </data>
+  <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
+    <value>유저 저항 관통</value>
   </data>
 </root>
