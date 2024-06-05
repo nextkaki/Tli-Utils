@@ -152,8 +152,7 @@ namespace Tli_Utils
             btn_500m.Text = Language.tab_7_500m;
             btn_5b.Text = Language.tab_7_5b;
             btn_50b.Text = Language.tab_7_50b;
-            btn_500b.Text = Language.tab_7_50b;
-
+            btn_500b.Text = Language.tab_7_500b;
         }
 
         private void ReloadUI()
