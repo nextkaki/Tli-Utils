@@ -23,7 +23,7 @@
 - 얼음불 폭주 계산기(Frostfire Rampage Calculator)
 - 질서 혼란 계산기(Order Chaos Calculator)
 - 언어 변경 기능(Change languages)
-- 촉발체 계산(예정)
+- 촉발체 계산기(질풍율동)
 
 ## 라이센스
 - **MIT License**
