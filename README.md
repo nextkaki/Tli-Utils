@@ -7,6 +7,10 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
+## 현재 진행 상태(24.06.06~)
+- 질서/혼합 계산기 로직 수정 중
+- 로컬라이징 보완
+
 ## 소개(Introduce)
 - KR) 토치라이트 인피니트 게임의 편의, 편리를 위한 계산기 프로그램 이며, 기존 구글 엑셀 링크를 제공했으나 수식의 번거로움이 발생. 그래서, 프로그램 개발 진행.
 - EN) This is a calculator program for the convenience of Torchlight Infinite game players. Previously, we provided a Google Sheets link, but it caused inconvenience due to the complexity of the formulas. Therefore, we developed a dedicated program.
