@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Controls;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.Http;
 using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Security.Policy;
@@ -21,6 +23,8 @@ namespace Tli_Utils
     public partial class Main : Form
     {
         bool gLanguageKor = true;
+        bool gCheckPopup = false;
+        string gCurrentVersion = ""; // 현재 프로그램 버전
         int[] gMonsterArmorByLevel = new int[DefineValues.BASE_MAX_MONSTER_LEVEL];
 
         public Main()
@@ -183,6 +187,7 @@ namespace Tli_Utils
 
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             lblVersion.Text = $"Ver: {version}";
+            gCurrentVersion = version.ToString().Replace(".", "");
 
             txtBaseFreezeTime.Text = DefineValues.BASE_FREEZE_TIME.ToString();
             txtCatPer.Text = DefineValues.BASE_CAT_TRIGGER_PERCENT.ToString();
@@ -198,7 +203,90 @@ namespace Tli_Utils
             btnArmorCalc.Tag = DefineValues.TAB_ARMOR_CALC;
 
             createMonsterArmor();
+            LoadReadMeAsync();
+            CheckForUpdateAsync();
         }
+        private async void CheckForUpdateAsync()
+        {
+            string latestVersion = await GetLatestVersionAsync();
+            latestVersion = latestVersion.Replace("v", "");
+            if (IsNewVersionAvailable(gCurrentVersion, latestVersion))
+            {
+                ShowUpdatePopup(latestVersion);
+            }
+        }
+        private async Task<string> GetLatestVersionAsync()
+        {
+            string apiUrl = "https://api.github.com/repos/nextkaki/Tli-Utils/releases/latest";
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("User-Agent", "request"); // GitHub API를 사용하기 위한 User-Agent 설정
+                try
+                {
+                    string response = await client.GetStringAsync(apiUrl);
+                    JObject json = JObject.Parse(response);
+                    return json["tag_name"].ToString(); // 최신 릴리스의 태그 이름을 버전으로 사용
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"최신 버전을 확인하는 중 오류가 발생했습니다: {ex.Message}");
+                    return gCurrentVersion; // 오류 발생 시 현재 버전을 반환
+                }
+            }
+        }
+        private bool IsNewVersionAvailable(string currentVersion, string latestVersion)
+        {
+            int nCurrent = int.Parse(currentVersion);
+            int nLatest = int.Parse(latestVersion);
+            return nLatest > nCurrent;
+        }
+
+        private void ShowUpdatePopup(string latestVersion)
+        {
+            string message = $"새로운 버전({latestVersion})이 업데이트되었습니다.\n업데이트 페이지로 이동하시겠습니까?";
+            string caption = "업데이트 알림";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start("https://github.com/nextkaki/Tli-Utils/releases");
+            }
+        }
+
+        private async void LoadReadMeAsync()
+        {
+            if (gCheckPopup)
+                return;
+
+            gCheckPopup = true;
+            string readMeUrl = "https://raw.githubusercontent.com/nextkaki/Tli-Utils/main/README.md";
+            string readMeContent = await GetReadMeContentAsync(readMeUrl);
+
+            ShowReadMePopup(readMeContent);
+        }
+
+        private async Task<string> GetReadMeContentAsync(string url)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    return await client.GetStringAsync(url);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"README.md 파일을 가져오는 중 오류가 발생했습니다: {ex.Message}");
+                    return string.Empty;
+                }
+            }
+        }
+
+        private void ShowReadMePopup(string content)
+        {
+            ReadMePopupForm popupForm = new ReadMePopupForm(content);
+            popupForm.ShowDialog();
+        }
+
         private void createMonsterArmor()
         {
             for (int level = 1; level <= DefineValues.BASE_MAX_MONSTER_LEVEL; level++)
