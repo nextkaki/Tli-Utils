@@ -241,11 +241,17 @@
   <data name="tab_4_My_Skill_Effect_Duration" xml:space="preserve">
     <value>My Skill Effect Duration (%)</value>
   </data>
+  <data name="tab_4_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
   <data name="tab_5" xml:space="preserve">
     <value>Order/Chaos Calc</value>
   </data>
   <data name="tab_5_At_points_for_each_slab" xml:space="preserve">
     <value>At 100 points for each slab, % effectiveness</value>
+  </data>
+  <data name="tab_5_example" xml:space="preserve">
+    <value>Example</value>
   </data>
   <data name="tab_5_explain" xml:space="preserve">
     <value>Numbers 1,4 are affected by 2 and have an effect of 40%.
@@ -366,5 +372,11 @@ Please do your own sums as the effectiveness
   </data>
   <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
     <value>User Resistance Penetration</value>
+  </data>
+  <data name="txtAnnouncements" xml:space="preserve">
+    <value>Announcements</value>
+  </data>
+  <data name="txtVersionCheck" xml:space="preserve">
+    <value>Version Check</value>
   </data>
 </root>

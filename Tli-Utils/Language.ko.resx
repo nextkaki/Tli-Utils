@@ -241,11 +241,17 @@
   <data name="tab_4_My_Skill_Effect_Duration" xml:space="preserve">
     <value>내 스킬 효과 지속시간(%)</value>
   </data>
+  <data name="tab_4_Result" xml:space="preserve">
+    <value>결과</value>
+  </data>
   <data name="tab_5" xml:space="preserve">
     <value>질서혼란 계산</value>
   </data>
   <data name="tab_5_At_points_for_each_slab" xml:space="preserve">
     <value>각 석판 당 100포인트 일 때, 효과 %</value>
+  </data>
+  <data name="tab_5_example" xml:space="preserve">
+    <value>예시</value>
   </data>
   <data name="tab_5_explain" xml:space="preserve">
     <value>1,4번은 2개 영향 받아 효과 40%
@@ -365,5 +371,11 @@
   </data>
   <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
     <value>유저 저항 관통</value>
+  </data>
+  <data name="txtAnnouncements" xml:space="preserve">
+    <value>공지사항</value>
+  </data>
+  <data name="txtVersionCheck" xml:space="preserve">
+    <value>버전 체크</value>
   </data>
 </root>

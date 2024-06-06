@@ -432,6 +432,15 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   Result과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_4_Result {
+            get {
+                return ResourceManager.GetString("tab_4_Result", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Order/Chaos Calc과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_5 {
@@ -446,6 +455,15 @@ namespace Tli_Utils {
         public static string tab_5_At_points_for_each_slab {
             get {
                 return ResourceManager.GetString("tab_5_At_points_for_each_slab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Example과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_example {
+            get {
+                return ResourceManager.GetString("tab_5_example", resourceCulture);
             }
         }
         
@@ -800,6 +818,24 @@ namespace Tli_Utils {
         public static string tab_7_User_Resistance_Penetration {
             get {
                 return ResourceManager.GetString("tab_7_User_Resistance_Penetration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Announcements과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string txtAnnouncements {
+            get {
+                return ResourceManager.GetString("txtAnnouncements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Version Check과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string txtVersionCheck {
+            get {
+                return ResourceManager.GetString("txtVersionCheck", resourceCulture);
             }
         }
     }

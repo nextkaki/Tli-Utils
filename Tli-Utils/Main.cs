@@ -24,7 +24,8 @@ namespace Tli_Utils
     {
         bool gLanguageKor = true;
         bool gCheckPopup = false;
-        string gCurrentVersion = ""; // 현재 프로그램 버전
+        string gCurrentVersion = ""; 
+        string gLatestVersion = ""; 
         int[] gMonsterArmorByLevel = new int[DefineValues.BASE_MAX_MONSTER_LEVEL];
 
         public Main()
@@ -66,6 +67,8 @@ namespace Tli_Utils
             btnLightningShadow.Text = Language.Lightning_Shadow;
             btnNewGod.Text = Language.calcNewGod;
             btnArmorCalc.Text = Language.Calculating_Armor_Reduction;
+            btnNotice.Text = Language.txtAnnouncements;
+            btnCheckVersion.Text = Language.txtVersionCheck;
 
             //가이드 하단
             linkYoutube.Text = Language.strYoutube;
@@ -113,6 +116,7 @@ namespace Tli_Utils
             lb_fre.Text = Language.tab_4_Frostfire_Rampage_exp;
             lb_t4_mcrr.Text = Language.tab_4_My_Cooldown_Recovery_Rate;
             lb_msed.Text = Language.tab_4_My_Skill_Effect_Duration;
+            lblResultRampage.Text = Language.tab_4_Result;
 
             //질서혼란 계산기
             lb_popp.Text = Language.tab_5_Percentage_of_option_per_1_point_of_Order_Chaos;
@@ -122,6 +126,7 @@ namespace Tli_Utils
             lb_apes.Text = Language.tab_5_At_points_for_each_slab;
             lb_teasc.Text = Language.tab_5_Total_effect_of_all_slabs_combined;
             lb_explain.Text = Language.tab_5_explain;
+            lbl_tab5_example.Text = Language.tab_5_example;
 
             //촉발체 계산기
             lb_title_cwr.Text = Language.tab_6_Calculating_Wind_Rhythm;
@@ -210,6 +215,7 @@ namespace Tli_Utils
         {
             string latestVersion = await GetLatestVersionAsync();
             latestVersion = latestVersion.Replace("v", "");
+            gLatestVersion = latestVersion;
             if (IsNewVersionAvailable(gCurrentVersion, latestVersion))
             {
                 ShowUpdatePopup(latestVersion);
@@ -796,6 +802,25 @@ namespace Tli_Utils
             {
                 int value = Convert.ToInt32(dmgBtn.Tag);
                 txtUserBaseDmg.Text = value.ToString();
+            }
+        }
+
+        private void btnNotice_Click(object sender, EventArgs e)
+        {
+            gCheckPopup = false;
+            LoadReadMeAsync();
+        }
+
+        private void btnCheckVersion_Click(object sender, EventArgs e)
+        {
+            CheckForUpdateAsync();
+            if (IsNewVersionAvailable(gCurrentVersion, gLatestVersion))
+            {
+                ShowUpdatePopup(gLatestVersion);
+            }
+            else
+            {
+                MessageBox.Show($"최신 버전 상태 입니다.");
             }
         }
     }
