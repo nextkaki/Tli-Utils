@@ -7,11 +7,9 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
-## 현재 진행 상태(24.06.06~)
-- 질서/혼합 계산기 로직 수정 중(업데이트 예정)
-- 로컬라이징 보완 완료(업데이트 예정)
-- 바로가기 경로 문제 해결 완료(업데이트 예정)
-- 설치된 프로그램 제거기능 추가 완료(업데이트 예정)
+## 현재 진행 상태(24.06.07~)
+- 버전 1.0.1.1 업데이트 완료 - 자세한 내용은 Releases 참고.
+- 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
 ## 소개(Introduce)
 - KR) 토치라이트 인피니트 게임의 편의, 편리를 위한 계산기 프로그램 이며, 기존 구글 엑셀 링크를 제공했으나 수식의 번거로움이 발생. 그래서, 프로그램 개발 진행.
