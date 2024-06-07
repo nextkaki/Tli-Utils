@@ -261,11 +261,11 @@
   <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
     <value>인접한 석판의 갯수(효과 20%)</value>
   </data>
+  <data name="tab_5_Order_Chaos_Use" xml:space="preserve">
+    <value>만계의 일상/재난 사용(질서/혼란 효과+25%)</value>
+  </data>
   <data name="tab_5_Other_God_Talent_Effect" xml:space="preserve">
     <value>그 외 &lt;신의 재능 효과 %&gt;</value>
-  </data>
-  <data name="tab_5_Peaceful_Realm_Use" xml:space="preserve">
-    <value>만계의 일상 사용(질서효과+25%)</value>
   </data>
   <data name="tab_5_Percentage_of_option_per_1_point_of_Order_Chaos" xml:space="preserve">
     <value>질서/혼란 1포인트 당 &lt;옵션&gt;의 %</value>

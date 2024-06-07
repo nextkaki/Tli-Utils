@@ -16,30 +16,42 @@
         "Entry"
         {
         "MsmKey" = "8:_03E3B1DBF7922010D170989600254105"
-        "OwnerKey" = "8:_FF5F7007D45B4FC7A8318EAAE3694DA7"
+        "OwnerKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_87AC116B1614160C09B251BCB449D6D4"
-        "OwnerKey" = "8:_FF5F7007D45B4FC7A8318EAAE3694DA7"
+        "OwnerKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_91DE0755AE4E4D58B935FABF5E525168"
-        "OwnerKey" = "8:_FF5F7007D45B4FC7A8318EAAE3694DA7"
+        "OwnerKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_9D0C4618F364B2C612B6D54BACF1C6AC"
-        "OwnerKey" = "8:_FF5F7007D45B4FC7A8318EAAE3694DA7"
+        "OwnerKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_CFB5A2502DA641A0A4D84ADA140159D3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D59DA19EA9A04EB4944B265334B2CD18"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -52,7 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_DAD521F5E27E0D4F76DC020EC64765F3"
-        "OwnerKey" = "8:_FF5F7007D45B4FC7A8318EAAE3694DA7"
+        "OwnerKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -69,14 +81,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FF5F7007D45B4FC7A8318EAAE3694DA7"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_F394C2FEF042A5C6E0493906A10D8749"
+        "OwnerKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FF5F7007D45B4FC7A8318EAAE3694DA7"
+        "OwnerKey" = "8:_8F4F1726F16F428B8D73E32C755913CD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CFB5A2502DA641A0A4D84ADA140159D3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F394C2FEF042A5C6E0493906A10D8749"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -101,12 +125,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_87AC116B1614160C09B251BCB449D6D4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CFB5A2502DA641A0A4D84ADA140159D3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -140,6 +158,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -164,6 +190,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -322,7 +356,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tli-Utils.resources, Version=1.0.0.4, Culture=ko, processorArchitecture=AMD64"
+            "AssemblyAsmDisplayName" = "8:Tli-Utils.resources, Version=1.0.0.6, Culture=ko, processorArchitecture=AMD64"
                 "ScatterAssemblies"
                 {
                     "_CFB5A2502DA641A0A4D84ADA140159D3"
@@ -342,6 +376,26 @@
             "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D59DA19EA9A04EB4944B265334B2CD18"
+            {
+            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
+            "TargetName" = "8:msiexec.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_EB3FC41338A742198F2D73108F9E5F68"
+            "Condition" = "8:Not Installed "
+            "Transitive" = "11:TRUE"
+            "Vital" = "11:FALSE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:TRUE"
+            "Permanent" = "11:TRUE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
@@ -400,6 +454,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F394C2FEF042A5C6E0493906A10D8749"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_F394C2FEF042A5C6E0493906A10D8749"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B062181498CA416582FC451832D2C66A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -409,7 +494,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_9A0EBD8329114F318C2606B3172828BB"
             {
             "Name" = "8:#1919"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
@@ -451,6 +536,17 @@
                 {
                 }
             }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_EB3FC41338A742198F2D73108F9E5F68"
+            {
+            "Name" = "8:#1914"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:SystemFolder"
+                "Folders"
+                {
+                }
+            }
         }
         "LaunchCondition"
         {
@@ -468,7 +564,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Tli Utils"
         "ProductCode" = "8:{AB35BC06-26F0-4F81-8878-225A2783986C}"
-        "PackageCode" = "8:{BE93EA1E-D634-4E2F-B726-26D586F0E73D}"
+        "PackageCode" = "8:{4261BF61-55A0-40CE-BDD7-30FCEA0951E6}"
         "UpgradeCode" = "8:{F494E074-0842-4133-B879-82B8E5369594}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -477,13 +573,13 @@
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:KakiKakiTV"
-        "ARPHELPTELEPHONE" = "8:"
+        "ARPHELPTELEPHONE" = "8:KakiKakiTV"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Tli Utils Installer"
-        "Subject" = "8:"
+        "Title" = "8:Tli Utils Installer(KakiKakiTV)"
+        "Subject" = "8:KakiKakiTV"
         "ARPCONTACT" = "8:KakiKakiTV"
-        "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:"
+        "Keywords" = "8:KakiKakiTV"
+        "ARPCOMMENTS" = "8:KakiKakiTV"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
@@ -588,17 +684,59 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_63A19FA3FB614DD1AFE6356EAF466DBD"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2C766ED02F5E4E3F87179E6C59F09595"
             {
-            "Name" = "8:Tli-Utils"
+            "Name" = "8:Uninstall"
+            "Arguments" = "8:/x {AB35BC06-26F0-4F81-8878-225A2783986C}"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_D59DA19EA9A04EB4944B265334B2CD18"
+            "Folder" = "8:_B062181498CA416582FC451832D2C66A"
+            "WorkingFolder" = "8:_EB3FC41338A742198F2D73108F9E5F68"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_38EC78D9642D4C45931ADBE208000845"
+            {
+            "Name" = "8:Uninstall Tli-Utils"
+            "Arguments" = "8:/x {AB35BC06-26F0-4F81-8878-225A2783986C}"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_D59DA19EA9A04EB4944B265334B2CD18"
+            "Folder" = "8:_9A0EBD8329114F318C2606B3172828BB"
+            "WorkingFolder" = "8:_EB3FC41338A742198F2D73108F9E5F68"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C799DE752F824F36B4922CC1B1D4133B"
+            {
+            "Name" = "8:Tli-Utilis (KakiKakiTV)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D2FB41418C2D4085829609F069836A27"
+            "Target" = "8:_8F4F1726F16F428B8D73E32C755913CD"
+            "Folder" = "8:_9A0EBD8329114F318C2606B3172828BB"
+            "WorkingFolder" = "8:_B062181498CA416582FC451832D2C66A"
+            "Icon" = "8:_F2DFF3113B264CCAB87BF8BF7450F6B3"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E34C85D6ABA9488AB99C4B1A2C15332E"
+            {
+            "Name" = "8:Tli-Utilis (KakiKakiTV)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_8F4F1726F16F428B8D73E32C755913CD"
             "Folder" = "8:_D2FB41418C2D4085829609F069836A27"
-            "WorkingFolder" = "8:_D2FB41418C2D4085829609F069836A27"
+            "WorkingFolder" = "8:_B062181498CA416582FC451832D2C66A"
             "Icon" = "8:_F2DFF3113B264CCAB87BF8BF7450F6B3"
             "Feature" = "8:"
             }
@@ -1001,7 +1139,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FF5F7007D45B4FC7A8318EAAE3694DA7"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8F4F1726F16F428B8D73E32C755913CD"
             {
             "SourcePath" = "8:..\\Tli-Utils\\obj\\x64\\Release\\Tli-Utils.exe"
             "TargetName" = "8:"

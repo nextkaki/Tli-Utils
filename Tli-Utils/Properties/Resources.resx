@@ -121,4 +121,7 @@
   <data name="example_newgod" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\example_newgod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\tli.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

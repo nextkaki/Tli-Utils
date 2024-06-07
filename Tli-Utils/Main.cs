@@ -122,7 +122,7 @@ namespace Tli_Utils
             lb_popp.Text = Language.tab_5_Percentage_of_option_per_1_point_of_Order_Chaos;
             lb_nns.Text = Language.tab_5_Number_of_neighboring_slabs;
             lb_ogte.Text = Language.tab_5_Other_God_Talent_Effect;
-            cbPeacefulRealm.Text = Language.tab_5_Peaceful_Realm_Use;
+            cbPeacefulRealm.Text = Language.tab_5_Order_Chaos_Use;
             lb_apes.Text = Language.tab_5_At_points_for_each_slab;
             lb_teasc.Text = Language.tab_5_Total_effect_of_all_slabs_combined;
             lb_explain.Text = Language.tab_5_explain;

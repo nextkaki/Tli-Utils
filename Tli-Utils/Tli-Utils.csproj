@@ -193,6 +193,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Icon1.ico" />
     <Content Include="tli.ico" />
     <None Include="Resources\example_newgod.png" />
   </ItemGroup>

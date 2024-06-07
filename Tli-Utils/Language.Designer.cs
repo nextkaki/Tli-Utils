@@ -489,20 +489,20 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   (Peaceful/Chaotic) Realm Use (+25% Order/Chaos Effect)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_Order_Chaos_Use {
+            get {
+                return ResourceManager.GetString("tab_5_Order_Chaos_Use", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Other &lt;New God Effect %&gt;.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_5_Other_God_Talent_Effect {
             get {
                 return ResourceManager.GetString("tab_5_Other_God_Talent_Effect", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Peaceful Realm Use (+25% Order Effect)과(와) 유사한 지역화된 문자열을 찾습니다.
-        /// </summary>
-        public static string tab_5_Peaceful_Realm_Use {
-            get {
-                return ResourceManager.GetString("tab_5_Peaceful_Realm_Use", resourceCulture);
             }
         }
         

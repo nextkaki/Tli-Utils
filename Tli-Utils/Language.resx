@@ -262,11 +262,11 @@ Please do your own sums as the effectiveness
   <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
     <value>Number of neighboring slabs (20% effect)</value>
   </data>
+  <data name="tab_5_Order_Chaos_Use" xml:space="preserve">
+    <value>(Peaceful/Chaotic) Realm Use (+25% Order/Chaos Effect)</value>
+  </data>
   <data name="tab_5_Other_God_Talent_Effect" xml:space="preserve">
     <value>Other &lt;New God Effect %&gt;.</value>
-  </data>
-  <data name="tab_5_Peaceful_Realm_Use" xml:space="preserve">
-    <value>Peaceful Realm Use (+25% Order Effect)</value>
   </data>
   <data name="tab_5_Percentage_of_option_per_1_point_of_Order_Chaos" xml:space="preserve">
     <value>Percentage of &lt;option&gt; per 1 point of Order/Chaos</value>
