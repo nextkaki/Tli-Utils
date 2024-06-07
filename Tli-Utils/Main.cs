@@ -127,6 +127,7 @@ namespace Tli_Utils
             lb_teasc.Text = Language.tab_5_Total_effect_of_all_slabs_combined;
             lb_explain.Text = Language.tab_5_explain;
             lbl_tab5_example.Text = Language.tab_5_example;
+            lbl_mini_calc1.Text = Language.tab_5_mini_calc;
 
             //촉발체 계산기
             lb_title_cwr.Text = Language.tab_6_Calculating_Wind_Rhythm;
@@ -630,20 +631,20 @@ namespace Tli_Utils
                 decimal dPoint = decimal.Parse(txtNewGod[0].Text.Trim());
                 decimal dBasePoint = dPoint * 100.0m;
                 txtExNewGodPoint.Text = dBasePoint.ToString("F2");
-                dPoint = dPoint / 100.0m;
 
                 decimal dCnt = decimal.Parse(txtNewGod[1].Text.Trim());
                 if(dCnt >= 0 )
                 {
-                    bool bPeacefulRealm = cbPeacefulRealm.Checked; //만계의 일상
-                    decimal dRateRealm = bPeacefulRealm ? 0.20m : 0;
-                    decimal dRatePoint = dCnt * 0.20m;
-                    decimal dEtcEffect = decimal.Parse(txtNewGod[2].Text.Trim());
-                    dEtcEffect = dEtcEffect / 100.0m;
-                    decimal dTotalRate = dRateRealm + dRatePoint + dEtcEffect;
+                    bool bPeacefulRealm = cbPeacefulRealm.Checked; //만계의 일상,재난
+                    decimal dRateRealm = bPeacefulRealm ? 0.25m : 0;
+                    decimal dRatePoint = dCnt * 0.20m; //효과 비율 %
+                    //decimal dEtcEffect = decimal.Parse(txtNewGod[2].Text.Trim());
+                    //dEtcEffect = dEtcEffect / 100.0m;
 
-                    txtEachEffect.Text = (dBasePoint * (1 + dTotalRate)).ToString("F2");
-                    txtTotalEffect.Text = (dBasePoint * (1 + dTotalRate) * dCnt).ToString("F2");
+                    decimal dFirstEffectCalc = dBasePoint * (1 + dRatePoint);
+                    decimal dSecondEffectCalc = dFirstEffectCalc * (1 + dRateRealm);
+                    
+                    txtEachEffect.Text = dSecondEffectCalc.ToString("F2");
                 }
             }
         }
@@ -821,6 +822,35 @@ namespace Tli_Utils
             else
             {
                 MessageBox.Show($"최신 버전 상태 입니다.");
+            }
+        }
+
+        private void txtMiniCalc1_TextChanged(object sender, EventArgs e)
+        {
+            MetroTextBox[] txtCalc = { txtMiniCalc1, txtMiniCalc2, txtMiniCalc3, txtMiniCalc4 };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtCalc)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                int nResult = 0;
+                foreach (MetroTextBox control in txtCalc)
+                {
+                    nResult += int.Parse(control.Text.Trim());
+                }
+                txtMiniCalcResult.Text = nResult.ToString();
             }
         }
     }

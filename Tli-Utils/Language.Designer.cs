@@ -450,7 +450,7 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   At 100 points for each slab, % effectiveness과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   At 100 points of slab, effectiveness %.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_5_At_points_for_each_slab {
             get {
@@ -476,6 +476,15 @@ namespace Tli_Utils {
         public static string tab_5_explain {
             get {
                 return ResourceManager.GetString("tab_5_explain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Mini calculations과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_5_mini_calc {
+            get {
+                return ResourceManager.GetString("tab_5_mini_calc", resourceCulture);
             }
         }
         

@@ -248,7 +248,7 @@
     <value>Order/Chaos Calc</value>
   </data>
   <data name="tab_5_At_points_for_each_slab" xml:space="preserve">
-    <value>At 100 points for each slab, % effectiveness</value>
+    <value>At 100 points of slab, effectiveness %.</value>
   </data>
   <data name="tab_5_example" xml:space="preserve">
     <value>Example</value>
@@ -258,6 +258,9 @@
 2,3 are influenced by 3, so the effect is 60%.
 Please do your own sums as the effectiveness
 % is different for each location.</value>
+  </data>
+  <data name="tab_5_mini_calc" xml:space="preserve">
+    <value>Mini calculations</value>
   </data>
   <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
     <value>Number of neighboring slabs (20% effect)</value>
