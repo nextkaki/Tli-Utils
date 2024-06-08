@@ -8,6 +8,7 @@
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
 ## 현재 진행 상태(24.06.09~)
+- 라이트닝 쉐도우, 번개속행 체크에 따른 공/시속 Enabled 수정예정
 - 촉발체 계산 시 공격/시전 속도 제한치 적용 완료.
 - 촉발체 계산식 로직 보완 완료.
 - 버전 1.0.1.2 업데이트 바람.
