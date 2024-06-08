@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="All_responsibility" xml:space="preserve">
+    <value>모든 책임은 사용자에게 있습니다.</value>
+  </data>
   <data name="calcActivationMediumSkill" xml:space="preserve">
     <value>촉발체 계산</value>
   </data>
@@ -132,8 +135,14 @@
   <data name="Calculating Armor Reduction" xml:space="preserve">
     <value>아머 감면 계산</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
   <data name="FrostRampage" xml:space="preserve">
     <value>얼음불 폭주</value>
+  </data>
+  <data name="Latest_version_status" xml:space="preserve">
+    <value>최신 버전 상태 입니다.</value>
   </data>
   <data name="Lightning Shadow" xml:space="preserve">
     <value>라이트닝 쉐도우</value>

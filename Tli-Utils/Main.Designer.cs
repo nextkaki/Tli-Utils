@@ -507,7 +507,7 @@
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::Tli_Utils.Properties.Resources.example_newgod;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(465, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(568, 47);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(336, 414);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -625,7 +625,7 @@
             this.lb_explain.AutoSize = true;
             this.lb_explain.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lb_explain.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lb_explain.Location = new System.Drawing.Point(403, 464);
+            this.lb_explain.Location = new System.Drawing.Point(485, 464);
             this.lb_explain.Name = "lb_explain";
             this.lb_explain.Size = new System.Drawing.Size(441, 75);
             this.lb_explain.TabIndex = 2;
@@ -636,7 +636,7 @@
             this.lbl_tab5_example.AutoSize = true;
             this.lbl_tab5_example.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_tab5_example.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tab5_example.Location = new System.Drawing.Point(599, 19);
+            this.lbl_tab5_example.Location = new System.Drawing.Point(711, 19);
             this.lbl_tab5_example.Name = "lbl_tab5_example";
             this.lbl_tab5_example.Size = new System.Drawing.Size(53, 25);
             this.lbl_tab5_example.TabIndex = 2;

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="All_responsibility" xml:space="preserve">
+    <value>You take all responsibility.</value>
+  </data>
   <data name="calcActivationMediumSkill" xml:space="preserve">
     <value>Activation Medium Skill</value>
   </data>
@@ -132,8 +135,14 @@
   <data name="Calculating Armor Reduction" xml:space="preserve">
     <value>Calculating Armor Reduction</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="FrostRampage" xml:space="preserve">
     <value>Frostfire Rampage</value>
+  </data>
+  <data name="Latest_version_status" xml:space="preserve">
+    <value>The latest version status.</value>
   </data>
   <data name="Lightning Shadow" xml:space="preserve">
     <value>Lightning Shadow</value>

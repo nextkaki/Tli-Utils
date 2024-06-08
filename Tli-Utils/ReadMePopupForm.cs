@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +22,8 @@ namespace Tli_Utils
         public ReadMePopupForm(string content)
         {
             InitializeComponent();
+            btnClosePopup.Text = Language.Close;
+
             this.StartPosition = FormStartPosition.CenterScreen;
             txtReadMe.Text = "";
             
@@ -36,8 +40,6 @@ namespace Tli_Utils
                 result = result.Replace("-", "\r\n - ");
                 txtReadMe.Text = result;
             }
-
-            
 
         }
 

@@ -74,6 +74,8 @@ namespace Tli_Utils
             linkYoutube.Text = Language.strYoutube;
             linkCzz.Text = Language.strCzz;
             linkGithub.Text = Language.strGithub;
+            metroLink1.Text = Language.All_responsibility;
+
 
             //메인가기
             MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain2, btnMain3, btnMain4, btnMain5, btnMain6 };
@@ -821,7 +823,7 @@ namespace Tli_Utils
             }
             else
             {
-                MessageBox.Show($"최신 버전 상태 입니다.");
+                MessageBox.Show(Language.Latest_version_status);
             }
         }
 

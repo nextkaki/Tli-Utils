@@ -67,7 +67,7 @@
             // txtReadMe
             // 
             this.txtReadMe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtReadMe.Font = new System.Drawing.Font("나눔고딕", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtReadMe.Font = new System.Drawing.Font("나눔고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtReadMe.Location = new System.Drawing.Point(3, 3);
             this.txtReadMe.Multiline = true;
             this.txtReadMe.Name = "txtReadMe";

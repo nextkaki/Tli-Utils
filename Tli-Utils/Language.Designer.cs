@@ -61,6 +61,15 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   You take all responsibility.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string All_responsibility {
+            get {
+                return ResourceManager.GetString("All_responsibility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Activation Medium Skill과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string calcActivationMediumSkill {
@@ -106,11 +115,29 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   Close과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Frostfire Rampage과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string FrostRampage {
             get {
                 return ResourceManager.GetString("FrostRampage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The latest version status.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string Latest_version_status {
+            get {
+                return ResourceManager.GetString("Latest_version_status", resourceCulture);
             }
         }
         
