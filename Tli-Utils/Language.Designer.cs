@@ -624,6 +624,15 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   Limit: 30 attacks/casts per second과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_6_limit_value {
+            get {
+                return ResourceManager.GetString("tab_6_limit_value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Number of casts per second과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_6_Number_of_casts_per_second {

@@ -55,6 +55,11 @@
             this.btnMain0 = new MetroFramework.Controls.MetroTile();
             this.cbPeacefulRealm = new MetroFramework.Controls.MetroCheckBox();
             this.txtTotalEffect = new MetroFramework.Controls.MetroTextBox();
+            this.txtMiniCalc4 = new MetroFramework.Controls.MetroTextBox();
+            this.txtMiniCalc3 = new MetroFramework.Controls.MetroTextBox();
+            this.txtMiniCalc2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtMiniCalcResult = new MetroFramework.Controls.MetroTextBox();
+            this.txtMiniCalc1 = new MetroFramework.Controls.MetroTextBox();
             this.txtEachEffect = new MetroFramework.Controls.MetroTextBox();
             this.txtNewGodEtcEffect = new MetroFramework.Controls.MetroTextBox();
             this.txtNewGodCnt = new MetroFramework.Controls.MetroTextBox();
@@ -63,6 +68,7 @@
             this.lb_explain = new MetroFramework.Controls.MetroLabel();
             this.lbl_tab5_example = new MetroFramework.Controls.MetroLabel();
             this.lb_teasc = new MetroFramework.Controls.MetroLabel();
+            this.lbl_mini_calc1 = new MetroFramework.Controls.MetroLabel();
             this.lb_apes = new MetroFramework.Controls.MetroLabel();
             this.lb_ogte = new MetroFramework.Controls.MetroLabel();
             this.lb_nns = new MetroFramework.Controls.MetroLabel();
@@ -196,12 +202,7 @@
             this.lb_mms = new MetroFramework.Controls.MetroLabel();
             this.cbFast = new MetroFramework.Controls.MetroCheckBox();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.lbl_mini_calc1 = new MetroFramework.Controls.MetroLabel();
-            this.txtMiniCalc1 = new MetroFramework.Controls.MetroTextBox();
-            this.txtMiniCalc2 = new MetroFramework.Controls.MetroTextBox();
-            this.txtMiniCalc4 = new MetroFramework.Controls.MetroTextBox();
-            this.txtMiniCalc3 = new MetroFramework.Controls.MetroTextBox();
-            this.txtMiniCalcResult = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_limit_value = new MetroFramework.Controls.MetroLabel();
             this.mainTab.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
@@ -229,7 +230,7 @@
             this.mainTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTab.Location = new System.Drawing.Point(0, 0);
             this.mainTab.Name = "mainTab";
-            this.mainTab.SelectedIndex = 1;
+            this.mainTab.SelectedIndex = 3;
             this.mainTab.Size = new System.Drawing.Size(1008, 729);
             this.mainTab.TabIndex = 0;
             // 
@@ -554,6 +555,71 @@
             this.txtTotalEffect.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtTotalEffect.Visible = false;
             // 
+            // txtMiniCalc4
+            // 
+            this.txtMiniCalc4.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtMiniCalc4.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtMiniCalc4.Location = new System.Drawing.Point(3, 646);
+            this.txtMiniCalc4.Multiline = true;
+            this.txtMiniCalc4.Name = "txtMiniCalc4";
+            this.txtMiniCalc4.Size = new System.Drawing.Size(102, 35);
+            this.txtMiniCalc4.TabIndex = 14;
+            this.txtMiniCalc4.Text = "0";
+            this.txtMiniCalc4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMiniCalc4.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
+            // 
+            // txtMiniCalc3
+            // 
+            this.txtMiniCalc3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtMiniCalc3.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtMiniCalc3.Location = new System.Drawing.Point(3, 605);
+            this.txtMiniCalc3.Multiline = true;
+            this.txtMiniCalc3.Name = "txtMiniCalc3";
+            this.txtMiniCalc3.Size = new System.Drawing.Size(102, 35);
+            this.txtMiniCalc3.TabIndex = 13;
+            this.txtMiniCalc3.Text = "0";
+            this.txtMiniCalc3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMiniCalc3.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
+            // 
+            // txtMiniCalc2
+            // 
+            this.txtMiniCalc2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtMiniCalc2.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtMiniCalc2.Location = new System.Drawing.Point(3, 564);
+            this.txtMiniCalc2.Multiline = true;
+            this.txtMiniCalc2.Name = "txtMiniCalc2";
+            this.txtMiniCalc2.Size = new System.Drawing.Size(102, 35);
+            this.txtMiniCalc2.TabIndex = 12;
+            this.txtMiniCalc2.Text = "0";
+            this.txtMiniCalc2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMiniCalc2.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
+            // 
+            // txtMiniCalcResult
+            // 
+            this.txtMiniCalcResult.Enabled = false;
+            this.txtMiniCalcResult.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtMiniCalcResult.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtMiniCalcResult.Location = new System.Drawing.Point(111, 646);
+            this.txtMiniCalcResult.Multiline = true;
+            this.txtMiniCalcResult.Name = "txtMiniCalcResult";
+            this.txtMiniCalcResult.Size = new System.Drawing.Size(102, 35);
+            this.txtMiniCalcResult.TabIndex = 3;
+            this.txtMiniCalcResult.Text = "0";
+            this.txtMiniCalcResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtMiniCalc1
+            // 
+            this.txtMiniCalc1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtMiniCalc1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtMiniCalc1.Location = new System.Drawing.Point(3, 523);
+            this.txtMiniCalc1.Multiline = true;
+            this.txtMiniCalc1.Name = "txtMiniCalc1";
+            this.txtMiniCalc1.Size = new System.Drawing.Size(102, 35);
+            this.txtMiniCalc1.TabIndex = 11;
+            this.txtMiniCalc1.Text = "0";
+            this.txtMiniCalc1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMiniCalc1.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
+            // 
             // txtEachEffect
             // 
             this.txtEachEffect.Enabled = false;
@@ -653,6 +719,17 @@
             this.lb_teasc.TabIndex = 2;
             this.lb_teasc.Text = "총 석판의 효과 % 합산";
             this.lb_teasc.Visible = false;
+            // 
+            // lbl_mini_calc1
+            // 
+            this.lbl_mini_calc1.AutoSize = true;
+            this.lbl_mini_calc1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_mini_calc1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_mini_calc1.Location = new System.Drawing.Point(3, 495);
+            this.lbl_mini_calc1.Name = "lbl_mini_calc1";
+            this.lbl_mini_calc1.Size = new System.Drawing.Size(107, 25);
+            this.lbl_mini_calc1.TabIndex = 2;
+            this.lbl_mini_calc1.Text = "미니 계산기";
             // 
             // lb_apes
             // 
@@ -836,6 +913,7 @@
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.metroPanel1.Controls.Add(this.lbl_limit_value);
             this.metroPanel1.Controls.Add(this.txtWindTotalCast);
             this.metroPanel1.Controls.Add(this.txtWindResultCool);
             this.metroPanel1.Controls.Add(this.txtPlayerCool);
@@ -857,7 +935,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 4);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(504, 373);
+            this.metroPanel1.Size = new System.Drawing.Size(773, 565);
             this.metroPanel1.TabIndex = 10;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -2323,81 +2401,16 @@
             this.metroStyleManager1.Owner = null;
             this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
-            // lbl_mini_calc1
+            // lbl_limit_value
             // 
-            this.lbl_mini_calc1.AutoSize = true;
-            this.lbl_mini_calc1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_mini_calc1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_mini_calc1.Location = new System.Drawing.Point(3, 495);
-            this.lbl_mini_calc1.Name = "lbl_mini_calc1";
-            this.lbl_mini_calc1.Size = new System.Drawing.Size(107, 25);
-            this.lbl_mini_calc1.TabIndex = 2;
-            this.lbl_mini_calc1.Text = "미니 계산기";
-            // 
-            // txtMiniCalc1
-            // 
-            this.txtMiniCalc1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtMiniCalc1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtMiniCalc1.Location = new System.Drawing.Point(3, 523);
-            this.txtMiniCalc1.Multiline = true;
-            this.txtMiniCalc1.Name = "txtMiniCalc1";
-            this.txtMiniCalc1.Size = new System.Drawing.Size(102, 35);
-            this.txtMiniCalc1.TabIndex = 11;
-            this.txtMiniCalc1.Text = "0";
-            this.txtMiniCalc1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMiniCalc1.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
-            // 
-            // txtMiniCalc2
-            // 
-            this.txtMiniCalc2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtMiniCalc2.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtMiniCalc2.Location = new System.Drawing.Point(3, 564);
-            this.txtMiniCalc2.Multiline = true;
-            this.txtMiniCalc2.Name = "txtMiniCalc2";
-            this.txtMiniCalc2.Size = new System.Drawing.Size(102, 35);
-            this.txtMiniCalc2.TabIndex = 12;
-            this.txtMiniCalc2.Text = "0";
-            this.txtMiniCalc2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMiniCalc2.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
-            // 
-            // txtMiniCalc4
-            // 
-            this.txtMiniCalc4.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtMiniCalc4.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtMiniCalc4.Location = new System.Drawing.Point(3, 646);
-            this.txtMiniCalc4.Multiline = true;
-            this.txtMiniCalc4.Name = "txtMiniCalc4";
-            this.txtMiniCalc4.Size = new System.Drawing.Size(102, 35);
-            this.txtMiniCalc4.TabIndex = 14;
-            this.txtMiniCalc4.Text = "0";
-            this.txtMiniCalc4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMiniCalc4.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
-            // 
-            // txtMiniCalc3
-            // 
-            this.txtMiniCalc3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtMiniCalc3.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtMiniCalc3.Location = new System.Drawing.Point(3, 605);
-            this.txtMiniCalc3.Multiline = true;
-            this.txtMiniCalc3.Name = "txtMiniCalc3";
-            this.txtMiniCalc3.Size = new System.Drawing.Size(102, 35);
-            this.txtMiniCalc3.TabIndex = 13;
-            this.txtMiniCalc3.Text = "0";
-            this.txtMiniCalc3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMiniCalc3.TextChanged += new System.EventHandler(this.txtMiniCalc1_TextChanged);
-            // 
-            // txtMiniCalcResult
-            // 
-            this.txtMiniCalcResult.Enabled = false;
-            this.txtMiniCalcResult.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtMiniCalcResult.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtMiniCalcResult.Location = new System.Drawing.Point(111, 646);
-            this.txtMiniCalcResult.Multiline = true;
-            this.txtMiniCalcResult.Name = "txtMiniCalcResult";
-            this.txtMiniCalcResult.Size = new System.Drawing.Size(102, 35);
-            this.txtMiniCalcResult.TabIndex = 3;
-            this.txtMiniCalcResult.Text = "0";
-            this.txtMiniCalcResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lbl_limit_value.AutoSize = true;
+            this.lbl_limit_value.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_limit_value.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_limit_value.Location = new System.Drawing.Point(21, 360);
+            this.lbl_limit_value.Name = "lbl_limit_value";
+            this.lbl_limit_value.Size = new System.Drawing.Size(299, 25);
+            this.lbl_limit_value.TabIndex = 15;
+            this.lbl_limit_value.Text = "제한치: 공격/시전 속도는 초당 30회";
             // 
             // Main
             // 
@@ -2611,6 +2624,7 @@
         private MetroFramework.Controls.MetroTextBox txtMiniCalc1;
         private MetroFramework.Controls.MetroLabel lbl_mini_calc1;
         private MetroFramework.Controls.MetroTextBox txtMiniCalcResult;
+        private MetroFramework.Controls.MetroLabel lbl_limit_value;
     }
 }
 

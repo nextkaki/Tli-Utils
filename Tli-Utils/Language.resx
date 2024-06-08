@@ -307,6 +307,9 @@ Please do your own sums as the effectiveness
   <data name="tab_6_Final_Trigger_Cooldown" xml:space="preserve">
     <value>Final Trigger Cooldown</value>
   </data>
+  <data name="tab_6_limit_value" xml:space="preserve">
+    <value>Limit: 30 attacks/casts per second</value>
+  </data>
   <data name="tab_6_Number_of_casts_per_second" xml:space="preserve">
     <value>Number of casts per second</value>
   </data>

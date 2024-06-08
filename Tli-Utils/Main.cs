@@ -140,6 +140,7 @@ namespace Tli_Utils
             lb_ccrr.Text = Language.tab_6_Character_Cooldown_Recovery_Rate;
             lb_ftc.Text = Language.tab_6_Final_Trigger_Cooldown;
             lb_ncps.Text = Language.tab_6_Number_of_casts_per_second;
+            lbl_limit_value.Text = Language.tab_6_limit_value;
 
             //아머 감면 계산기
             lbl_armor_explain1.Text = Language.tab_7_explain1;
@@ -691,16 +692,16 @@ namespace Tli_Utils
             }
             if(bPass)
             {
-                int nPlayerCast = int.Parse(txtPlayerCast.Text.Trim());
-                int nPlayerCastAdd = int.Parse(txtPlayerCastAdd.Text.Trim());
-                int nResultCast = nPlayerCast + nPlayerCastAdd;
+                decimal dPlayerCast = decimal.Parse(txtPlayerCast.Text.Trim());
+                decimal dPlayerCastAdd = decimal.Parse(txtPlayerCastAdd.Text.Trim());
+                decimal dResultCast = dPlayerCast + dPlayerCastAdd;
 
-                int nWindCastValue = int.Parse(txtWindCastSum.Text.Trim());
+                decimal dWindCastValue = decimal.Parse(txtWindCastSum.Text.Trim());
 
-                int nResultWindCool = nResultCast * (nWindCastValue/100);
+                decimal dResultWindCool = dResultCast * (dWindCastValue/100.0m);
 
                 int nPlayerCool = int.Parse(txtPlayerCool.Text.Trim());
-                decimal dResultBaseCool = (decimal)(nResultWindCool + nPlayerCool) / 100 ;
+                decimal dResultBaseCool = (decimal)(dResultWindCool + nPlayerCool) / 100 ;
                 
                 decimal dRateCool = Common.getCoolDown(dResultBaseCool);
                 decimal dWindCool = decimal.Parse(txtWindCool.Text.Trim());
@@ -709,7 +710,9 @@ namespace Tli_Utils
                 if(dResultCool > 0)
                 {
                     txtWindResultCool.Text = dResultCool.ToString("F2");
-                    txtWindTotalCast.Text = (1 / dResultCool).ToString("F2");
+
+                    decimal dTotalCast = (1 / dResultCool) > 30 ? 30 : (1 / dResultCool);
+                    txtWindTotalCast.Text = dTotalCast.ToString("F2");
                 }
             }
         }
