@@ -7,14 +7,9 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
-## 현재 진행 상태(24.06.07~)
-- 버전 1.0.1.1 업데이트 완료
-- 질서/혼합 계산기 로직 수정 완료
-- 로컬라이징 보완 완료
-- 바로가기 경로 문제 해결 완료
-- 설치된 프로그램 제거기능 추가 완료
-- 최신 버전 확인 기능 추가 완료
-- 공지사항 기능 추가 완료료
+## 현재 진행 상태(24.06.09~)
+- 촉발체 계산 시 공격/시전 속도 한계 30회 계산 추가 예정
+- 버전 1.0.1.1 업데이트 완료(자세한건 Release 확인바람)
 - 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
 ## 소개(Introduce)
