@@ -11,6 +11,10 @@ namespace Tli_Utils
         public static readonly string NEED = "필요";
         public static readonly string NOT_NEED = "불필요";
 
+        public static readonly string KR = "KR";
+        public static readonly string EN = "EN";
+        public static readonly string RU = "RU";
+
         public static readonly int BASE_MAX_MONSTER_LEVEL = 90;
         public static readonly int BASE_MIN_MONSTER_ARMOR = 0;
         public static readonly int BASE_MAX_MONSTER_ARMOR = 27273;

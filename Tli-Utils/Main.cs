@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
@@ -14,19 +15,30 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using Tli_Utils.Properties;
 using static System.Net.Mime.MediaTypeNames;
+using ListBox = System.Windows.Forms.ListBox;
 
 namespace Tli_Utils
 {
     public partial class Main : Form
     {
-        bool gLanguageKor = true;
+        string gLanguage = "KR";
+        string[] arrLanguage = new string[]
+        { 
+            DefineValues.KR,
+            DefineValues.EN,
+            DefineValues.RU
+        };
+
         bool gCheckPopup = false;
         string gCurrentVersion = ""; 
         string gLatestVersion = ""; 
         int[] gMonsterArmorByLevel = new int[DefineValues.BASE_MAX_MONSTER_LEVEL];
+        CultureInfo gCulture = CultureInfo.InvariantCulture;
 
         public Main()
         {
@@ -44,16 +56,20 @@ namespace Tli_Utils
 
         private void ToggleLanguage()
         {
-            if (gLanguageKor)
+            if (gLanguage == DefineValues.KR)
             {
-                gLanguageKor = true;
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("ko-KR");
             }
-            else
+            else if (gLanguage == DefineValues.EN)
             {
-                gLanguageKor = false;
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
             }
+            else if (gLanguage == DefineValues.RU)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru-RU");
+            }
+
+            gCulture = CultureInfo.InvariantCulture;
             ReloadUI();
             LoadResources();
         }
@@ -177,10 +193,8 @@ namespace Tli_Utils
 
         public void init()
         {
-            if (gLanguageKor)
-                btnLanguge.Text = "한 글";
-            else
-                btnLanguge.Text = "Eng";
+            lbx_Language.Items.Clear();
+            lbx_Language.Items.AddRange(arrLanguage);
 
             var sortedPages = mainTab.TabPages.Cast<TabPage>()
                 .OrderBy(tp => tp.Name)
@@ -190,7 +204,7 @@ namespace Tli_Utils
             for (int i = 0; i < sortedPages.Count; i++)
             {
                 var tabPage = sortedPages[i];
-                tabPage.Text = GetTabPageText(i);
+                tabPage.Text = GetTabPageText(i).Trim() ;
                 mainTab.TabPages.Add(tabPage);
             }
 
@@ -215,6 +229,19 @@ namespace Tli_Utils
             LoadReadMeAsync();
             CheckForUpdateAsync();
         }
+        private void SelectListBoxItem(ListBox listBox, string searchText)
+        {
+            for (int i = 0; i < listBox.Items.Count; i++)
+            {
+                string item = listBox.Items[i].ToString();
+                if (item.Contains(searchText))
+                {
+                    listBox.SelectedIndex = i;
+                    break;
+                }
+            }
+        }
+
         private async void CheckForUpdateAsync()
         {
             string latestVersion = await GetLatestVersionAsync();
@@ -346,10 +373,8 @@ namespace Tli_Utils
             {
                 if (Common.IsNumericInputValid(textBox))
                 {
-                    string text = textBox.Text.Trim();
-                    decimal dMyCoolTime = string.IsNullOrEmpty(text) ? 0 : Convert.ToDecimal(text);
-                    string strRef = txtRefCoolTime.Text.Trim();
-                    decimal dRef = string.IsNullOrEmpty(strRef) ? 0 : Convert.ToDecimal(strRef);
+                    decimal dMyCoolTime = Common.ParseTextBoxToDecimal(textBox, gCulture);
+                    decimal dRef = Common.ParseTextBoxToDecimal(txtRefCoolTime, gCulture);
 
                     decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
                     txtResultCoolTime.Text = dRtnValue.ToString("F2");
@@ -366,10 +391,8 @@ namespace Tli_Utils
             {
                 if (Common.IsNumericInputValid(textBox))
                 {
-                    string text = textBox.Text.Trim();
-                    decimal dRef = string.IsNullOrEmpty(text) ? 0 : Convert.ToDecimal(text);
-                    string strMycool = txtMyCoolTime.Text.Trim();
-                    decimal dMyCoolTime = string.IsNullOrEmpty(strMycool) ? 0 : Convert.ToDecimal(strMycool);
+                    decimal dRef = Common.ParseTextBoxToDecimal(textBox, gCulture);
+                    decimal dMyCoolTime = Common.ParseTextBoxToDecimal(txtMyCoolTime, gCulture);
 
                     decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
                     txtResultCoolTime.Text = dRtnValue.ToString("F2");
@@ -408,9 +431,10 @@ namespace Tli_Utils
         public void calcNeedCoolTime()
         {
             decimal rtnValue = -1;
-            decimal dMyCool = string.IsNullOrEmpty(txtMyCoolTime.Text.Trim()) ? 0 : Convert.ToDecimal(txtMyCoolTime.Text.Trim());
-            decimal dSkillCool = string.IsNullOrEmpty(txtRefCoolTime.Text.Trim()) ? 0 : Convert.ToDecimal(txtRefCoolTime.Text.Trim());
-            decimal dTargetCool = string.IsNullOrEmpty(txtTargetCool.Text.Trim()) ? 0 : Convert.ToDecimal(txtTargetCool.Text.Trim());
+            decimal dMyCool = Common.ParseTextBoxToDecimal(txtMyCoolTime, gCulture);
+            decimal dSkillCool = Common.ParseTextBoxToDecimal(txtRefCoolTime, gCulture);
+            decimal dTargetCool = Common.ParseTextBoxToDecimal(txtTargetCool, gCulture);
+
             if (dTargetCool > 0)
             {
                 decimal dReqCool = (dSkillCool / dTargetCool) - 1.0m;
@@ -421,9 +445,10 @@ namespace Tli_Utils
         }
         public void checkCoolYN()
         {
-            decimal dResultCool = string.IsNullOrEmpty(txtResultCoolTime.Text.Trim()) ? 0 : Convert.ToDecimal(txtResultCoolTime.Text.Trim());
-            decimal dTargetCool = string.IsNullOrEmpty(txtTargetCool.Text.Trim()) ? 0 : Convert.ToDecimal(txtTargetCool.Text.Trim());
-            if (dResultCool == dTargetCool) {
+            decimal dResultCool = Common.ParseTextBoxToDecimal(txtResultCoolTime, gCulture);
+            decimal dTargetCool = Common.ParseTextBoxToDecimal(txtTargetCool, gCulture);
+
+            if (dResultCool <= dTargetCool) {
                 txtYNCool.Text = DefineValues.NOT_NEED;
                 txtYNCool.ForeColor = Color.Green;
             }
@@ -449,10 +474,8 @@ namespace Tli_Utils
                 {
                     if (Common.IsNumericInputValid(control))
                     {
-                        string strText = control.Text.Trim();
-                        strText = strText.Replace(" ", "");
-                        strText = string.IsNullOrEmpty(strText) ? "0" : strText;
-                        dSum += Decimal.Parse(strText);
+                        decimal dPoint = Common.ParseTextBoxToDecimal(control, gCulture);
+                        dSum += dPoint;
                     }
                 }
             }
@@ -483,16 +506,17 @@ namespace Tli_Utils
 
                 if (Common.IsNumericInputValid(textBox))
                 {
-                    string strText = textBox.Text.Trim();
-                    decimal dMovePer = string.IsNullOrEmpty(strText) ? 0 : Convert.ToDecimal(strText);
+                    decimal dMovePer = Common.ParseTextBoxToDecimal(textBox, gCulture);
                     decimal sToM = (1.0m + (dMovePer / 100.0m)) * 6.0m;
+                    sToM = sToM > 36.0m ? 36.0m : sToM;
                     decimal mToS = 1.0m / sToM;
                     txtStoMLS.Text = sToM.ToString("F2");
                     txtMtoSLS.Text = mToS.ToString("F2");
                     if (cbFast.Checked)
                     {
-                        txtSpeedPerSkill.Enabled = false;
-                        txtSpeedPerSkill.Text = txtStoMLS.Text.Trim();
+                        decimal dTemp = Common.ParseTextBoxToDecimal(txtStoMLS, gCulture);
+                        dTemp = dTemp > 30 ? 30.0m : dTemp;
+                        txtSpeedPerSkill.Text = dTemp.ToString("F2");
                     }
                 }
             }
@@ -503,7 +527,9 @@ namespace Tli_Utils
             if (cbFast.Checked)
             {
                 //txtSpeedPerSkill.Enabled = false;
-                txtSpeedPerSkill.Text = txtStoMLS.Text.Trim();
+                decimal dTemp = Common.ParseTextBoxToDecimal(txtStoMLS, gCulture);
+                dTemp = dTemp > 30 ? 30.0m : dTemp;
+                txtSpeedPerSkill.Text = dTemp.ToString("F2");
             }
             else
             {
@@ -522,10 +548,11 @@ namespace Tli_Utils
 
                 if (Common.IsNumericInputValid(textBox))
                 {
-                    decimal dSpeedPerSkill = string.IsNullOrEmpty(txtSpeedPerSkill.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtSpeedPerSkill.Text.Trim());
-                    decimal dCatPer = string.IsNullOrEmpty(txtCatPer.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatPer.Text.Trim());
-                    decimal dCatCool = string.IsNullOrEmpty(txtCatCool.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatCool.Text.Trim());
-                    decimal dCatCnt = string.IsNullOrEmpty(txtCatCnt.Text.Trim()) ? 1.0m : Convert.ToDecimal(txtCatCnt.Text.Trim());
+                    decimal dSpeedPerSkill = Common.ParseTextBoxToDecimal(txtSpeedPerSkill, gCulture);
+                    decimal dCatPer = Common.ParseTextBoxToDecimal(txtCatPer, gCulture);
+                    decimal dCatCool = Common.ParseTextBoxToDecimal(txtCatCool, gCulture);
+                    decimal dCatCnt = Common.ParseTextBoxToDecimal(txtCatCnt, gCulture);
+
                     if (dSpeedPerSkill <= 0) dSpeedPerSkill = 1.0m;
                     if (dCatPer <= 0) dCatPer = 1.0m;
                     if (dCatCool <= 0) dCatCool = 1.0m;
@@ -563,7 +590,9 @@ namespace Tli_Utils
             {
                 if (Common.IsNumericInputValid(textBox))
                 {
-                    decimal dRate = 1 / (1 + (decimal.Parse(textBox.Text.Trim()) / 100.0m));
+                    decimal dTemp = Common.ParseTextBoxToDecimal(textBox, gCulture);
+
+                    decimal dRate = 1 / (1 + dTemp / 100.0m);
                     decimal dResultRapageCool = DefineValues.BASE_FROSTFIRE_RAMPAGE_COOL * dRate;
                     txtResultRampageCool.Text = dResultRapageCool.ToString("F2");
                     calcRampage();
@@ -578,7 +607,8 @@ namespace Tli_Utils
             {
                 if (Common.IsNumericInputValid(textBox))
                 {
-                    decimal dResultRapageDuration = DefineValues.BASE_FROSTFIRE_RAMPAGE_DURATION * (1 + (decimal.Parse(textBox.Text.Trim()) / 100.0m));
+                    decimal dTemp = Common.ParseTextBoxToDecimal(textBox, gCulture);
+                    decimal dResultRapageDuration = DefineValues.BASE_FROSTFIRE_RAMPAGE_DURATION * (1 + dTemp / 100.0m);
                     txtResultRampageDuration.Text = dResultRapageDuration.ToString("F2");
                     calcRampage();
                 }
@@ -587,22 +617,16 @@ namespace Tli_Utils
 
         public void calcRampage()
         {
-            decimal dRampageCool = decimal.Parse(txtResultRampageCool.Text.Trim());
-            decimal dRampageDuration = decimal.Parse(txtResultRampageDuration.Text.Trim());
+            decimal dRampageCool = Common.ParseTextBoxToDecimal(txtResultRampageCool, gCulture);
+            decimal dRampageDuration = Common.ParseTextBoxToDecimal(txtResultRampageDuration, gCulture);
             decimal dResult = dRampageCool - dRampageDuration;
             if (dResult > 0)
             {
-                if (gLanguageKor)
-                    lblResultRampage.Text = dResult.ToString("F2") + "만큼 지속시간이 필요하다.\r\n쿨타임 or 스킬 효과 지속시간을 챙겨주세요.";
-                else
-                    lblResultRampage.Text = dResult.ToString("F2") + " duration is required.\r\nIncrease the cooldown or skill effect duration.";
+                lblResultRampage.Text = dResult.ToString("F2") + Language.tab_4_explain;
             }
             else
             {
-                if (gLanguageKor)
-                    lblResultRampage.Text = "스킬 효과 지속시간이 충분합니다.";
-                else
-                    lblResultRampage.Text = "Skill effect duration is long enough.";
+                lblResultRampage.Text = Language.tab_4_explain_ok;
             }
         }
 
@@ -631,12 +655,12 @@ namespace Tli_Utils
             }
             if (bPass)
             {
-                decimal dPoint = decimal.Parse(txtNewGod[0].Text.Trim());
+                decimal dPoint = Common.ParseTextBoxToDecimal(txtNewGod[0], gCulture);
                 decimal dBasePoint = dPoint * 100.0m;
                 txtExNewGodPoint.Text = dBasePoint.ToString("F2");
 
-                decimal dCnt = decimal.Parse(txtNewGod[1].Text.Trim());
-                if(dCnt >= 0 )
+                decimal dCnt = Common.ParseTextBoxToDecimal(txtNewGod[1], gCulture);
+                if (dCnt >= 0 )
                 {
                     bool bPeacefulRealm = cbPeacefulRealm.Checked; //만계의 일상,재난
                     decimal dRateRealm = bPeacefulRealm ? 0.25m : 0;
@@ -650,16 +674,6 @@ namespace Tli_Utils
                     txtEachEffect.Text = dSecondEffectCalc.ToString("F2");
                 }
             }
-        }
-
-        private void Language_CheckedChanged(object sender, EventArgs e)
-        {
-            if (gLanguageKor) 
-                gLanguageKor = false;
-            else
-                gLanguageKor = true;
-
-            ToggleLanguage();
         }
 
         private void cbPeacefulRealm_CheckedChanged(object sender, EventArgs e)
@@ -692,19 +706,20 @@ namespace Tli_Utils
             }
             if(bPass)
             {
-                decimal dPlayerCast = decimal.Parse(txtPlayerCast.Text.Trim());
-                decimal dPlayerCastAdd = decimal.Parse(txtPlayerCastAdd.Text.Trim());
+                decimal dPlayerCast = Common.ParseTextBoxToDecimal(txtPlayerCast, gCulture);
+                decimal dPlayerCastAdd = Common.ParseTextBoxToDecimal(txtPlayerCastAdd, gCulture);
                 decimal dResultCast = dPlayerCast + dPlayerCastAdd;
 
-                decimal dWindCastValue = decimal.Parse(txtWindCastSum.Text.Trim());
+                decimal dWindCastValue = Common.ParseTextBoxToDecimal(txtWindCastSum, gCulture);
 
                 decimal dResultWindCool = dResultCast * (dWindCastValue/100.0m);
 
                 int nPlayerCool = int.Parse(txtPlayerCool.Text.Trim());
+
                 decimal dResultBaseCool = (decimal)(dResultWindCool + nPlayerCool) / 100 ;
                 
                 decimal dRateCool = Common.getCoolDown(dResultBaseCool);
-                decimal dWindCool = decimal.Parse(txtWindCool.Text.Trim());
+                decimal dWindCool = Common.ParseTextBoxToDecimal(txtWindCool, gCulture);
 
                 decimal dResultCool = dWindCool * dRateCool;
                 if(dResultCool > 0)
@@ -772,7 +787,7 @@ namespace Tli_Utils
             {
                 int nMonsterArmor = int.Parse(txtMonsterArmor.Text.Trim());
                 decimal dMonsterArmorPercent = Common.getMonsterArmorPhysicalDamageReduction(nMonsterArmor);
-                decimal dUserArmorPen = decimal.Parse(txtUserArmorPen.Text.Trim());
+                decimal dUserArmorPen = Common.ParseTextBoxToDecimal(txtUserArmorPen, gCulture);
 
                 decimal dResultMonsterPhyReduce = dMonsterArmorPercent - (dUserArmorPen / 100.0m);
                 txtMonsterArmorPhyReduce.Text = (dResultMonsterPhyReduce * 100).ToString("F2") + "%";
@@ -780,8 +795,8 @@ namespace Tli_Utils
                 decimal dResultMonsterNonPhyReduce = (dMonsterArmorPercent * 0.6m) - (dUserArmorPen / 100.0m);
                 txtMonsterArmorNonPhyReduce.Text = (dResultMonsterNonPhyReduce * 100).ToString("F2") + "%";
 
-                decimal dUserResistPen = decimal.Parse(txtUserResistPen.Text.Trim());
-                decimal dMonsterResist = decimal.Parse(txtMonsterBaseResist.Text.Trim());
+                decimal dUserResistPen = Common.ParseTextBoxToDecimal(txtUserResistPen, gCulture);
+                decimal dMonsterResist = Common.ParseTextBoxToDecimal(txtMonsterBaseResist, gCulture);
                 decimal dResultMonsterResistReduce = dMonsterResist - dUserResistPen;
                 txtMonsterResistReduce.Text = dResultMonsterResistReduce.ToString("F2") + "%";
 
@@ -856,6 +871,15 @@ namespace Tli_Utils
                     nResult += int.Parse(control.Text.Trim());
                 }
                 txtMiniCalcResult.Text = nResult.ToString();
+            }
+        }
+
+        private void lbx_Language_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbx_Language.SelectedItem != null)
+            {
+                gLanguage = lbx_Language.SelectedItem.ToString().Trim();
+                ToggleLanguage();
             }
         }
     }

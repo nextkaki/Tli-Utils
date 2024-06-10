@@ -241,6 +241,13 @@
   <data name="tab_4" xml:space="preserve">
     <value>얼음불 폭주</value>
   </data>
+  <data name="tab_4_explain" xml:space="preserve">
+    <value>만큼 지속시간이 필요하다.
+쿨타임 or 스킬 효과 지속시간을 챙겨주세요.</value>
+  </data>
+  <data name="tab_4_explain_ok" xml:space="preserve">
+    <value>스킬 효과 지속시간이 충분합니다.</value>
+  </data>
   <data name="tab_4_Frostfire_Rampage_exp" xml:space="preserve">
     <value>얼음불의 폭주, 기본 쿨타임 11초, 지속시간 5초</value>
   </data>

@@ -1,6 +1,7 @@
 ﻿using MetroFramework.Controls;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -77,6 +78,25 @@ namespace Tli_Utils
             string rtnValue = "";
             rtnValue = _ref.Replace(",", "");
             return rtnValue;
+        }
+        public static decimal ParseTextBoxToDecimal(MetroTextBox textBox, CultureInfo cultureInfo)
+        {
+            string text = textBox.Text.Trim();
+
+            // 유효하지 않은 형식 처리
+            if (string.IsNullOrWhiteSpace(text) || text == ".")
+            {
+                text = "0";
+            }
+
+            if (decimal.TryParse(text, NumberStyles.Number, cultureInfo, out decimal dPoint))
+            {
+                return dPoint;
+            }
+            else
+            {
+                return 0.0m;
+            }
         }
 
     }

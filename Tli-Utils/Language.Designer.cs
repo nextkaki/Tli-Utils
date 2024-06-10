@@ -432,6 +432,25 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   duration is required.
+        ///Increase the cooldown or skill effect duration.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_4_explain {
+            get {
+                return ResourceManager.GetString("tab_4_explain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Skill effect duration is long enough.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_4_explain_ok {
+            get {
+                return ResourceManager.GetString("tab_4_explain_ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Frostfire Rampage, base cooldown 11 seconds, duration 5 seconds과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_4_Frostfire_Rampage_exp {

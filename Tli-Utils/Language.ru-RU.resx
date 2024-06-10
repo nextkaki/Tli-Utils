@@ -117,35 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="% is different for each location." xml:space="preserve">
+    <value>так как процент эффективности различен для каждого местоположения.</value>
+  </data>
+  <data name="(Number of Static Meteor Shock Counts)" xml:space="preserve">
+    <value>(Количество метеоритов статического электричества)</value>
+  </data>
+  <data name="2,3 are influenced by 3, so the effect is 60%." xml:space="preserve">
+    <value>2,3 находятся под влиянием 3, поэтому эффект составляет 60%.</value>
+  </data>
   <data name="All_responsibility" xml:space="preserve">
-    <value>You take all responsibility.</value>
+    <value>Вы несете полную ответственность</value>
   </data>
   <data name="calcActivationMediumSkill" xml:space="preserve">
-    <value>Activation Medium Skill</value>
+    <value>Эфир</value>
   </data>
   <data name="calcCool" xml:space="preserve">
-    <value>Cooldown Calc</value>
+    <value>Расчет перезарядки</value>
   </data>
   <data name="calcFreeze" xml:space="preserve">
-    <value>Freeze Calc</value>
+    <value>Расчет заморозки</value>
   </data>
   <data name="calcNewGod" xml:space="preserve">
-    <value>Order/Chaos Calc</value>
+    <value>Расчет Порядка/Хаоса</value>
   </data>
   <data name="Calculating Armor Reduction" xml:space="preserve">
-    <value>Calculating Armor Reduction</value>
+    <value>Расчет уменьшения брони</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Закрыть</value>
   </data>
   <data name="FrostRampage" xml:space="preserve">
-    <value>Frostfire Rampage</value>
+    <value>Буйство ледяного огня</value>
   </data>
   <data name="Latest_version_status" xml:space="preserve">
-    <value>The latest version status.</value>
+    <value>Статус последней версии</value>
   </data>
   <data name="Lightning Shadow" xml:space="preserve">
-    <value>Lightning Shadow</value>
+    <value>Молниевая тень(Электрокошка)</value>
+  </data>
+  <data name="Please do your own sums as the effectiveness" xml:space="preserve">
+    <value>Пожалуйста, посчитайте итоговую сумму сами,</value>
   </data>
   <data name="strCzz" xml:space="preserve">
     <value>chzzk</value>
@@ -154,251 +166,248 @@
     <value>Github</value>
   </data>
   <data name="strGoMain" xml:space="preserve">
-    <value>Go Main</value>
+    <value>На главную</value>
   </data>
   <data name="strYoutube" xml:space="preserve">
     <value>Youtube</value>
   </data>
   <data name="tab_0" xml:space="preserve">
-    <value>Guides</value>
+    <value>Путеводитель</value>
   </data>
   <data name="tab_1" xml:space="preserve">
-    <value>Cooldown Calc</value>
+    <value>Расчет перезарядки</value>
   </data>
   <data name="tab_1_Goal_Skill_Cooldown" xml:space="preserve">
-    <value>Goal) Skill Cooldown(s)</value>
+    <value>Желаемая скорость перезарядки навыка</value>
   </data>
   <data name="tab_1_My_cooldown_recovery_rate" xml:space="preserve">
-    <value>Bag) My cooldown recovery rate (%)</value>
+    <value>Скорость перезарядки персонажа (%)</value>
   </data>
   <data name="tab_1_Required_Cooldown" xml:space="preserve">
-    <value>Required Cooldown (%)</value>
+    <value>Сколько перезарядки нужно добавить (%)</value>
   </data>
   <data name="tab_1_Result_Skill_Cooldown" xml:space="preserve">
-    <value>Result) Skill cooldown</value>
+    <value>Итоговая скорость перезарядки навыка</value>
   </data>
   <data name="tab_1_Skill_cooldown_calculate" xml:space="preserve">
-    <value>Skill cooldown (s) to calculate</value>
+    <value>Базовая перезарядка навыка</value>
   </data>
   <data name="tab_1_Whether_cooldown" xml:space="preserve">
-    <value>Cooldown Required</value>
+    <value>Будет ли время восстановления</value>
   </data>
   <data name="tab_2" xml:space="preserve">
-    <value>Freeze Calc</value>
+    <value>Расчет заморозки</value>
   </data>
   <data name="tab_2_Final_freeze_duration" xml:space="preserve">
-    <value>Final freeze duration (s)</value>
+    <value>Итоговая длительность заморозки</value>
   </data>
   <data name="tab_2_Freeze_default_duration" xml:space="preserve">
-    <value>Freeze default duration (s)</value>
+    <value>Базовая длительность заморозки</value>
   </data>
   <data name="tab_2_Gain_Extreme_when_freezing" xml:space="preserve">
-    <value>Gain Arctic when freezing. Up to 20</value>
+    <value>Получение лютого мороза при заморозке. До 20 раз</value>
   </data>
   <data name="tab_2_Owned_freeze_duration" xml:space="preserve">
-    <value>Owned freeze duration (%)</value>
+    <value>Продолжительность заморозки у персонажа</value>
   </data>
   <data name="tab_3" xml:space="preserve">
-    <value>Lightning Shadow</value>
+    <value>Молниевая тень(Электрокошка)</value>
   </data>
   <data name="tab_3_bag_attack_cast_speed" xml:space="preserve">
-    <value>Bag) Attack/Cast Speed</value>
+    <value>Скорость атаки/каста персонажа</value>
   </data>
   <data name="tab_3_Distance_traveled_in_1_second" xml:space="preserve">
-    <value>Distance traveled in 1 second (M)</value>
+    <value>Пройденная дистанция за 1 сек (М)</value>
   </data>
   <data name="tab_3_Estimated_number_of_triggers" xml:space="preserve">
-    <value>Estimated number of triggers</value>
+    <value>Предполагаемое количество срабатываний</value>
   </data>
   <data name="tab_3_ff_Cooldown" xml:space="preserve">
-    <value>[Feline Figure] Cooldown</value>
+    <value>[Призрак кошки] Перезарядка</value>
   </data>
   <data name="tab_3_ff_Count" xml:space="preserve">
-    <value>[Feline Figure] Count</value>
+    <value>[Призрак кошки] Количество</value>
   </data>
   <data name="tab_3_ff_trigger_chance" xml:space="preserve">
-    <value>[Feline Figure] Trigger Chance (%)</value>
+    <value>[Призрак кошки] Шанс срабатывания</value>
   </data>
   <data name="tab_3_Maximum_number_of_ff_activations_in_4_seconds" xml:space="preserve">
-    <value>Maximum number of [Feline Figure] activations in 4 seconds</value>
+    <value>Максимальное количество активаций [Призрака кошки] за 4 секунды</value>
   </data>
   <data name="tab_3_My_movement_speed" xml:space="preserve">
-    <value>My movement speed (%)</value>
+    <value>Моя скорость передвижения</value>
   </data>
   <data name="tab_3_Time_taken_to_move_1M" xml:space="preserve">
-    <value>Time taken to move 1M (s)</value>
+    <value>Время, затраченное на перемещение 1М (с)</value>
   </data>
   <data name="tab_3_Total_number_of_attacks_in_4_seconds" xml:space="preserve">
-    <value>Total number of attacks in 4 seconds</value>
+    <value>Количество атак за 4 секунды</value>
   </data>
   <data name="tab_3_Total_number_of_ff_[shock_counts]_in_4_seconds(Number_of_Static_Meteor_Shock_Counts)" xml:space="preserve">
-    <value>Total number of [Feline Figure] [shock counts] in 4 seconds
-(Number of Static Meteor Shock Counts)</value>
+    <value>Общее количество [Призраков кошки] [Количество шока] за 4 секунды
+(Количество метеоритов статического электричества)</value>
   </data>
   <data name="tab_3_Use_Talent_Lightning_Fast" xml:space="preserve">
-    <value>Use Talent [Lightning Fast].</value>
+    <value>Используется ли талант [Бегущая по молнии]</value>
   </data>
   <data name="tab_4" xml:space="preserve">
-    <value>Frostfire Rampage</value>
+    <value>Буйство ледяного огня</value>
   </data>
   <data name="tab_4_explain" xml:space="preserve">
-    <value>duration is required.
-Increase the cooldown or skill effect duration.</value>
+    <value>требуемая продолжительность
+Увеличение времени перезарядки или длительности эффекта умения</value>
   </data>
   <data name="tab_4_explain_ok" xml:space="preserve">
-    <value>Skill effect duration is long enough.</value>
+    <value>Длительность эффекта умения достаточно велика.</value>
   </data>
   <data name="tab_4_Frostfire_Rampage_exp" xml:space="preserve">
-    <value>Frostfire Rampage, base cooldown 11 seconds, duration 5 seconds</value>
+    <value>Буйство ледяного огня, базовая перезарядка 11 секунд, длительность 5 секунд</value>
   </data>
   <data name="tab_4_My_Cooldown_Recovery_Rate" xml:space="preserve">
-    <value>My Cooldown Recovery Rate (%)</value>
+    <value>Скорость перезарядки персонажа (%)</value>
   </data>
   <data name="tab_4_My_Skill_Effect_Duration" xml:space="preserve">
-    <value>My Skill Effect Duration (%)</value>
+    <value>Длительность навыка персонажа</value>
   </data>
   <data name="tab_4_Result" xml:space="preserve">
-    <value>Result</value>
+    <value>Итог</value>
   </data>
   <data name="tab_5" xml:space="preserve">
-    <value>Order/Chaos Calc</value>
+    <value>Расчет порядка/хаоса</value>
   </data>
   <data name="tab_5_At_points_for_each_slab" xml:space="preserve">
-    <value>At 100 points of slab, effectiveness %.</value>
+    <value>Эффективность в % за 100 очков</value>
   </data>
   <data name="tab_5_example" xml:space="preserve">
-    <value>Example</value>
+    <value>Пример</value>
   </data>
   <data name="tab_5_explain" xml:space="preserve">
-    <value>Numbers 1,4 are affected by 2 and have an effect of 40%.
-2,3 are influenced by 3, so the effect is 60%.
-Please do your own sums as the effectiveness
-% is different for each location.</value>
+    <value>Номера 1,4 подвержены влиянию 2 и имеют эффект 40%.</value>
   </data>
   <data name="tab_5_mini_calc" xml:space="preserve">
-    <value>Mini calculations</value>
+    <value>Мини расчеты</value>
   </data>
   <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
-    <value>Number of neighboring slabs (20% effect)</value>
+    <value>Количество соседний плиток (20% эффекта)</value>
   </data>
   <data name="tab_5_Order_Chaos_Use" xml:space="preserve">
-    <value>(Peaceful/Chaotic) Realm Use (+25% Order/Chaos Effect)</value>
+    <value>Используется ли Беспорядочный/Заурядный мир (+25% эффекта Хаоса/Порядка)</value>
   </data>
   <data name="tab_5_Other_God_Talent_Effect" xml:space="preserve">
-    <value>Other &lt;New God Effect %&gt;.</value>
+    <value>Другие &lt;Эффекты нового бога %&gt;</value>
   </data>
   <data name="tab_5_Percentage_of_option_per_1_point_of_Order_Chaos" xml:space="preserve">
-    <value>Percentage of &lt;option&gt; per 1 point of Order/Chaos</value>
+    <value>Процент вашего бонуса за 1 очко Хаоса/Порядка</value>
   </data>
   <data name="tab_5_Total_effect_of_all_slabs_combined" xml:space="preserve">
-    <value>Total effect % of all slabs combined</value>
+    <value>Общий эффект в % за комбинацию всех плиток</value>
   </data>
   <data name="tab_6" xml:space="preserve">
-    <value>Activation Medium Skill</value>
+    <value>Эфир</value>
   </data>
   <data name="tab_6_Add_Character_Cast_Speed" xml:space="preserve">
-    <value>Additional Character Cast Speed(%)</value>
+    <value>Доп. скорость заклинаний</value>
   </data>
   <data name="tab_6_Calculating_Wind_Rhythm" xml:space="preserve">
-    <value>Calculating Wind Rhythm</value>
+    <value>Расчет перезарядки ураганного ритма</value>
   </data>
   <data name="tab_6_Character_Cast_Speed" xml:space="preserve">
-    <value>Character Cast Speed(%)</value>
+    <value>Скорость заклинания персонажа</value>
   </data>
   <data name="tab_6_Character_Cooldown_Recovery_Rate" xml:space="preserve">
-    <value>Character Cooldown Recovery Rate(%)</value>
+    <value>Скорость перезарядки персонажа</value>
   </data>
   <data name="tab_6_Combined_Wind_Rhythm_Cast_Speed" xml:space="preserve">
-    <value>Combined Wind Rhythm Cast Speed(%)</value>
+    <value>% от скорости и доп. скорости заклинаний</value>
   </data>
   <data name="tab_6_Final_Trigger_Cooldown" xml:space="preserve">
-    <value>Final Trigger Cooldown</value>
+    <value>Итоговая перезарядка срабатываний</value>
   </data>
   <data name="tab_6_limit_value" xml:space="preserve">
-    <value>Limit: 30 attacks/casts per second</value>
+    <value>Ограничение: 30 атак/заклинаний в секунду</value>
   </data>
   <data name="tab_6_Number_of_casts_per_second" xml:space="preserve">
-    <value>Number of casts per second</value>
+    <value>Количество заклинаний в секунду</value>
   </data>
   <data name="tab_6_Wind_Rhythm_Cooldown" xml:space="preserve">
-    <value>Wind Rhythm Cooldown(s)</value>
+    <value>Перезарядка ураганного ритма</value>
   </data>
   <data name="tab_7" xml:space="preserve">
-    <value>Calculating Armor Reduction</value>
+    <value>Расчет уменьшения брони</value>
   </data>
   <data name="tab_7_500b" xml:space="preserve">
-    <value>Max 500 billion</value>
+    <value>500 миллиардов (макс)</value>
   </data>
   <data name="tab_7_500m" xml:space="preserve">
-    <value>500 million</value>
+    <value>500 миллионов</value>
   </data>
   <data name="tab_7_50b" xml:space="preserve">
-    <value>50 billion</value>
+    <value>50 миллиардов</value>
   </data>
   <data name="tab_7_50m" xml:space="preserve">
-    <value>50 million</value>
+    <value>50 миллионов</value>
   </data>
   <data name="tab_7_5b" xml:space="preserve">
-    <value>5 billion</value>
+    <value>5 миллиардов</value>
   </data>
   <data name="tab_7_Enemy)_Elemental_Damage_Reduction_Rate_by_Resistance" xml:space="preserve">
-    <value>Enemy) Elemental Damage Reduction Rate by Resistance</value>
+    <value>Противник) Снижение стихийного урона в зависимости от сопротивления</value>
   </data>
   <data name="tab_7_Enemy)_Non-Physical_Damage_Reduction_Rate_by_Armor" xml:space="preserve">
-    <value>Enemy) Non-Physical Damage Reduction Rate by Armor</value>
+    <value>Противник) Снижение нефизического урона за счет брони</value>
   </data>
   <data name="tab_7_Enemy)_Physical_Damage_Reduction_Rate_by_Armor" xml:space="preserve">
-    <value>Enemy) Physical Damage Reduction Rate by Armor</value>
+    <value>Противник) Снижение физического урона за счет брони</value>
   </data>
   <data name="tab_7_Expected)_Final_Damage" xml:space="preserve">
-    <value>Expected) Final Damage (Physical/Non-Phy)</value>
+    <value>Ожидание) Итоговый урон (физический/нефизический)</value>
   </data>
   <data name="tab_7_explain1" xml:space="preserve">
-    <value>Enemy Level Input Changes Monster Armor Value. // Monster Max Level 90</value>
+    <value>Пропишите уровень монста, для изменения его брони //Максимальный уровень монстра 90</value>
   </data>
   <data name="tab_7_explain2" xml:space="preserve">
-    <value>Enter "Expected Value" for User Base Damage. Unit is 1,000 (Thousands)</value>
+    <value>Введите "Ожидаемое значение" базового урона персонажа</value>
   </data>
   <data name="tab_7_Final)_Monster_Elemental_Damage_Multiplier" xml:space="preserve">
-    <value>Final) Monster Elemental Damage Multiplier</value>
+    <value>Итог) Множитель стихийного урона монстра</value>
   </data>
   <data name="tab_7_Final)_Monster_Physical_Damage_Multiplier" xml:space="preserve">
-    <value>Final) Monster Physical Damage Multiplier</value>
+    <value>Итог) Множитель физического урона монстра</value>
   </data>
   <data name="tab_7_Final_Calculation_Result" xml:space="preserve">
-    <value>Final Calculation Result</value>
+    <value>Итоговый результат расчета</value>
   </data>
   <data name="tab_7_Monster_Armor_Value" xml:space="preserve">
-    <value>Monster Armor Value</value>
+    <value>Значение брони монстра</value>
   </data>
   <data name="tab_7_Monster_Base_Resistance" xml:space="preserve">
-    <value>Monster Base Resistance</value>
+    <value>Базовое сопротивление монстра</value>
   </data>
   <data name="tab_7_Monster_Level" xml:space="preserve">
-    <value>Monster Level</value>
+    <value>Уровень монстра</value>
   </data>
   <data name="tab_7_User)_Armor_Non-Physical_Damage_Reduction" xml:space="preserve">
-    <value>User) Armor Non-Physical Damage Reduction</value>
+    <value>Игрок) Снижение нефизического урона от брони</value>
   </data>
   <data name="tab_7_User)_Armor_Physical_Damage_Reduction" xml:space="preserve">
-    <value>User) Armor Physical Damage Reduction</value>
+    <value>Игрок) Снижение физического урона от брони</value>
   </data>
   <data name="tab_7_User_Armor_Damage_Penetration" xml:space="preserve">
-    <value>User Armor Damage Penetration</value>
+    <value>Пробивание брони персонажа</value>
   </data>
   <data name="tab_7_User_Armor_Value" xml:space="preserve">
-    <value>User Armor Value</value>
+    <value>Значение брони персонажа</value>
   </data>
   <data name="tab_7_User_Base_Damage" xml:space="preserve">
-    <value>User Base Damage (Thousands)</value>
+    <value>Базовый урон персонажа (Тысячи)</value>
   </data>
   <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
-    <value>User Resistance Penetration</value>
+    <value>Пробивание сопротивлений персонажа</value>
   </data>
   <data name="txtAnnouncements" xml:space="preserve">
-    <value>Announcements</value>
+    <value>Анонсы</value>
   </data>
   <data name="txtVersionCheck" xml:space="preserve">
-    <value>Version Check</value>
+    <value>Проверить версию</value>
   </data>
 </root>
