@@ -7,13 +7,11 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
-## 현재 진행 상태(24.06.10~)
+## 현재 진행 상태(24.06.13~)
+- SS5 '기계인형 클럽' 공개
+- 시즌 프리뷰 방송은 6월 29일 22:00
+- 시즌 오픈 기간은 7월 5일 11:00
 - 1.0.0.3 업데이트 완료
-- 라이트닝 쉐도우, 번개속행 체크에 따른 공/시속 Enabled 보완 완료
-- 라이트닝 쉐도우, 공격/시전/이동 속도 한계치 기능 추가 완료
-- 소수점 입력 할 때 '.' (점) 입력하면 에러 발생 로직 보완 완료
-- 러시아 언어 기능 추가 완료
-- 언어에 따른 UI 위치 변경 완료
 - 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
 ## 소개(Introduce)
