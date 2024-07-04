@@ -8,9 +8,8 @@
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
 ## 현재 진행 상태(24.06.13~)
-- SS5 '기계인형 클럽' 공개, 시즌 프리뷰 방송은 6월 29일 22:00, 시즌 오픈 기간은 7월 5일 11:00
-- 얼음불의 폭주 계산식 보완(지속시간)
-- 1.0.1.3 업데이트 완료
+- 카리노, 전쟁광인 특성: https://youtu.be/7_5Tv73HD9Q
+- 유튜브: https://www.youtube.com/@Kaki_TV
 - 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
 ## 소개(Introduce)
