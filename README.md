@@ -7,8 +7,8 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
-## 현재 진행 상태(24.06.13~)
-- 카리노, 전쟁광인 특성: https://youtu.be/7_5Tv73HD9Q
+## 현재 진행 상태(24.10.22~)
+- 신규 시즌에 따른 내용 변경(Content changes for the new season)
 - 유튜브: https://www.youtube.com/@Kaki_TV
 - 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
