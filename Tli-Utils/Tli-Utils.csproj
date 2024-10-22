@@ -151,12 +151,15 @@
     <EmbeddedResource Include="Language.ko.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Language.ko.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Language.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Language.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language.ru-RU.resx" />
+    <EmbeddedResource Include="Language.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

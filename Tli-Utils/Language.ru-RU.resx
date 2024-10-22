@@ -141,6 +141,9 @@
   <data name="calcNewGod" xml:space="preserve">
     <value>Расчет Порядка/Хаоса</value>
   </data>
+  <data name="calcSelena" xml:space="preserve">
+    <value>셀레나-특성 계산</value>
+  </data>
   <data name="Calculating Armor Reduction" xml:space="preserve">
     <value>Расчет уменьшения брони</value>
   </data>
@@ -253,15 +256,18 @@
   <data name="tab_4" xml:space="preserve">
     <value>Буйство ледяного огня</value>
   </data>
+  <data name="tab_4_confirm_cool" xml:space="preserve">
+    <value>Применяемый кулдаун(ы)</value>
+  </data>
   <data name="tab_4_explain" xml:space="preserve">
-    <value>требуемая продолжительность
-Увеличение времени перезарядки или длительности эффекта умения</value>
+    <value>Применяемый(ые) кулдаун(ы).
+Кроме того, необходимо указать длительность кулдауна/эффекта умения.</value>
   </data>
   <data name="tab_4_explain_ok" xml:space="preserve">
-    <value>Длительность эффекта умения достаточно велика.</value>
+    <value>Длительность навыка достаточно продолжительная</value>
   </data>
   <data name="tab_4_Frostfire_Rampage_exp" xml:space="preserve">
-    <value>Буйство ледяного огня, базовая перезарядка 11 секунд, длительность 5 секунд</value>
+    <value>Буйство ледяного огня, базовая перезарядка 10 секунд, длительность 5 секунд</value>
   </data>
   <data name="tab_4_My_Cooldown_Recovery_Rate" xml:space="preserve">
     <value>Скорость перезарядки персонажа (%)</value>
@@ -282,16 +288,19 @@
     <value>Пример</value>
   </data>
   <data name="tab_5_explain" xml:space="preserve">
-    <value>Номера 1,4 подвержены влиянию 2 и имеют эффект 40%.</value>
+    <value>Номера 1,4 подвержены влиянию 2 и имеют эффект 20%.
+2,3 находятся под влиянием 3, поэтому эффект составляет 30%.
+Пожалуйста, посчитайте итоговую сумму сами,
+так как процент эффективности различен для каждого местоположения.</value>
   </data>
   <data name="tab_5_mini_calc" xml:space="preserve">
-    <value>Мини расчеты</value>
+    <value>сумма</value>
   </data>
   <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
-    <value>Количество соседний плиток (20% эффекта)</value>
+    <value>Количество соседний плиток (10% эффекта)</value>
   </data>
   <data name="tab_5_Order_Chaos_Use" xml:space="preserve">
-    <value>Используется ли Беспорядочный/Заурядный мир (+25% эффекта Хаоса/Порядка)</value>
+    <value>Почивший мир (+25% эффекта Хаоса/Порядка)</value>
   </data>
   <data name="tab_5_Other_God_Talent_Effect" xml:space="preserve">
     <value>Другие &lt;Эффекты нового бога %&gt;</value>
@@ -403,6 +412,21 @@
   </data>
   <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
     <value>Пробивание сопротивлений персонажа</value>
+  </data>
+  <data name="tab_8" xml:space="preserve">
+    <value>셀레나-특성 계산</value>
+  </data>
+  <data name="tab_8_tide_add" xml:space="preserve">
+    <value>조수 효과 추가(%)</value>
+  </data>
+  <data name="tab_8_tide_default" xml:space="preserve">
+    <value>대미지 추가 +10% , 4 초 지속 / 적 발 아래 조수, 6초 지속</value>
+  </data>
+  <data name="tab_8_tide_duration" xml:space="preserve">
+    <value>조수 지속시간(%)</value>
+  </data>
+  <data name="tab_8_tide_inc" xml:space="preserve">
+    <value>조수 효과(%)</value>
   </data>
   <data name="txtAnnouncements" xml:space="preserve">
     <value>Анонсы</value>

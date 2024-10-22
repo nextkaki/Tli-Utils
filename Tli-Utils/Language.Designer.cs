@@ -106,6 +106,15 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   셀레나-특성 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string calcSelena {
+            get {
+                return ResourceManager.GetString("calcSelena", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Calculating Armor Reduction과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string Calculating_Armor_Reduction {
@@ -432,8 +441,17 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   duration is required.
-        ///Increase the cooldown or skill effect duration.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Applied cooldown (s)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_4_confirm_cool {
+            get {
+                return ResourceManager.GetString("tab_4_confirm_cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The cooldown(s) applied.
+        ///In addition, the cooldown / skill effect duration is required.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_4_explain {
             get {
@@ -451,7 +469,7 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   Frostfire Rampage, base cooldown 11 seconds, duration 5 seconds과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Frostfire Rampage, base cooldown 10 seconds, duration 5 seconds과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_4_Frostfire_Rampage_exp {
             get {
@@ -514,8 +532,8 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   Numbers 1,4 are affected by 2 and have an effect of 40%.
-        ///2,3 are influenced by 3, so the effect is 60%.
+        ///   Numbers 1,4 are affected by 2 and have an effect of 20%.
+        ///2,3 are influenced by 3, so the effect is 30%.
         ///Please do your own sums as the effectiveness
         ///% is different for each location.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
@@ -526,7 +544,7 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   Mini calculations과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Sum과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_5_mini_calc {
             get {
@@ -535,7 +553,7 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   Number of neighboring slabs (20% effect)과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Number of neighboring slabs (10% effect)과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_5_Number_of_neighboring_slabs {
             get {
@@ -544,7 +562,7 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   (Peaceful/Chaotic) Realm Use (+25% Order/Chaos Effect)과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Silent Realm Use (+25% Order/Chaos Effect)과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_5_Order_Chaos_Use {
             get {
@@ -882,6 +900,51 @@ namespace Tli_Utils {
         public static string tab_7_User_Resistance_Penetration {
             get {
                 return ResourceManager.GetString("tab_7_User_Resistance_Penetration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   셀레나-특성 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_8 {
+            get {
+                return ResourceManager.GetString("tab_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   조수 효과 추가(%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_8_tide_add {
+            get {
+                return ResourceManager.GetString("tab_8_tide_add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   대미지 추가 +10% , 4 초 지속 / 적 발 아래 조수, 6초 지속과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_8_tide_default {
+            get {
+                return ResourceManager.GetString("tab_8_tide_default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   조수 지속시간(%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_8_tide_duration {
+            get {
+                return ResourceManager.GetString("tab_8_tide_duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   조수 효과(%)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_8_tide_inc {
+            get {
+                return ResourceManager.GetString("tab_8_tide_inc", resourceCulture);
             }
         }
         

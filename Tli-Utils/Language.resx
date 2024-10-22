@@ -132,6 +132,9 @@
   <data name="calcNewGod" xml:space="preserve">
     <value>Order/Chaos Calc</value>
   </data>
+  <data name="calcSelena" xml:space="preserve">
+    <value>셀레나-특성 계산</value>
+  </data>
   <data name="Calculating Armor Reduction" xml:space="preserve">
     <value>Calculating Armor Reduction</value>
   </data>
@@ -241,15 +244,18 @@
   <data name="tab_4" xml:space="preserve">
     <value>Frostfire Rampage</value>
   </data>
+  <data name="tab_4_confirm_cool" xml:space="preserve">
+    <value>Applied cooldown (s)</value>
+  </data>
   <data name="tab_4_explain" xml:space="preserve">
-    <value>duration is required.
-Increase the cooldown or skill effect duration.</value>
+    <value>The cooldown(s) applied.
+In addition, the cooldown / skill effect duration is required.</value>
   </data>
   <data name="tab_4_explain_ok" xml:space="preserve">
     <value>Skill effect duration is long enough.</value>
   </data>
   <data name="tab_4_Frostfire_Rampage_exp" xml:space="preserve">
-    <value>Frostfire Rampage, base cooldown 11 seconds, duration 5 seconds</value>
+    <value>Frostfire Rampage, base cooldown 10 seconds, duration 5 seconds</value>
   </data>
   <data name="tab_4_My_Cooldown_Recovery_Rate" xml:space="preserve">
     <value>My Cooldown Recovery Rate (%)</value>
@@ -270,19 +276,19 @@ Increase the cooldown or skill effect duration.</value>
     <value>Example</value>
   </data>
   <data name="tab_5_explain" xml:space="preserve">
-    <value>Numbers 1,4 are affected by 2 and have an effect of 40%.
-2,3 are influenced by 3, so the effect is 60%.
+    <value>Numbers 1,4 are affected by 2 and have an effect of 20%.
+2,3 are influenced by 3, so the effect is 30%.
 Please do your own sums as the effectiveness
 % is different for each location.</value>
   </data>
   <data name="tab_5_mini_calc" xml:space="preserve">
-    <value>Mini calculations</value>
+    <value>Sum</value>
   </data>
   <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
-    <value>Number of neighboring slabs (20% effect)</value>
+    <value>Number of neighboring slabs (10% effect)</value>
   </data>
   <data name="tab_5_Order_Chaos_Use" xml:space="preserve">
-    <value>(Peaceful/Chaotic) Realm Use (+25% Order/Chaos Effect)</value>
+    <value>Silent Realm Use (+25% Order/Chaos Effect)</value>
   </data>
   <data name="tab_5_Other_God_Talent_Effect" xml:space="preserve">
     <value>Other &lt;New God Effect %&gt;.</value>
@@ -394,6 +400,21 @@ Please do your own sums as the effectiveness
   </data>
   <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
     <value>User Resistance Penetration</value>
+  </data>
+  <data name="tab_8" xml:space="preserve">
+    <value>셀레나-특성 계산</value>
+  </data>
+  <data name="tab_8_tide_add" xml:space="preserve">
+    <value>조수 효과 추가(%)</value>
+  </data>
+  <data name="tab_8_tide_default" xml:space="preserve">
+    <value>대미지 추가 +10% , 4 초 지속 / 적 발 아래 조수, 6초 지속</value>
+  </data>
+  <data name="tab_8_tide_duration" xml:space="preserve">
+    <value>조수 지속시간(%)</value>
+  </data>
+  <data name="tab_8_tide_inc" xml:space="preserve">
+    <value>조수 효과(%)</value>
   </data>
   <data name="txtAnnouncements" xml:space="preserve">
     <value>Announcements</value>

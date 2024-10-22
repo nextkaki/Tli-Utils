@@ -79,6 +79,11 @@ namespace Tli_Utils
             rtnValue = _ref.Replace(",", "");
             return rtnValue;
         }
+        public static Decimal CalcPercent(Decimal _ref)
+        {
+            return (_ref / 100.0m);
+        }
+
         public static decimal ParseTextBoxToDecimal(MetroTextBox textBox, CultureInfo cultureInfo)
         {
             string text = textBox.Text.Trim();

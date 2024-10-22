@@ -132,6 +132,9 @@
   <data name="calcNewGod" xml:space="preserve">
     <value>질서혼란 계산</value>
   </data>
+  <data name="calcSelena" xml:space="preserve">
+    <value>셀레나-특성 계산</value>
+  </data>
   <data name="Calculating Armor Reduction" xml:space="preserve">
     <value>아머 감면 계산</value>
   </data>
@@ -241,15 +244,18 @@
   <data name="tab_4" xml:space="preserve">
     <value>얼음불 폭주</value>
   </data>
+  <data name="tab_4_confirm_cool" xml:space="preserve">
+    <value>적용된 쿨타임(s)</value>
+  </data>
   <data name="tab_4_explain" xml:space="preserve">
-    <value>만큼 지속시간이 필요하다.
-쿨타임 or 스킬 효과 지속시간을 챙겨주세요.</value>
+    <value>적용된 쿨타임(s) 입니다.
+추가적으로 쿨타임 / 스킬 효과 지속시간이 필요합니다.</value>
   </data>
   <data name="tab_4_explain_ok" xml:space="preserve">
     <value>스킬 효과 지속시간이 충분합니다.</value>
   </data>
   <data name="tab_4_Frostfire_Rampage_exp" xml:space="preserve">
-    <value>얼음불의 폭주, 기본 쿨타임 11초, 지속시간 5초</value>
+    <value>얼음불의 폭주, 기본 쿨타임 10초, 지속시간 5초</value>
   </data>
   <data name="tab_4_My_Cooldown_Recovery_Rate" xml:space="preserve">
     <value>내 쿨타임 회복 속도(%)</value>
@@ -270,15 +276,15 @@
     <value>예시</value>
   </data>
   <data name="tab_5_explain" xml:space="preserve">
-    <value>1,4번은 2개 영향 받아 효과 40%
-2,3번은 3개 영향 받아 효과 60%
+    <value>1,4번은 2개 영향 받아 효과 20%
+2,3번은 3개 영향 받아 효과 30%
 위치별 효과%는 다르니 개별적 합산을 직접 해주세요.</value>
   </data>
   <data name="tab_5_mini_calc" xml:space="preserve">
-    <value>미니 계산기</value>
+    <value>합산</value>
   </data>
   <data name="tab_5_Number_of_neighboring_slabs" xml:space="preserve">
-    <value>인접한 석판의 갯수(효과 20%)</value>
+    <value>인접한 석판의 갯수(효과 10%)</value>
   </data>
   <data name="tab_5_Order_Chaos_Use" xml:space="preserve">
     <value>만계의 일상/재난 사용(질서/혼란 효과+25%)</value>
@@ -393,6 +399,21 @@
   </data>
   <data name="tab_7_User_Resistance_Penetration" xml:space="preserve">
     <value>유저 저항 관통</value>
+  </data>
+  <data name="tab_8" xml:space="preserve">
+    <value>셀레나-특성 계산</value>
+  </data>
+  <data name="tab_8_tide_add" xml:space="preserve">
+    <value>조수 효과 추가(%)</value>
+  </data>
+  <data name="tab_8_tide_default" xml:space="preserve">
+    <value>대미지 추가 +10% , 4 초 지속 / 적 발 아래 조수, 6초 지속</value>
+  </data>
+  <data name="tab_8_tide_duration" xml:space="preserve">
+    <value>조수 지속시간(%)</value>
+  </data>
+  <data name="tab_8_tide_inc" xml:space="preserve">
+    <value>조수 효과(%)</value>
   </data>
   <data name="txtAnnouncements" xml:space="preserve">
     <value>공지사항</value>

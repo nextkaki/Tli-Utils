@@ -1,26 +1,16 @@
 ﻿using MetroFramework.Controls;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
-using System.Net.NetworkInformation;
 using System.Reflection;
-using System.Security.Policy;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using Tli_Utils.Properties;
-using static System.Net.Mime.MediaTypeNames;
-using ListBox = System.Windows.Forms.ListBox;
 
 namespace Tli_Utils
 {
@@ -80,9 +70,9 @@ namespace Tli_Utils
             btnActivation.Text = Language.calcActivationMediumSkill;
             btnFreeze.Text = Language.calcFreeze;
             btnFrostRampage.Text = Language.FrostRampage;
-            btnLightningShadow.Text = Language.Lightning_Shadow;
             btnNewGod.Text = Language.calcNewGod;
             btnArmorCalc.Text = Language.Calculating_Armor_Reduction;
+            btnSelena.Text = Language.calcSelena;
             btnNotice.Text = Language.txtAnnouncements;
             btnCheckVersion.Text = Language.txtVersionCheck;
 
@@ -94,7 +84,7 @@ namespace Tli_Utils
 
 
             //메인가기
-            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain2, btnMain3, btnMain4, btnMain5, btnMain6 };
+            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain3, btnMain4, btnMain5, btnMain6,  };
             foreach (var goHome in arrGoHome)
             {
                 if (goHome != null) {
@@ -117,24 +107,25 @@ namespace Tli_Utils
             lb_gewf.Text = Language.tab_2_Gain_Extreme_when_freezing;
 
             //라이트닝 쉐도우
-            lb_bacs.Text = Language.tab_3_bag_attack_cast_speed;
-            lb_fftc.Text = Language.tab_3_ff_trigger_chance;
-            lb_ffcd.Text = Language.tab_3_ff_Cooldown;
-            lb_ffc.Text = Language.tab_3_ff_Count;
-            lb_tna4.Text = Language.tab_3_Total_number_of_attacks_in_4_seconds;
-            lb_mnffa4.Text = Language.tab_3_Maximum_number_of_ff_activations_in_4_seconds;
-            lb_ent.Text = Language.tab_3_Estimated_number_of_triggers;
-            lb_tnoffsc.Text = Language.tab_3_Total_number_of_ff__shock_counts__in_4_seconds_Number_of_Static_Meteor_Shock_Counts_;
-            lb_mms.Text = Language.tab_3_My_movement_speed;
-            lb_dts.Text = Language.tab_3_Distance_traveled_in_1_second;
-            lb_ttm.Text = Language.tab_3_Time_taken_to_move_1M;
-            cbFast.Text = Language.tab_3_Use_Talent_Lightning_Fast;
+            //lb_bacs.Text = Language.tab_3_bag_attack_cast_speed;
+            //lb_fftc.Text = Language.tab_3_ff_trigger_chance;
+            //lb_ffcd.Text = Language.tab_3_ff_Cooldown;
+            //lb_ffc.Text = Language.tab_3_ff_Count;
+            //lb_tna4.Text = Language.tab_3_Total_number_of_attacks_in_4_seconds;
+            //lb_mnffa4.Text = Language.tab_3_Maximum_number_of_ff_activations_in_4_seconds;
+            //lb_ent.Text = Language.tab_3_Estimated_number_of_triggers;
+            //lb_tnoffsc.Text = Language.tab_3_Total_number_of_ff__shock_counts__in_4_seconds_Number_of_Static_Meteor_Shock_Counts_;
+            //lb_mms.Text = Language.tab_3_My_movement_speed;
+            //lb_dts.Text = Language.tab_3_Distance_traveled_in_1_second;
+            //lb_ttm.Text = Language.tab_3_Time_taken_to_move_1M;
+            //cbFast.Text = Language.tab_3_Use_Talent_Lightning_Fast;
 
             //얼음불 폭주
             lb_fre.Text = Language.tab_4_Frostfire_Rampage_exp;
             lb_t4_mcrr.Text = Language.tab_4_My_Cooldown_Recovery_Rate;
             lb_msed.Text = Language.tab_4_My_Skill_Effect_Duration;
             lblResultRampage.Text = Language.tab_4_Result;
+            lbl_confirm_cool.Text = Language.tab_4_confirm_cool;
 
             //질서혼란 계산기
             lb_popp.Text = Language.tab_5_Percentage_of_option_per_1_point_of_Order_Chaos;
@@ -182,6 +173,13 @@ namespace Tli_Utils
             btn_5b.Text = Language.tab_7_5b;
             btn_50b.Text = Language.tab_7_50b;
             btn_500b.Text = Language.tab_7_500b;
+
+            //셀레나 - 히어로 특성
+            lbl_tide_default.Text = Language.tab_8_tide_default;
+            lbl_tide_inc.Text = Language.tab_8_tide_inc;
+            lbl_tide_add.Text = Language.tab_8_tide_add;
+            lbl_tide_duration.Text = Language.tab_8_tide_duration;
+
         }
 
         private void ReloadUI()
@@ -208,38 +206,24 @@ namespace Tli_Utils
                 mainTab.TabPages.Add(tabPage);
             }
 
+
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             lblVersion.Text = $"Ver: {version}";
             gCurrentVersion = version.ToString().Replace(".", "");
 
             txtBaseFreezeTime.Text = DefineValues.BASE_FREEZE_TIME.ToString();
-            txtCatPer.Text = DefineValues.BASE_CAT_TRIGGER_PERCENT.ToString();
-            txtCatCool.Text = DefineValues.BASE_CAT_TRIGGER_COOLTIME.ToString();
-            txtCatCnt.Text = DefineValues.BASE_CAT_TRIGGER_CNT.ToString();
 
             btnCool.Tag = DefineValues.TAB_COOLTIME;
             btnFreeze.Tag = DefineValues.TAB_FREEZE;
-            btnLightningShadow.Tag = DefineValues.TAB_LIGHTNING_SHADOW;
             btnFrostRampage.Tag = DefineValues.TAB_FROSTFIRE_RAMPAGE;
             btnNewGod.Tag = DefineValues.TAB_NEW_GOD;
             btnActivation.Tag = DefineValues.TAB_ACTIVATION;
             btnArmorCalc.Tag = DefineValues.TAB_ARMOR_CALC;
+            btnSelena.Tag = DefineValues.TAB_SELENA_CALC;
 
             createMonsterArmor();
             LoadReadMeAsync();
             CheckForUpdateAsync();
-        }
-        private void SelectListBoxItem(ListBox listBox, string searchText)
-        {
-            for (int i = 0; i < listBox.Items.Count; i++)
-            {
-                string item = listBox.Items[i].ToString();
-                if (item.Contains(searchText))
-                {
-                    listBox.SelectedIndex = i;
-                    break;
-                }
-            }
         }
 
         private async void CheckForUpdateAsync()
@@ -254,7 +238,7 @@ namespace Tli_Utils
         }
         private async Task<string> GetLatestVersionAsync()
         {
-            string apiUrl = "https://api.github.com/repos/nextkaki/Tli-Utils/releases/latest";
+            string apiUrl = DefineValues.API_VERSION;
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("User-Agent", "request"); // GitHub API를 사용하기 위한 User-Agent 설정
@@ -286,7 +270,7 @@ namespace Tli_Utils
 
             if (result == DialogResult.Yes)
             {
-                System.Diagnostics.Process.Start("https://github.com/nextkaki/Tli-Utils/releases");
+                System.Diagnostics.Process.Start(DefineValues.API_RELEASE);
             }
         }
 
@@ -296,7 +280,7 @@ namespace Tli_Utils
                 return;
 
             gCheckPopup = true;
-            string readMeUrl = "https://raw.githubusercontent.com/nextkaki/Tli-Utils/main/README.md";
+            string readMeUrl = DefineValues.API_README;
             string readMeContent = await GetReadMeContentAsync(readMeUrl);
 
             ShowReadMePopup(readMeContent);
@@ -345,11 +329,12 @@ namespace Tli_Utils
                 case 0: return Language.tab_0;
                 case 1: return Language.tab_1;
                 case 2: return Language.tab_2;
-                case 3: return Language.tab_3;
-                case 4: return Language.tab_4;
-                case 5: return Language.tab_5;
-                case 6: return Language.tab_6;
-                case 7: return Language.tab_7;
+                case 3: return Language.tab_4;
+                case 4: return Language.tab_5;
+                case 5: return Language.tab_6;
+                case 6: return Language.tab_7;
+                case 7: return Language.tab_8;
+
 
                 default: return $"Tab {index + 1}";
             }
@@ -496,77 +481,7 @@ namespace Tli_Utils
 
         }
 
-        private void txtMovePerLS_TextChanged(object sender, EventArgs e)
-        {
-            MetroTextBox textBox = sender as MetroTextBox;
-            if (textBox != null)
-            {
-                //if (!cbFast.Checked) return;
-                if (!textBox.Enabled) return;
-
-                if (Common.IsNumericInputValid(textBox))
-                {
-                    decimal dMovePer = Common.ParseTextBoxToDecimal(textBox, gCulture);
-                    decimal sToM = (1.0m + (dMovePer / 100.0m)) * 6.0m;
-                    sToM = sToM > 36.0m ? 36.0m : sToM;
-                    decimal mToS = 1.0m / sToM;
-                    txtStoMLS.Text = sToM.ToString("F2");
-                    txtMtoSLS.Text = mToS.ToString("F2");
-                    if (cbFast.Checked)
-                    {
-                        decimal dTemp = Common.ParseTextBoxToDecimal(txtStoMLS, gCulture);
-                        dTemp = dTemp > 30 ? 30.0m : dTemp;
-                        txtSpeedPerSkill.Text = dTemp.ToString("F2");
-                    }
-                }
-            }
-        }
-
-        private void cbFast_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbFast.Checked)
-            {
-                //txtSpeedPerSkill.Enabled = false;
-                decimal dTemp = Common.ParseTextBoxToDecimal(txtStoMLS, gCulture);
-                dTemp = dTemp > 30 ? 30.0m : dTemp;
-                txtSpeedPerSkill.Text = dTemp.ToString("F2");
-            }
-            else
-            {
-                txtSpeedPerSkill.Text = "0";
-                //txtSpeedPerSkill.Enabled = true;
-            }
-        }
-
-        private void txtSpeedPerSkill_TextChanged(object sender, EventArgs e)
-        {
-            MetroTextBox textBox = sender as MetroTextBox;
-            if (textBox != null)
-            {
-                if (string.IsNullOrEmpty(textBox.Text) || textBox.Text == "0") return;
-                if (!textBox.Enabled) return;
-
-                if (Common.IsNumericInputValid(textBox))
-                {
-                    decimal dSpeedPerSkill = Common.ParseTextBoxToDecimal(txtSpeedPerSkill, gCulture);
-                    decimal dCatPer = Common.ParseTextBoxToDecimal(txtCatPer, gCulture);
-                    decimal dCatCool = Common.ParseTextBoxToDecimal(txtCatCool, gCulture);
-                    decimal dCatCnt = Common.ParseTextBoxToDecimal(txtCatCnt, gCulture);
-
-                    if (dSpeedPerSkill <= 0) dSpeedPerSkill = 1.0m;
-                    if (dCatPer <= 0) dCatPer = 1.0m;
-                    if (dCatCool <= 0) dCatCool = 1.0m;
-                    if (dCatCnt <= 0) dCatCnt = 1.0m;
-
-                    txtResultSkill.Text = (dSpeedPerSkill * 4.0m).ToString("F2");
-                    decimal resultCatMaxTrigger = 4.0m / dCatCool;
-                    txtCatMaxTrigger.Text = resultCatMaxTrigger.ToString("F2");
-                    decimal resultCatExpectTrigger = resultCatMaxTrigger * (dCatPer / 100.0m);
-                    txtCatExpectTrigger.Text = resultCatExpectTrigger.ToString("F2");
-                    txtCatResultTrigger.Text = (resultCatExpectTrigger * dCatCnt).ToString("F2");
-                }
-            }
-        }
+       
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
@@ -617,8 +532,23 @@ namespace Tli_Utils
 
         public void calcRampage()
         {
-            decimal dRampageCool = Common.ParseTextBoxToDecimal(txtResultRampageCool, gCulture);
             decimal dRampageDuration = Common.ParseTextBoxToDecimal(txtResultRampageDuration, gCulture);
+            if (dRampageDuration == 0)
+            {
+                decimal dTemp = Common.ParseTextBoxToDecimal(txtRampageDuration, gCulture);
+                decimal dResultRapageDuration = DefineValues.BASE_FROSTFIRE_RAMPAGE_DURATION * (1 + dTemp / 100.0m);
+                txtResultRampageDuration.Text = dResultRapageDuration.ToString("F2");
+                dRampageDuration = Common.ParseTextBoxToDecimal(txtResultRampageDuration, gCulture);
+            }
+
+            decimal dRampageCool = Common.ParseTextBoxToDecimal(txtResultRampageCool, gCulture);
+            if(dRampageCool == 0)
+            {
+                decimal dResultRapageCool = DefineValues.BASE_FROSTFIRE_RAMPAGE_COOL;
+                txtResultRampageCool.Text = dResultRapageCool.ToString("F2");
+                dRampageCool = DefineValues.BASE_FROSTFIRE_RAMPAGE_COOL;
+            }
+            
             decimal dResult = dRampageCool - dRampageDuration;
             if (dResult > 0)
             {
@@ -663,8 +593,8 @@ namespace Tli_Utils
                 if (dCnt >= 0 )
                 {
                     bool bPeacefulRealm = cbPeacefulRealm.Checked; //만계의 일상,재난
-                    decimal dRateRealm = bPeacefulRealm ? 0.25m : 0;
-                    decimal dRatePoint = dCnt * 0.20m; //효과 비율 %
+                    decimal dRateRealm = bPeacefulRealm ? DefineValues.BASE_NEW_GOD_REALM : 0;
+                    decimal dRatePoint = dCnt * DefineValues.BASE_NEW_GOD_AFFECTED; //효과 비율 %
                     //decimal dEtcEffect = decimal.Parse(txtNewGod[2].Text.Trim());
                     //dEtcEffect = dEtcEffect / 100.0m;
 
@@ -865,12 +795,12 @@ namespace Tli_Utils
             }
             if (bPass)
             {
-                int nResult = 0;
+                decimal dResult = 0;
                 foreach (MetroTextBox control in txtCalc)
                 {
-                    nResult += int.Parse(control.Text.Trim());
+                    dResult += Common.ParseTextBoxToDecimal(control, gCulture);
                 }
-                txtMiniCalcResult.Text = nResult.ToString();
+                txtMiniCalcResult.Text = dResult.ToString();
             }
         }
 
@@ -880,6 +810,124 @@ namespace Tli_Utils
             {
                 gLanguage = lbx_Language.SelectedItem.ToString().Trim();
                 ToggleLanguage();
+            }
+        }
+
+        private void txtTideInc_TextChanged(object sender, EventArgs e)
+        {
+            MetroTextBox[] txtCalc = { txtTideInc1, txtTideInc2, txtTideInc3 };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtCalc)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                decimal dResult = 0;
+                foreach (MetroTextBox control in txtCalc)
+                {
+                    dResult += Common.ParseTextBoxToDecimal(control, gCulture);
+                }
+                calcSelenaTide();
+                lbl_Tide_Result_Inc.Text = "+" + dResult.ToString() + " " + Language.tab_8_tide_inc;
+            }
+        }
+
+        private void txtTideAdd_TextChanged(object sender, EventArgs e)
+        {
+            MetroTextBox[] txtCalc = { txtTideAdd1, txtTideAdd2, txtTideAdd3 };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtCalc)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                calcSelenaTide();
+            }
+        }
+
+        private void calcSelenaTide()
+        {
+            MetroTextBox[] txtSelenaTideAdd = { txtTideAdd1, txtTideAdd2, txtTideAdd3 };
+            MetroTextBox[] txtSelenaTideInc = { txtTideInc1, txtTideInc2, txtTideInc3 };
+
+            Decimal temp_Base = Common.ParseTextBoxToDecimal(txtTideDefault, gCulture);
+            Decimal Base_Tide_Effect = Common.CalcPercent(temp_Base);
+            Decimal Result_Tide_Effect = 0.0m;
+
+            //증가 계산
+            decimal dResult = 0;
+            foreach (MetroTextBox control in txtSelenaTideInc)
+            {
+                dResult += Common.ParseTextBoxToDecimal(control, gCulture);
+            }
+            Result_Tide_Effect = Base_Tide_Effect * (1+Common.CalcPercent(dResult));
+
+            //추가 계산
+            dResult = 0;
+            foreach (MetroTextBox control in txtSelenaTideAdd)
+            {
+                dResult = Common.ParseTextBoxToDecimal(control, gCulture);
+                if (dResult == 0)
+                    continue;
+                Result_Tide_Effect = Result_Tide_Effect * (1 + Common.CalcPercent(dResult));
+            }
+            lbl_Tide_Result.Text = "+" + (Result_Tide_Effect * 100) + "% 대미지 추가";
+        }
+
+        private void txtTideDuration_TextChanged(object sender, EventArgs e)
+        {
+            MetroTextBox[] txtCalc = { txtTideDuration };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtCalc)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                decimal dResult = 0;
+                foreach (MetroTextBox control in txtCalc)
+                {
+                    dResult += Common.ParseTextBoxToDecimal(control, gCulture);
+                }
+                decimal duration1 = 6.0m;
+                duration1 = duration1 * (1- Math.Abs(Common.CalcPercent(dResult)));
+
+                decimal duration2 = 4.0m;
+                duration2 = duration2 * (1 - Math.Abs(Common.CalcPercent(dResult)));
+
+                lbl_Tide_Result_Duration.Text = "조수 효과, " + duration2 + "초 / 적 발 아래 조수, " + duration1 + "초 지속";
             }
         }
     }
