@@ -8,7 +8,9 @@
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
 ## 현재 진행 상태(24.10.22~)
-- 신규 시즌에 따른 내용 변경(Content changes for the new season)
+- 셀레나 히어로 특성 계산(Selena Hero Trait Calculation)
+- 더 이상 필요하지 않은 기능 삭제(Removing Menu that are no longer needed)
+- 수치 변경에 따른 수치 최신화(Updating numbers as they change)
 - 유튜브: https://www.youtube.com/@Kaki_TV
 - 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
@@ -24,12 +26,12 @@
 ## 기능(Features)
 - 쿨타임 계산기(Cooldown Calculator)
 - 동결 지속시간 계산기(프로즌 하트, 극한)(Freeze Duration Calculator)
-- 라이트닝 쉐도우 특성 계산기(Lightning Shadow Talent Calculator)
 - 얼음불 폭주 계산기(Frostfire Rampage Calculator)
 - 질서 혼란 계산기(Order Chaos Calculator)
 - 언어 변경 기능(Change languages)
-- 촉발체 계산기(질풍율동)
-- 아머 대미지 관통 계산기
+- 촉발체 계산기(Trigger Calculator)
+- 아머 대미지 관통 계산기(Armour DMG PEN Calculator)
+- 셀레나 특성 계산기(Selena Calculator)
 
 ## 라이센스
 - **MIT License**
