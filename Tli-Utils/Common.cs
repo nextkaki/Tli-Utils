@@ -103,6 +103,11 @@ namespace Tli_Utils
                 return 0.0m;
             }
         }
+        public static string FormatWithComma(decimal value)
+        {
+            // "N0" 포맷을 사용하여 숫자를 1000 단위마다 콤마로 구분
+            return value.ToString("N0");
+        }
 
     }
 }

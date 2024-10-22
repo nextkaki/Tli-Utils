@@ -126,6 +126,9 @@
   <data name="calcCool" xml:space="preserve">
     <value>Cooldown Calc</value>
   </data>
+  <data name="calcDMG" xml:space="preserve">
+    <value>대미지 계산</value>
+  </data>
   <data name="calcFreeze" xml:space="preserve">
     <value>Freeze Calc</value>
   </data>
@@ -415,6 +418,9 @@ Please do your own sums as the effectiveness
   </data>
   <data name="tab_8_tide_inc" xml:space="preserve">
     <value>조수 효과(%)</value>
+  </data>
+  <data name="tab_9" xml:space="preserve">
+    <value>대미지 계산</value>
   </data>
   <data name="txtAnnouncements" xml:space="preserve">
     <value>Announcements</value>

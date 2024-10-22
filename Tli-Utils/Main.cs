@@ -73,6 +73,7 @@ namespace Tli_Utils
             btnNewGod.Text = Language.calcNewGod;
             btnArmorCalc.Text = Language.Calculating_Armor_Reduction;
             btnSelena.Text = Language.calcSelena;
+            btnDMG.Text = Language.calcDMG;
             btnNotice.Text = Language.txtAnnouncements;
             btnCheckVersion.Text = Language.txtVersionCheck;
 
@@ -220,6 +221,7 @@ namespace Tli_Utils
             btnActivation.Tag = DefineValues.TAB_ACTIVATION;
             btnArmorCalc.Tag = DefineValues.TAB_ARMOR_CALC;
             btnSelena.Tag = DefineValues.TAB_SELENA_CALC;
+            btnDMG.Tag = DefineValues.TAB_DMG_CALC;
 
             createMonsterArmor();
             LoadReadMeAsync();
@@ -334,6 +336,7 @@ namespace Tli_Utils
                 case 5: return Language.tab_6;
                 case 6: return Language.tab_7;
                 case 7: return Language.tab_8;
+                case 8: return Language.tab_9;
 
 
                 default: return $"Tab {index + 1}";
@@ -929,6 +932,83 @@ namespace Tli_Utils
 
                 lbl_Tide_Result_Duration.Text = "조수 효과, " + duration2 + "초 / 적 발 아래 조수, " + duration1 + "초 지속";
             }
+        }
+
+        private void calcDmgFlat(object sender, EventArgs e)
+        {
+            MetroTextBox[] txtCalc = { txtDmgMin,txtDmgMax };
+            bool bPass = true;
+            foreach (MetroTextBox control in txtCalc)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                decimal dResult = 0.0m;
+                foreach (MetroTextBox control in txtCalc)
+                {
+                    dResult += Common.ParseTextBoxToDecimal(control, gCulture);
+                }
+                decimal dDmgMulti = Common.CalcPercent(Common.ParseTextBoxToDecimal(txtDmgMulti, gCulture));
+                txtDmgAvg.Text = (dDmgMulti * (dResult / 2.0m)).ToString();
+            }
+        }
+
+        private void calcDmg()
+        {
+            MetroTextBox[] txtCalc = { txtDmgInc, txtDmgAdd1, txtDmgAdd2, txtDmgAdd3, txtDmgAdd4, txtDmgAdd5,
+                txtDmgAdd6, txtDmgAdd7, txtDmgAdd8, txtDmgAdd9, txtDmgAdd10, txtDmgAdd11,
+            txtDmgAdd12, txtDmgAdd13, txtDmgAdd14, txtDmgAdd15, txtDmgAdd16, txtDmgAdd17,
+            txtDmgAdd18, txtDmgAdd19, txtDmgAdd20, txtDmgAdd21, txtDmgAdd22};
+            bool bPass = true;
+            foreach (MetroTextBox control in txtCalc)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                decimal dResult = 0.0m;
+                decimal baseDmg = Decimal.Parse(txtDmgAvg.Text);
+                decimal resultDmg = 0.0m;
+                // 증가 계산
+                dResult = Common.ParseTextBoxToDecimal(txtDmgInc, gCulture);
+                resultDmg = baseDmg * (1 + Common.CalcPercent(dResult));
+
+                foreach (MetroTextBox control in txtCalc)
+                {
+                    if (control.Equals(txtDmgInc))
+                        continue;
+                    dResult = Common.ParseTextBoxToDecimal(control, gCulture);
+                    resultDmg = resultDmg * (1 + Common.CalcPercent(dResult));
+                }
+
+                txtResultDmg.Text = Common.FormatWithComma(resultDmg);
+            }
+        }
+
+        private void calcDmg(object sender, EventArgs e)
+        {
+            calcDmg();
         }
     }
 }

@@ -428,6 +428,9 @@
   <data name="tab_8_tide_inc" xml:space="preserve">
     <value>조수 효과(%)</value>
   </data>
+  <data name="tab_9" xml:space="preserve">
+    <value>대미지 계산</value>
+  </data>
   <data name="txtAnnouncements" xml:space="preserve">
     <value>Анонсы</value>
   </data>

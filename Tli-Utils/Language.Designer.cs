@@ -88,6 +88,15 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   대미지 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string calcDMG {
+            get {
+                return ResourceManager.GetString("calcDMG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Freeze Calc과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string calcFreeze {
@@ -945,6 +954,15 @@ namespace Tli_Utils {
         public static string tab_8_tide_inc {
             get {
                 return ResourceManager.GetString("tab_8_tide_inc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   대미지 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_9 {
+            get {
+                return ResourceManager.GetString("tab_9", resourceCulture);
             }
         }
         

@@ -31,6 +31,7 @@ namespace Tli_Utils
         public static readonly int TAB_ACTIVATION = 5;
         public static readonly int TAB_ARMOR_CALC = 6;
         public static readonly int TAB_SELENA_CALC = 7;
+        public static readonly int TAB_DMG_CALC = 8;
 
 
         public static readonly int BASE_CAT_TRIGGER_PERCENT = 30;
