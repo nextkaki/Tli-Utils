@@ -11,6 +11,7 @@
 - 셀레나 히어로 특성 계산(Selena Hero Trait Calculation)
 - 더 이상 필요하지 않은 기능 삭제(Removing Menu that are no longer needed)
 - 수치 변경에 따른 수치 최신화(Updating numbers as they change)
+- 대미지 계산기 기능 추가(Added a damage calculator feature)
 - 유튜브: https://www.youtube.com/@Kaki_TV
 - 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
