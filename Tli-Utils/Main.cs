@@ -365,9 +365,10 @@ namespace Tli_Utils
                     decimal dRef = Common.ParseTextBoxToDecimal(txtRefCoolTime, gCulture);
 
                     decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
-                    txtResultCoolTime.Text = dRtnValue.ToString("F2");
+                    txtResultCoolTime.Text = dRtnValue.ToString("F3");
                     calcNeedCoolTime();
                     checkCoolYN();
+                    setFrameView(dRef);
                 }
             }
         }
@@ -383,9 +384,10 @@ namespace Tli_Utils
                     decimal dMyCoolTime = Common.ParseTextBoxToDecimal(txtMyCoolTime, gCulture);
 
                     decimal dRtnValue = calcCoolTime(dMyCoolTime, dRef);
-                    txtResultCoolTime.Text = dRtnValue.ToString("F2");
+                    txtResultCoolTime.Text = dRtnValue.ToString("F3");
                     calcNeedCoolTime();
                     checkCoolYN();
+                    setFrameView(dRef);
                 }
             }
         }
@@ -416,6 +418,46 @@ namespace Tli_Utils
                 }
             }
         }
+        private void setFrameView(decimal baseTime)
+        {
+            if(baseTime <= 0)
+                return;
+
+            // DataTable 생성
+            DataTable table = new DataTable();
+            table.Columns.Add("목표 프레임 수", typeof(string));
+            table.Columns.Add("수확 쿨타임 시간 (초)", typeof(string));
+            table.Columns.Add("수확 쿨타임 % 최소값", typeof(string));
+            table.Columns.Add("수확 쿨타임 % 최대값", typeof(string));
+
+            // 데이터 채우기
+            decimal baseCooldown = baseTime;  // 30프레임 기준 쿨타임 시간 (초)
+            decimal extraDelay = 0.001m;  // 프레임당 추가 오차 시간
+            int targetFrame = 30;       // 목표 프레임 수 초기값
+
+            for (int frame = targetFrame; frame >= 10; frame--)
+            {
+                // 오차를 포함한 쿨타임 시간 계산
+                //decimal targetCooldownTime = baseCooldown * frame / targetFrame + extraDelay;
+                decimal targetCooldownTime = baseCooldown * frame / targetFrame;
+                // 쿨타임 % 계산: 쿨타임을 목표 시간까지 낮추기 위한 %
+                decimal minCooldownPercentage = (100 * baseCooldown) / targetCooldownTime - 100;
+                decimal maxCooldownPercentage = minCooldownPercentage + (100.0m / targetFrame);
+
+
+                // 테이블에 행 추가
+                table.Rows.Add(
+                    $"{frame}프레임",
+                    $"{targetCooldownTime:F3}초",
+                    $"{minCooldownPercentage:F2}%",
+                    $"{maxCooldownPercentage:F2}%"
+                );
+            }
+
+            dgvFrameView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFrameView.DataSource = table;
+        }
+
         public void calcNeedCoolTime()
         {
             decimal rtnValue = -1;
@@ -429,7 +471,7 @@ namespace Tli_Utils
                 dReqCool = dReqCool * 100.0m;
                 rtnValue = dReqCool - dMyCool;
             }
-            txtNeedCool.Text = rtnValue.ToString("F2");
+            txtNeedCool.Text = rtnValue.ToString("F3");
         }
         public void checkCoolYN()
         {
@@ -990,10 +1032,29 @@ namespace Tli_Utils
                 decimal dResult = 0.0m;
                 decimal baseDmg = Decimal.Parse(txtDmgAvg.Text);
                 decimal resultDmg = 0.0m;
+                // 상태이상 획득/추가 계산
+                decimal baseAilment = Decimal.Parse(txtDmgAilment.Text);
+                if (baseAilment > 0)
+                {
+                    baseAilment = Common.CalcPercent(baseAilment);
+                    decimal dAilmentDmgAVg = baseDmg * baseAilment;
+                    txtDmgAilmentAvg.Text = Common.FormatWithComma(dAilmentDmgAVg);
+
+                    // 심화 계산
+                    decimal baseAffliction = Decimal.Parse(txtAffliction.Text);
+                    if (baseAffliction > 0)
+                    {
+                        baseAffliction = Common.CalcPercent(baseAffliction);
+                        dAilmentDmgAVg = dAilmentDmgAVg * (1 + baseAffliction);
+                        txtDmgAilmentAvg.Text = Common.FormatWithComma(dAilmentDmgAVg);
+                    }
+                }
+
                 // 증가 계산
                 dResult = Common.ParseTextBoxToDecimal(txtDmgInc, gCulture);
                 resultDmg = baseDmg * (1 + Common.CalcPercent(dResult));
 
+                // 추가 계산
                 foreach (MetroTextBox control in txtCalc)
                 {
                     if (control.Equals(txtDmgInc))

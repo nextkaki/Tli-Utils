@@ -51,6 +51,20 @@
             this.btnFrostRampage = new MetroFramework.Controls.MetroTile();
             this.btnFreeze = new MetroFramework.Controls.MetroTile();
             this.btnCool = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.btnMain3 = new MetroFramework.Controls.MetroTile();
+            this.txtNeedCool = new MetroFramework.Controls.MetroTextBox();
+            this.txtYNCool = new MetroFramework.Controls.MetroTextBox();
+            this.txtResultCoolTime = new MetroFramework.Controls.MetroTextBox();
+            this.lb_wc = new MetroFramework.Controls.MetroLabel();
+            this.lb_rc = new MetroFramework.Controls.MetroLabel();
+            this.lb_gsc = new MetroFramework.Controls.MetroLabel();
+            this.lb_rsc = new MetroFramework.Controls.MetroLabel();
+            this.txtRefCoolTime = new MetroFramework.Controls.MetroTextBox();
+            this.lb_scc = new MetroFramework.Controls.MetroLabel();
+            this.txtTargetCool = new MetroFramework.Controls.MetroTextBox();
+            this.txtMyCoolTime = new MetroFramework.Controls.MetroTextBox();
+            this.lb_mcrr = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.btnMain1 = new MetroFramework.Controls.MetroTile();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
@@ -71,32 +85,6 @@
             this.lb_gewf = new MetroFramework.Controls.MetroLabel();
             this.lb_ffd = new MetroFramework.Controls.MetroLabel();
             this.lb_fdd = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
-            this.lbl_Tide_Result_Duration = new MetroFramework.Controls.MetroLabel();
-            this.lbl_Tide_Result_Inc = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtTideDuration = new MetroFramework.Controls.MetroTextBox();
-            this.txtTideAdd3 = new MetroFramework.Controls.MetroTextBox();
-            this.txtTideInc3 = new MetroFramework.Controls.MetroTextBox();
-            this.txtTideAdd2 = new MetroFramework.Controls.MetroTextBox();
-            this.txtTideInc2 = new MetroFramework.Controls.MetroTextBox();
-            this.txtTideAdd1 = new MetroFramework.Controls.MetroTextBox();
-            this.txtTideDefault = new MetroFramework.Controls.MetroTextBox();
-            this.txtTideInc1 = new MetroFramework.Controls.MetroTextBox();
-            this.lbl_tide_duration = new MetroFramework.Controls.MetroLabel();
-            this.lbl_tide_add = new MetroFramework.Controls.MetroLabel();
-            this.lbl_Tide_Result = new MetroFramework.Controls.MetroLabel();
-            this.lbl_tide_inc = new MetroFramework.Controls.MetroLabel();
-            this.lbl_tide_default = new MetroFramework.Controls.MetroLabel();
-            this.btnMain7 = new MetroFramework.Controls.MetroTile();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.lbl_confirm_cool = new MetroFramework.Controls.MetroLabel();
             this.btnMain4 = new MetroFramework.Controls.MetroTile();
@@ -191,95 +179,124 @@
             this.lbl_anpdr = new MetroFramework.Controls.MetroLabel();
             this.lbl_apdr = new MetroFramework.Controls.MetroLabel();
             this.lbl_uav = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.btnMain3 = new MetroFramework.Controls.MetroTile();
-            this.txtNeedCool = new MetroFramework.Controls.MetroTextBox();
-            this.txtYNCool = new MetroFramework.Controls.MetroTextBox();
-            this.txtResultCoolTime = new MetroFramework.Controls.MetroTextBox();
-            this.lb_wc = new MetroFramework.Controls.MetroLabel();
-            this.lb_rc = new MetroFramework.Controls.MetroLabel();
-            this.lb_gsc = new MetroFramework.Controls.MetroLabel();
-            this.lb_rsc = new MetroFramework.Controls.MetroLabel();
-            this.txtRefCoolTime = new MetroFramework.Controls.MetroTextBox();
-            this.lb_scc = new MetroFramework.Controls.MetroLabel();
-            this.txtTargetCool = new MetroFramework.Controls.MetroTextBox();
-            this.txtMyCoolTime = new MetroFramework.Controls.MetroTextBox();
-            this.lb_mcrr = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
+            this.lbl_Tide_Result_Duration = new MetroFramework.Controls.MetroLabel();
+            this.lbl_Tide_Result_Inc = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.txtTideDuration = new MetroFramework.Controls.MetroTextBox();
+            this.txtTideAdd3 = new MetroFramework.Controls.MetroTextBox();
+            this.txtTideInc3 = new MetroFramework.Controls.MetroTextBox();
+            this.txtTideAdd2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtTideInc2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtTideAdd1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtTideDefault = new MetroFramework.Controls.MetroTextBox();
+            this.txtTideInc1 = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_tide_duration = new MetroFramework.Controls.MetroLabel();
+            this.lbl_tide_add = new MetroFramework.Controls.MetroLabel();
+            this.lbl_Tide_Result = new MetroFramework.Controls.MetroLabel();
+            this.lbl_tide_inc = new MetroFramework.Controls.MetroLabel();
+            this.lbl_tide_default = new MetroFramework.Controls.MetroLabel();
+            this.btnMain7 = new MetroFramework.Controls.MetroTile();
             this.metroTabPage9 = new MetroFramework.Controls.MetroTabPage();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.txtDmgMin = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgMax = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgInc = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel43 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel42 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel38 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel33 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel41 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel39 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel36 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel34 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel32 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
+            this.txtDmgAdd22 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd21 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd19 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd17 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd15 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd13 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd11 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd9 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd6 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd20 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd18 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd16 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd14 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd12 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd10 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd8 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd5 = new MetroFramework.Controls.MetroTextBox();
             this.txtDmgAdd3 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd7 = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgAdd4 = new MetroFramework.Controls.MetroTextBox();
             this.txtDmgAdd2 = new MetroFramework.Controls.MetroTextBox();
             this.txtDmgAdd1 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd4 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd5 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd6 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd7 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd8 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd9 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd10 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd11 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAvg = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.txtDmgInc = new MetroFramework.Controls.MetroTextBox();
             this.txtResultDmg = new MetroFramework.Controls.MetroTextBox();
             this.txtDmgMulti = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd12 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd13 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel32 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel33 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd14 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd15 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel34 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd16 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd17 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel36 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel38 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd18 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd19 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel39 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd20 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDmgAdd21 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel41 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel42 = new MetroFramework.Controls.MetroLabel();
-            this.txtDmgAdd22 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel43 = new MetroFramework.Controls.MetroLabel();
+            this.txtDmgAvg = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgMax = new MetroFramework.Controls.MetroTextBox();
+            this.txtDmgMin = new MetroFramework.Controls.MetroTextBox();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroLabel44 = new MetroFramework.Controls.MetroLabel();
+            this.txtAffliction = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel45 = new MetroFramework.Controls.MetroLabel();
+            this.txtDmgAilment = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel46 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel47 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel48 = new MetroFramework.Controls.MetroLabel();
+            this.txtDmgAilmentAvg = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel49 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel50 = new MetroFramework.Controls.MetroLabel();
+            this.txtResultAilDmg = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel51 = new MetroFramework.Controls.MetroLabel();
+            this.txtAilmentStack = new MetroFramework.Controls.MetroTextBox();
+            this.dgvFrameView = new System.Windows.Forms.DataGridView();
+            this.metroLabel52 = new MetroFramework.Controls.MetroLabel();
             this.mainTab.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
-            this.metroTabPage8.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabPage6.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroTabPage7.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
+            this.metroTabPage8.SuspendLayout();
             this.metroTabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFrameView)).BeginInit();
             this.SuspendLayout();
             // 
             // mainTab
             // 
             this.mainTab.Controls.Add(this.metroTabPage1);
+            this.mainTab.Controls.Add(this.metroTabPage9);
             this.mainTab.Controls.Add(this.metroTabPage2);
             this.mainTab.Controls.Add(this.metroTabPage3);
             this.mainTab.Controls.Add(this.metroTabPage4);
@@ -287,11 +304,10 @@
             this.mainTab.Controls.Add(this.metroTabPage6);
             this.mainTab.Controls.Add(this.metroTabPage7);
             this.mainTab.Controls.Add(this.metroTabPage8);
-            this.mainTab.Controls.Add(this.metroTabPage9);
             this.mainTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTab.Location = new System.Drawing.Point(0, 0);
             this.mainTab.Name = "mainTab";
-            this.mainTab.SelectedIndex = 8;
+            this.mainTab.SelectedIndex = 1;
             this.mainTab.Size = new System.Drawing.Size(1008, 729);
             this.mainTab.TabIndex = 0;
             // 
@@ -544,6 +560,180 @@
             this.btnCool.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnCool.Click += new System.EventHandler(this.BtnTab_Click);
             // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.dgvFrameView);
+            this.metroTabPage2.Controls.Add(this.btnMain3);
+            this.metroTabPage2.Controls.Add(this.txtNeedCool);
+            this.metroTabPage2.Controls.Add(this.txtYNCool);
+            this.metroTabPage2.Controls.Add(this.txtResultCoolTime);
+            this.metroTabPage2.Controls.Add(this.lb_wc);
+            this.metroTabPage2.Controls.Add(this.lb_rc);
+            this.metroTabPage2.Controls.Add(this.lb_gsc);
+            this.metroTabPage2.Controls.Add(this.lb_rsc);
+            this.metroTabPage2.Controls.Add(this.txtRefCoolTime);
+            this.metroTabPage2.Controls.Add(this.lb_scc);
+            this.metroTabPage2.Controls.Add(this.txtTargetCool);
+            this.metroTabPage2.Controls.Add(this.txtMyCoolTime);
+            this.metroTabPage2.Controls.Add(this.metroLabel52);
+            this.metroTabPage2.Controls.Add(this.lb_mcrr);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 36);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1000, 689);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "쿨타임 계산기";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            // 
+            // btnMain3
+            // 
+            this.btnMain3.Location = new System.Drawing.Point(898, 4);
+            this.btnMain3.Name = "btnMain3";
+            this.btnMain3.Size = new System.Drawing.Size(99, 40);
+            this.btnMain3.TabIndex = 7;
+            this.btnMain3.Text = "메인으로";
+            this.btnMain3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnMain3.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // txtNeedCool
+            // 
+            this.txtNeedCool.Enabled = false;
+            this.txtNeedCool.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtNeedCool.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtNeedCool.Location = new System.Drawing.Point(22, 348);
+            this.txtNeedCool.Name = "txtNeedCool";
+            this.txtNeedCool.Size = new System.Drawing.Size(238, 34);
+            this.txtNeedCool.TabIndex = 3;
+            this.txtNeedCool.Text = "0";
+            this.txtNeedCool.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtYNCool
+            // 
+            this.txtYNCool.Enabled = false;
+            this.txtYNCool.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtYNCool.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtYNCool.ForeColor = System.Drawing.Color.White;
+            this.txtYNCool.Location = new System.Drawing.Point(22, 421);
+            this.txtYNCool.Name = "txtYNCool";
+            this.txtYNCool.Size = new System.Drawing.Size(238, 34);
+            this.txtYNCool.TabIndex = 3;
+            this.txtYNCool.Text = " - ";
+            this.txtYNCool.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtResultCoolTime
+            // 
+            this.txtResultCoolTime.Enabled = false;
+            this.txtResultCoolTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtResultCoolTime.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtResultCoolTime.Location = new System.Drawing.Point(22, 193);
+            this.txtResultCoolTime.Name = "txtResultCoolTime";
+            this.txtResultCoolTime.Size = new System.Drawing.Size(238, 34);
+            this.txtResultCoolTime.TabIndex = 3;
+            this.txtResultCoolTime.Text = "0";
+            this.txtResultCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lb_wc
+            // 
+            this.lb_wc.AutoSize = true;
+            this.lb_wc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_wc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_wc.Location = new System.Drawing.Point(123, 393);
+            this.lb_wc.Name = "lb_wc";
+            this.lb_wc.Size = new System.Drawing.Size(148, 25);
+            this.lb_wc.TabIndex = 2;
+            this.lb_wc.Text = "쿨타임 필요 여부";
+            // 
+            // lb_rc
+            // 
+            this.lb_rc.AutoSize = true;
+            this.lb_rc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_rc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_rc.Location = new System.Drawing.Point(123, 320);
+            this.lb_rc.Name = "lb_rc";
+            this.lb_rc.Size = new System.Drawing.Size(137, 25);
+            this.lb_rc.TabIndex = 2;
+            this.lb_rc.Text = "필요 쿨타임(%)";
+            // 
+            // lb_gsc
+            // 
+            this.lb_gsc.AutoSize = true;
+            this.lb_gsc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_gsc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_gsc.Location = new System.Drawing.Point(83, 247);
+            this.lb_gsc.Name = "lb_gsc";
+            this.lb_gsc.Size = new System.Drawing.Size(177, 25);
+            this.lb_gsc.TabIndex = 2;
+            this.lb_gsc.Text = "목표) 스킬 쿨타임(s)";
+            // 
+            // lb_rsc
+            // 
+            this.lb_rsc.AutoSize = true;
+            this.lb_rsc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_rsc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_rsc.Location = new System.Drawing.Point(115, 165);
+            this.lb_rsc.Name = "lb_rsc";
+            this.lb_rsc.Size = new System.Drawing.Size(155, 25);
+            this.lb_rsc.TabIndex = 2;
+            this.lb_rsc.Text = "결과) 스킬 쿨타임";
+            // 
+            // txtRefCoolTime
+            // 
+            this.txtRefCoolTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtRefCoolTime.Location = new System.Drawing.Point(22, 120);
+            this.txtRefCoolTime.Name = "txtRefCoolTime";
+            this.txtRefCoolTime.Size = new System.Drawing.Size(238, 34);
+            this.txtRefCoolTime.TabIndex = 2;
+            this.txtRefCoolTime.Text = "0";
+            this.txtRefCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRefCoolTime.TextChanged += new System.EventHandler(this.txtRefCoolTime_TextChanged);
+            // 
+            // lb_scc
+            // 
+            this.lb_scc.AutoSize = true;
+            this.lb_scc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_scc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_scc.Location = new System.Drawing.Point(82, 92);
+            this.lb_scc.Name = "lb_scc";
+            this.lb_scc.Size = new System.Drawing.Size(188, 25);
+            this.lb_scc.TabIndex = 2;
+            this.lb_scc.Text = "계산할 스킬 쿨타임(s)";
+            // 
+            // txtTargetCool
+            // 
+            this.txtTargetCool.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTargetCool.Location = new System.Drawing.Point(22, 275);
+            this.txtTargetCool.Name = "txtTargetCool";
+            this.txtTargetCool.Size = new System.Drawing.Size(238, 34);
+            this.txtTargetCool.TabIndex = 3;
+            this.txtTargetCool.Text = "0";
+            this.txtTargetCool.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTargetCool.TextChanged += new System.EventHandler(this.txtTargetCool_TextChanged);
+            // 
+            // txtMyCoolTime
+            // 
+            this.txtMyCoolTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtMyCoolTime.Location = new System.Drawing.Point(22, 47);
+            this.txtMyCoolTime.Name = "txtMyCoolTime";
+            this.txtMyCoolTime.Size = new System.Drawing.Size(238, 34);
+            this.txtMyCoolTime.TabIndex = 1;
+            this.txtMyCoolTime.Text = "0";
+            this.txtMyCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMyCoolTime.TextChanged += new System.EventHandler(this.txtMyCoolTime_TextChanged);
+            // 
+            // lb_mcrr
+            // 
+            this.lb_mcrr.AutoSize = true;
+            this.lb_mcrr.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lb_mcrr.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lb_mcrr.Location = new System.Drawing.Point(8, 19);
+            this.lb_mcrr.Name = "lb_mcrr";
+            this.lb_mcrr.Size = new System.Drawing.Size(262, 25);
+            this.lb_mcrr.TabIndex = 2;
+            this.lb_mcrr.Text = "가방)나의 쿨타임 회복 속도(%)";
+            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.btnMain1);
@@ -795,325 +985,6 @@
             this.lb_fdd.Size = new System.Drawing.Size(188, 25);
             this.lb_fdd.TabIndex = 2;
             this.lb_fdd.Text = "동결 기본 지속시간(s)";
-            // 
-            // metroTabPage8
-            // 
-            this.metroTabPage8.Controls.Add(this.lbl_Tide_Result_Duration);
-            this.metroTabPage8.Controls.Add(this.lbl_Tide_Result_Inc);
-            this.metroTabPage8.Controls.Add(this.metroLabel14);
-            this.metroTabPage8.Controls.Add(this.metroLabel1);
-            this.metroTabPage8.Controls.Add(this.metroLabel8);
-            this.metroTabPage8.Controls.Add(this.metroLabel4);
-            this.metroTabPage8.Controls.Add(this.metroLabel7);
-            this.metroTabPage8.Controls.Add(this.metroLabel5);
-            this.metroTabPage8.Controls.Add(this.metroLabel3);
-            this.metroTabPage8.Controls.Add(this.metroLabel6);
-            this.metroTabPage8.Controls.Add(this.metroLabel2);
-            this.metroTabPage8.Controls.Add(this.txtTideDuration);
-            this.metroTabPage8.Controls.Add(this.txtTideAdd3);
-            this.metroTabPage8.Controls.Add(this.txtTideInc3);
-            this.metroTabPage8.Controls.Add(this.txtTideAdd2);
-            this.metroTabPage8.Controls.Add(this.txtTideInc2);
-            this.metroTabPage8.Controls.Add(this.txtTideAdd1);
-            this.metroTabPage8.Controls.Add(this.txtTideDefault);
-            this.metroTabPage8.Controls.Add(this.txtTideInc1);
-            this.metroTabPage8.Controls.Add(this.lbl_tide_duration);
-            this.metroTabPage8.Controls.Add(this.lbl_tide_add);
-            this.metroTabPage8.Controls.Add(this.lbl_Tide_Result);
-            this.metroTabPage8.Controls.Add(this.lbl_tide_inc);
-            this.metroTabPage8.Controls.Add(this.lbl_tide_default);
-            this.metroTabPage8.Controls.Add(this.btnMain7);
-            this.metroTabPage8.HorizontalScrollbarBarColor = true;
-            this.metroTabPage8.Location = new System.Drawing.Point(4, 36);
-            this.metroTabPage8.Name = "metroTabPage8";
-            this.metroTabPage8.Size = new System.Drawing.Size(1000, 689);
-            this.metroTabPage8.TabIndex = 8;
-            this.metroTabPage8.Text = "셀레나-특성 계산";
-            this.metroTabPage8.VerticalScrollbarBarColor = true;
-            // 
-            // lbl_Tide_Result_Duration
-            // 
-            this.lbl_Tide_Result_Duration.AutoSize = true;
-            this.lbl_Tide_Result_Duration.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_Tide_Result_Duration.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_Tide_Result_Duration.Location = new System.Drawing.Point(309, 513);
-            this.lbl_Tide_Result_Duration.Name = "lbl_Tide_Result_Duration";
-            this.lbl_Tide_Result_Duration.Size = new System.Drawing.Size(89, 25);
-            this.lbl_Tide_Result_Duration.TabIndex = 14;
-            this.lbl_Tide_Result_Duration.Text = "시간 결과";
-            // 
-            // lbl_Tide_Result_Inc
-            // 
-            this.lbl_Tide_Result_Inc.AutoSize = true;
-            this.lbl_Tide_Result_Inc.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_Tide_Result_Inc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_Tide_Result_Inc.Location = new System.Drawing.Point(309, 164);
-            this.lbl_Tide_Result_Inc.Name = "lbl_Tide_Result_Inc";
-            this.lbl_Tide_Result_Inc.Size = new System.Drawing.Size(89, 25);
-            this.lbl_Tide_Result_Inc.TabIndex = 14;
-            this.lbl_Tide_Result_Inc.Text = "효과 추가";
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel14.Location = new System.Drawing.Point(187, 46);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(28, 25);
-            this.metroLabel14.TabIndex = 13;
-            this.metroLabel14.Text = "%";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(133, 545);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(28, 25);
-            this.metroLabel1.TabIndex = 13;
-            this.metroLabel1.Text = "%";
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(8, 457);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel8.TabIndex = 13;
-            this.metroLabel8.Text = "3";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(8, 288);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel4.TabIndex = 13;
-            this.metroLabel4.Text = "3";
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(8, 414);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel7.TabIndex = 13;
-            this.metroLabel7.Text = "2";
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(8, 206);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel5.TabIndex = 13;
-            this.metroLabel5.Text = "1";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(8, 245);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel3.TabIndex = 13;
-            this.metroLabel3.Text = "2";
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(8, 373);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel6.TabIndex = 12;
-            this.metroLabel6.Text = "1";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(14, 46);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(48, 25);
-            this.metroLabel2.TabIndex = 12;
-            this.metroLabel2.Text = "기본";
-            // 
-            // txtTideDuration
-            // 
-            this.txtTideDuration.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideDuration.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideDuration.Location = new System.Drawing.Point(15, 541);
-            this.txtTideDuration.Name = "txtTideDuration";
-            this.txtTideDuration.Size = new System.Drawing.Size(112, 35);
-            this.txtTideDuration.TabIndex = 11;
-            this.txtTideDuration.Text = "0";
-            this.txtTideDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideDuration.TextChanged += new System.EventHandler(this.txtTideDuration_TextChanged);
-            // 
-            // txtTideAdd3
-            // 
-            this.txtTideAdd3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideAdd3.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideAdd3.Location = new System.Drawing.Point(36, 454);
-            this.txtTideAdd3.Name = "txtTideAdd3";
-            this.txtTideAdd3.Size = new System.Drawing.Size(112, 35);
-            this.txtTideAdd3.TabIndex = 11;
-            this.txtTideAdd3.Text = "0";
-            this.txtTideAdd3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideAdd3.TextChanged += new System.EventHandler(this.txtTideAdd_TextChanged);
-            // 
-            // txtTideInc3
-            // 
-            this.txtTideInc3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideInc3.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideInc3.Location = new System.Drawing.Point(36, 285);
-            this.txtTideInc3.Name = "txtTideInc3";
-            this.txtTideInc3.Size = new System.Drawing.Size(112, 35);
-            this.txtTideInc3.TabIndex = 11;
-            this.txtTideInc3.Text = "0";
-            this.txtTideInc3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideInc3.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
-            // 
-            // txtTideAdd2
-            // 
-            this.txtTideAdd2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideAdd2.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideAdd2.Location = new System.Drawing.Point(36, 413);
-            this.txtTideAdd2.Name = "txtTideAdd2";
-            this.txtTideAdd2.Size = new System.Drawing.Size(112, 35);
-            this.txtTideAdd2.TabIndex = 11;
-            this.txtTideAdd2.Text = "0";
-            this.txtTideAdd2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideAdd2.TextChanged += new System.EventHandler(this.txtTideAdd_TextChanged);
-            // 
-            // txtTideInc2
-            // 
-            this.txtTideInc2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideInc2.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideInc2.Location = new System.Drawing.Point(36, 244);
-            this.txtTideInc2.Name = "txtTideInc2";
-            this.txtTideInc2.Size = new System.Drawing.Size(112, 35);
-            this.txtTideInc2.TabIndex = 11;
-            this.txtTideInc2.Text = "0";
-            this.txtTideInc2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideInc2.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
-            // 
-            // txtTideAdd1
-            // 
-            this.txtTideAdd1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideAdd1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideAdd1.Location = new System.Drawing.Point(36, 370);
-            this.txtTideAdd1.Name = "txtTideAdd1";
-            this.txtTideAdd1.Size = new System.Drawing.Size(112, 35);
-            this.txtTideAdd1.TabIndex = 11;
-            this.txtTideAdd1.Text = "0";
-            this.txtTideAdd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideAdd1.TextChanged += new System.EventHandler(this.txtTideAdd_TextChanged);
-            // 
-            // txtTideDefault
-            // 
-            this.txtTideDefault.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideDefault.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideDefault.Location = new System.Drawing.Point(69, 41);
-            this.txtTideDefault.Name = "txtTideDefault";
-            this.txtTideDefault.Size = new System.Drawing.Size(112, 35);
-            this.txtTideDefault.TabIndex = 11;
-            this.txtTideDefault.Text = "10";
-            this.txtTideDefault.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideDefault.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
-            // 
-            // txtTideInc1
-            // 
-            this.txtTideInc1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTideInc1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTideInc1.Location = new System.Drawing.Point(36, 201);
-            this.txtTideInc1.Name = "txtTideInc1";
-            this.txtTideInc1.Size = new System.Drawing.Size(112, 35);
-            this.txtTideInc1.TabIndex = 11;
-            this.txtTideInc1.Text = "0";
-            this.txtTideInc1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTideInc1.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
-            // 
-            // lbl_tide_duration
-            // 
-            this.lbl_tide_duration.AutoSize = true;
-            this.lbl_tide_duration.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_tide_duration.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tide_duration.Location = new System.Drawing.Point(8, 513);
-            this.lbl_tide_duration.Name = "lbl_tide_duration";
-            this.lbl_tide_duration.Size = new System.Drawing.Size(125, 25);
-            this.lbl_tide_duration.TabIndex = 10;
-            this.lbl_tide_duration.Text = "조수 지속시간";
-            // 
-            // lbl_tide_add
-            // 
-            this.lbl_tide_add.AutoSize = true;
-            this.lbl_tide_add.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_tide_add.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tide_add.Location = new System.Drawing.Point(8, 339);
-            this.lbl_tide_add.Name = "lbl_tide_add";
-            this.lbl_tide_add.Size = new System.Drawing.Size(160, 25);
-            this.lbl_tide_add.TabIndex = 10;
-            this.lbl_tide_add.Text = "조수 효과 추가(%)";
-            // 
-            // lbl_Tide_Result
-            // 
-            this.lbl_Tide_Result.AutoSize = true;
-            this.lbl_Tide_Result.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_Tide_Result.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_Tide_Result.Location = new System.Drawing.Point(309, 51);
-            this.lbl_Tide_Result.Name = "lbl_Tide_Result";
-            this.lbl_Tide_Result.Size = new System.Drawing.Size(48, 25);
-            this.lbl_Tide_Result.TabIndex = 10;
-            this.lbl_Tide_Result.Text = "결과";
-            // 
-            // lbl_tide_inc
-            // 
-            this.lbl_tide_inc.AutoSize = true;
-            this.lbl_tide_inc.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_tide_inc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tide_inc.Location = new System.Drawing.Point(8, 164);
-            this.lbl_tide_inc.Name = "lbl_tide_inc";
-            this.lbl_tide_inc.Size = new System.Drawing.Size(119, 25);
-            this.lbl_tide_inc.TabIndex = 10;
-            this.lbl_tide_inc.Text = "조수 효과(%)";
-            // 
-            // lbl_tide_default
-            // 
-            this.lbl_tide_default.AutoSize = true;
-            this.lbl_tide_default.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_tide_default.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tide_default.Location = new System.Drawing.Point(8, 12);
-            this.lbl_tide_default.Name = "lbl_tide_default";
-            this.lbl_tide_default.Size = new System.Drawing.Size(470, 25);
-            this.lbl_tide_default.TabIndex = 9;
-            this.lbl_tide_default.Text = "대미지 추가 +10% , 4 초 지속 / 적 발 아래 조수, 6초 지속";
-            // 
-            // btnMain7
-            // 
-            this.btnMain7.Location = new System.Drawing.Point(893, 12);
-            this.btnMain7.Name = "btnMain7";
-            this.btnMain7.Size = new System.Drawing.Size(99, 40);
-            this.btnMain7.TabIndex = 8;
-            this.btnMain7.Text = "메인으로";
-            this.btnMain7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMain7.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMain7.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnMain7.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             // 
             // metroTabPage4
             // 
@@ -2313,177 +2184,324 @@
             this.lbl_uav.TabIndex = 4;
             this.lbl_uav.Text = "유저 아머 수치";
             // 
-            // metroTabPage2
+            // metroTabPage8
             // 
-            this.metroTabPage2.Controls.Add(this.btnMain3);
-            this.metroTabPage2.Controls.Add(this.txtNeedCool);
-            this.metroTabPage2.Controls.Add(this.txtYNCool);
-            this.metroTabPage2.Controls.Add(this.txtResultCoolTime);
-            this.metroTabPage2.Controls.Add(this.lb_wc);
-            this.metroTabPage2.Controls.Add(this.lb_rc);
-            this.metroTabPage2.Controls.Add(this.lb_gsc);
-            this.metroTabPage2.Controls.Add(this.lb_rsc);
-            this.metroTabPage2.Controls.Add(this.txtRefCoolTime);
-            this.metroTabPage2.Controls.Add(this.lb_scc);
-            this.metroTabPage2.Controls.Add(this.txtTargetCool);
-            this.metroTabPage2.Controls.Add(this.txtMyCoolTime);
-            this.metroTabPage2.Controls.Add(this.lb_mcrr);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 36);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1000, 689);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "쿨타임 계산기";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage8.Controls.Add(this.lbl_Tide_Result_Duration);
+            this.metroTabPage8.Controls.Add(this.lbl_Tide_Result_Inc);
+            this.metroTabPage8.Controls.Add(this.metroLabel14);
+            this.metroTabPage8.Controls.Add(this.metroLabel1);
+            this.metroTabPage8.Controls.Add(this.metroLabel8);
+            this.metroTabPage8.Controls.Add(this.metroLabel4);
+            this.metroTabPage8.Controls.Add(this.metroLabel7);
+            this.metroTabPage8.Controls.Add(this.metroLabel5);
+            this.metroTabPage8.Controls.Add(this.metroLabel3);
+            this.metroTabPage8.Controls.Add(this.metroLabel6);
+            this.metroTabPage8.Controls.Add(this.metroLabel2);
+            this.metroTabPage8.Controls.Add(this.txtTideDuration);
+            this.metroTabPage8.Controls.Add(this.txtTideAdd3);
+            this.metroTabPage8.Controls.Add(this.txtTideInc3);
+            this.metroTabPage8.Controls.Add(this.txtTideAdd2);
+            this.metroTabPage8.Controls.Add(this.txtTideInc2);
+            this.metroTabPage8.Controls.Add(this.txtTideAdd1);
+            this.metroTabPage8.Controls.Add(this.txtTideDefault);
+            this.metroTabPage8.Controls.Add(this.txtTideInc1);
+            this.metroTabPage8.Controls.Add(this.lbl_tide_duration);
+            this.metroTabPage8.Controls.Add(this.lbl_tide_add);
+            this.metroTabPage8.Controls.Add(this.lbl_Tide_Result);
+            this.metroTabPage8.Controls.Add(this.lbl_tide_inc);
+            this.metroTabPage8.Controls.Add(this.lbl_tide_default);
+            this.metroTabPage8.Controls.Add(this.btnMain7);
+            this.metroTabPage8.HorizontalScrollbarBarColor = true;
+            this.metroTabPage8.Location = new System.Drawing.Point(4, 36);
+            this.metroTabPage8.Name = "metroTabPage8";
+            this.metroTabPage8.Size = new System.Drawing.Size(1000, 689);
+            this.metroTabPage8.TabIndex = 8;
+            this.metroTabPage8.Text = "셀레나-특성 계산";
+            this.metroTabPage8.VerticalScrollbarBarColor = true;
             // 
-            // btnMain3
+            // lbl_Tide_Result_Duration
             // 
-            this.btnMain3.Location = new System.Drawing.Point(898, 4);
-            this.btnMain3.Name = "btnMain3";
-            this.btnMain3.Size = new System.Drawing.Size(99, 40);
-            this.btnMain3.TabIndex = 7;
-            this.btnMain3.Text = "메인으로";
-            this.btnMain3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMain3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMain3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnMain3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btnMain3.Click += new System.EventHandler(this.btnHome_Click);
+            this.lbl_Tide_Result_Duration.AutoSize = true;
+            this.lbl_Tide_Result_Duration.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_Tide_Result_Duration.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_Tide_Result_Duration.Location = new System.Drawing.Point(309, 513);
+            this.lbl_Tide_Result_Duration.Name = "lbl_Tide_Result_Duration";
+            this.lbl_Tide_Result_Duration.Size = new System.Drawing.Size(89, 25);
+            this.lbl_Tide_Result_Duration.TabIndex = 14;
+            this.lbl_Tide_Result_Duration.Text = "시간 결과";
             // 
-            // txtNeedCool
+            // lbl_Tide_Result_Inc
             // 
-            this.txtNeedCool.Enabled = false;
-            this.txtNeedCool.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtNeedCool.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtNeedCool.Location = new System.Drawing.Point(182, 353);
-            this.txtNeedCool.Name = "txtNeedCool";
-            this.txtNeedCool.Size = new System.Drawing.Size(104, 34);
-            this.txtNeedCool.TabIndex = 3;
-            this.txtNeedCool.Text = "0";
-            this.txtNeedCool.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lbl_Tide_Result_Inc.AutoSize = true;
+            this.lbl_Tide_Result_Inc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_Tide_Result_Inc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_Tide_Result_Inc.Location = new System.Drawing.Point(309, 164);
+            this.lbl_Tide_Result_Inc.Name = "lbl_Tide_Result_Inc";
+            this.lbl_Tide_Result_Inc.Size = new System.Drawing.Size(89, 25);
+            this.lbl_Tide_Result_Inc.TabIndex = 14;
+            this.lbl_Tide_Result_Inc.Text = "효과 추가";
             // 
-            // txtYNCool
+            // metroLabel14
             // 
-            this.txtYNCool.Enabled = false;
-            this.txtYNCool.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtYNCool.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtYNCool.ForeColor = System.Drawing.Color.White;
-            this.txtYNCool.Location = new System.Drawing.Point(182, 426);
-            this.txtYNCool.Name = "txtYNCool";
-            this.txtYNCool.Size = new System.Drawing.Size(104, 34);
-            this.txtYNCool.TabIndex = 3;
-            this.txtYNCool.Text = " - ";
-            this.txtYNCool.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel14.Location = new System.Drawing.Point(187, 46);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel14.TabIndex = 13;
+            this.metroLabel14.Text = "%";
             // 
-            // txtResultCoolTime
+            // metroLabel1
             // 
-            this.txtResultCoolTime.Enabled = false;
-            this.txtResultCoolTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtResultCoolTime.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtResultCoolTime.Location = new System.Drawing.Point(182, 198);
-            this.txtResultCoolTime.Name = "txtResultCoolTime";
-            this.txtResultCoolTime.Size = new System.Drawing.Size(104, 34);
-            this.txtResultCoolTime.TabIndex = 3;
-            this.txtResultCoolTime.Text = "0";
-            this.txtResultCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(133, 545);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(28, 25);
+            this.metroLabel1.TabIndex = 13;
+            this.metroLabel1.Text = "%";
             // 
-            // lb_wc
+            // metroLabel8
             // 
-            this.lb_wc.AutoSize = true;
-            this.lb_wc.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lb_wc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lb_wc.Location = new System.Drawing.Point(149, 398);
-            this.lb_wc.Name = "lb_wc";
-            this.lb_wc.Size = new System.Drawing.Size(148, 25);
-            this.lb_wc.TabIndex = 2;
-            this.lb_wc.Text = "쿨타임 필요 여부";
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel8.Location = new System.Drawing.Point(8, 457);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel8.TabIndex = 13;
+            this.metroLabel8.Text = "3";
             // 
-            // lb_rc
+            // metroLabel4
             // 
-            this.lb_rc.AutoSize = true;
-            this.lb_rc.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lb_rc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lb_rc.Location = new System.Drawing.Point(149, 325);
-            this.lb_rc.Name = "lb_rc";
-            this.lb_rc.Size = new System.Drawing.Size(137, 25);
-            this.lb_rc.TabIndex = 2;
-            this.lb_rc.Text = "필요 쿨타임(%)";
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(8, 288);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel4.TabIndex = 13;
+            this.metroLabel4.Text = "3";
             // 
-            // lb_gsc
+            // metroLabel7
             // 
-            this.lb_gsc.AutoSize = true;
-            this.lb_gsc.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lb_gsc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lb_gsc.Location = new System.Drawing.Point(109, 252);
-            this.lb_gsc.Name = "lb_gsc";
-            this.lb_gsc.Size = new System.Drawing.Size(177, 25);
-            this.lb_gsc.TabIndex = 2;
-            this.lb_gsc.Text = "목표) 스킬 쿨타임(s)";
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel7.Location = new System.Drawing.Point(8, 414);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel7.TabIndex = 13;
+            this.metroLabel7.Text = "2";
             // 
-            // lb_rsc
+            // metroLabel5
             // 
-            this.lb_rsc.AutoSize = true;
-            this.lb_rsc.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lb_rsc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lb_rsc.Location = new System.Drawing.Point(141, 170);
-            this.lb_rsc.Name = "lb_rsc";
-            this.lb_rsc.Size = new System.Drawing.Size(155, 25);
-            this.lb_rsc.TabIndex = 2;
-            this.lb_rsc.Text = "결과) 스킬 쿨타임";
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(8, 206);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel5.TabIndex = 13;
+            this.metroLabel5.Text = "1";
             // 
-            // txtRefCoolTime
+            // metroLabel3
             // 
-            this.txtRefCoolTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtRefCoolTime.Location = new System.Drawing.Point(182, 125);
-            this.txtRefCoolTime.Name = "txtRefCoolTime";
-            this.txtRefCoolTime.Size = new System.Drawing.Size(104, 34);
-            this.txtRefCoolTime.TabIndex = 2;
-            this.txtRefCoolTime.Text = "0";
-            this.txtRefCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtRefCoolTime.TextChanged += new System.EventHandler(this.txtRefCoolTime_TextChanged);
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(8, 245);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel3.TabIndex = 13;
+            this.metroLabel3.Text = "2";
             // 
-            // lb_scc
+            // metroLabel6
             // 
-            this.lb_scc.AutoSize = true;
-            this.lb_scc.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lb_scc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lb_scc.Location = new System.Drawing.Point(108, 97);
-            this.lb_scc.Name = "lb_scc";
-            this.lb_scc.Size = new System.Drawing.Size(188, 25);
-            this.lb_scc.TabIndex = 2;
-            this.lb_scc.Text = "계산할 스킬 쿨타임(s)";
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(8, 373);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel6.TabIndex = 12;
+            this.metroLabel6.Text = "1";
             // 
-            // txtTargetCool
+            // metroLabel2
             // 
-            this.txtTargetCool.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTargetCool.Location = new System.Drawing.Point(182, 280);
-            this.txtTargetCool.Name = "txtTargetCool";
-            this.txtTargetCool.Size = new System.Drawing.Size(104, 34);
-            this.txtTargetCool.TabIndex = 3;
-            this.txtTargetCool.Text = "0";
-            this.txtTargetCool.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTargetCool.TextChanged += new System.EventHandler(this.txtTargetCool_TextChanged);
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(14, 46);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(48, 25);
+            this.metroLabel2.TabIndex = 12;
+            this.metroLabel2.Text = "기본";
             // 
-            // txtMyCoolTime
+            // txtTideDuration
             // 
-            this.txtMyCoolTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtMyCoolTime.Location = new System.Drawing.Point(182, 52);
-            this.txtMyCoolTime.Name = "txtMyCoolTime";
-            this.txtMyCoolTime.Size = new System.Drawing.Size(104, 34);
-            this.txtMyCoolTime.TabIndex = 1;
-            this.txtMyCoolTime.Text = "0";
-            this.txtMyCoolTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMyCoolTime.TextChanged += new System.EventHandler(this.txtMyCoolTime_TextChanged);
+            this.txtTideDuration.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideDuration.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideDuration.Location = new System.Drawing.Point(15, 541);
+            this.txtTideDuration.Name = "txtTideDuration";
+            this.txtTideDuration.Size = new System.Drawing.Size(112, 35);
+            this.txtTideDuration.TabIndex = 11;
+            this.txtTideDuration.Text = "0";
+            this.txtTideDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideDuration.TextChanged += new System.EventHandler(this.txtTideDuration_TextChanged);
             // 
-            // lb_mcrr
+            // txtTideAdd3
             // 
-            this.lb_mcrr.AutoSize = true;
-            this.lb_mcrr.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lb_mcrr.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lb_mcrr.Location = new System.Drawing.Point(34, 24);
-            this.lb_mcrr.Name = "lb_mcrr";
-            this.lb_mcrr.Size = new System.Drawing.Size(262, 25);
-            this.lb_mcrr.TabIndex = 2;
-            this.lb_mcrr.Text = "가방)나의 쿨타임 회복 속도(%)";
+            this.txtTideAdd3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideAdd3.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideAdd3.Location = new System.Drawing.Point(36, 454);
+            this.txtTideAdd3.Name = "txtTideAdd3";
+            this.txtTideAdd3.Size = new System.Drawing.Size(112, 35);
+            this.txtTideAdd3.TabIndex = 11;
+            this.txtTideAdd3.Text = "0";
+            this.txtTideAdd3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideAdd3.TextChanged += new System.EventHandler(this.txtTideAdd_TextChanged);
+            // 
+            // txtTideInc3
+            // 
+            this.txtTideInc3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideInc3.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideInc3.Location = new System.Drawing.Point(36, 285);
+            this.txtTideInc3.Name = "txtTideInc3";
+            this.txtTideInc3.Size = new System.Drawing.Size(112, 35);
+            this.txtTideInc3.TabIndex = 11;
+            this.txtTideInc3.Text = "0";
+            this.txtTideInc3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideInc3.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
+            // 
+            // txtTideAdd2
+            // 
+            this.txtTideAdd2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideAdd2.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideAdd2.Location = new System.Drawing.Point(36, 413);
+            this.txtTideAdd2.Name = "txtTideAdd2";
+            this.txtTideAdd2.Size = new System.Drawing.Size(112, 35);
+            this.txtTideAdd2.TabIndex = 11;
+            this.txtTideAdd2.Text = "0";
+            this.txtTideAdd2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideAdd2.TextChanged += new System.EventHandler(this.txtTideAdd_TextChanged);
+            // 
+            // txtTideInc2
+            // 
+            this.txtTideInc2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideInc2.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideInc2.Location = new System.Drawing.Point(36, 244);
+            this.txtTideInc2.Name = "txtTideInc2";
+            this.txtTideInc2.Size = new System.Drawing.Size(112, 35);
+            this.txtTideInc2.TabIndex = 11;
+            this.txtTideInc2.Text = "0";
+            this.txtTideInc2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideInc2.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
+            // 
+            // txtTideAdd1
+            // 
+            this.txtTideAdd1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideAdd1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideAdd1.Location = new System.Drawing.Point(36, 370);
+            this.txtTideAdd1.Name = "txtTideAdd1";
+            this.txtTideAdd1.Size = new System.Drawing.Size(112, 35);
+            this.txtTideAdd1.TabIndex = 11;
+            this.txtTideAdd1.Text = "0";
+            this.txtTideAdd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideAdd1.TextChanged += new System.EventHandler(this.txtTideAdd_TextChanged);
+            // 
+            // txtTideDefault
+            // 
+            this.txtTideDefault.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideDefault.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideDefault.Location = new System.Drawing.Point(69, 41);
+            this.txtTideDefault.Name = "txtTideDefault";
+            this.txtTideDefault.Size = new System.Drawing.Size(112, 35);
+            this.txtTideDefault.TabIndex = 11;
+            this.txtTideDefault.Text = "15";
+            this.txtTideDefault.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideDefault.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
+            // 
+            // txtTideInc1
+            // 
+            this.txtTideInc1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTideInc1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTideInc1.Location = new System.Drawing.Point(36, 201);
+            this.txtTideInc1.Name = "txtTideInc1";
+            this.txtTideInc1.Size = new System.Drawing.Size(112, 35);
+            this.txtTideInc1.TabIndex = 11;
+            this.txtTideInc1.Text = "0";
+            this.txtTideInc1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTideInc1.TextChanged += new System.EventHandler(this.txtTideInc_TextChanged);
+            // 
+            // lbl_tide_duration
+            // 
+            this.lbl_tide_duration.AutoSize = true;
+            this.lbl_tide_duration.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_tide_duration.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tide_duration.Location = new System.Drawing.Point(8, 513);
+            this.lbl_tide_duration.Name = "lbl_tide_duration";
+            this.lbl_tide_duration.Size = new System.Drawing.Size(125, 25);
+            this.lbl_tide_duration.TabIndex = 10;
+            this.lbl_tide_duration.Text = "조수 지속시간";
+            // 
+            // lbl_tide_add
+            // 
+            this.lbl_tide_add.AutoSize = true;
+            this.lbl_tide_add.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_tide_add.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tide_add.Location = new System.Drawing.Point(8, 339);
+            this.lbl_tide_add.Name = "lbl_tide_add";
+            this.lbl_tide_add.Size = new System.Drawing.Size(160, 25);
+            this.lbl_tide_add.TabIndex = 10;
+            this.lbl_tide_add.Text = "조수 효과 추가(%)";
+            // 
+            // lbl_Tide_Result
+            // 
+            this.lbl_Tide_Result.AutoSize = true;
+            this.lbl_Tide_Result.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_Tide_Result.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_Tide_Result.Location = new System.Drawing.Point(309, 51);
+            this.lbl_Tide_Result.Name = "lbl_Tide_Result";
+            this.lbl_Tide_Result.Size = new System.Drawing.Size(48, 25);
+            this.lbl_Tide_Result.TabIndex = 10;
+            this.lbl_Tide_Result.Text = "결과";
+            // 
+            // lbl_tide_inc
+            // 
+            this.lbl_tide_inc.AutoSize = true;
+            this.lbl_tide_inc.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_tide_inc.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tide_inc.Location = new System.Drawing.Point(8, 164);
+            this.lbl_tide_inc.Name = "lbl_tide_inc";
+            this.lbl_tide_inc.Size = new System.Drawing.Size(119, 25);
+            this.lbl_tide_inc.TabIndex = 10;
+            this.lbl_tide_inc.Text = "조수 효과(%)";
+            // 
+            // lbl_tide_default
+            // 
+            this.lbl_tide_default.AutoSize = true;
+            this.lbl_tide_default.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_tide_default.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tide_default.Location = new System.Drawing.Point(8, 12);
+            this.lbl_tide_default.Name = "lbl_tide_default";
+            this.lbl_tide_default.Size = new System.Drawing.Size(470, 25);
+            this.lbl_tide_default.TabIndex = 9;
+            this.lbl_tide_default.Text = "대미지 추가 +15% , 4 초 지속 / 적 발 아래 조수, 6초 지속";
+            // 
+            // btnMain7
+            // 
+            this.btnMain7.Location = new System.Drawing.Point(893, 12);
+            this.btnMain7.Name = "btnMain7";
+            this.btnMain7.Size = new System.Drawing.Size(99, 40);
+            this.btnMain7.TabIndex = 8;
+            this.btnMain7.Text = "메인으로";
+            this.btnMain7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain7.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMain7.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMain7.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             // 
             // metroTabPage9
             // 
@@ -2534,9 +2552,22 @@
             this.metroTabPage9.Controls.Add(this.metroLabel16);
             this.metroTabPage9.Controls.Add(this.metroLabel18);
             this.metroTabPage9.Controls.Add(this.metroLabel17);
+            this.metroTabPage9.Controls.Add(this.metroLabel46);
+            this.metroTabPage9.Controls.Add(this.metroLabel50);
+            this.metroTabPage9.Controls.Add(this.metroLabel49);
+            this.metroTabPage9.Controls.Add(this.metroLabel48);
+            this.metroTabPage9.Controls.Add(this.metroLabel45);
+            this.metroTabPage9.Controls.Add(this.metroLabel51);
+            this.metroTabPage9.Controls.Add(this.metroLabel44);
+            this.metroTabPage9.Controls.Add(this.metroLabel47);
             this.metroTabPage9.Controls.Add(this.metroLabel31);
             this.metroTabPage9.Controls.Add(this.metroLabel15);
+            this.metroTabPage9.Controls.Add(this.txtDmgAilmentAvg);
+            this.metroTabPage9.Controls.Add(this.txtDmgAilment);
+            this.metroTabPage9.Controls.Add(this.txtAilmentStack);
+            this.metroTabPage9.Controls.Add(this.txtAffliction);
             this.metroTabPage9.Controls.Add(this.txtDmgInc);
+            this.metroTabPage9.Controls.Add(this.txtResultAilDmg);
             this.metroTabPage9.Controls.Add(this.txtResultDmg);
             this.metroTabPage9.Controls.Add(this.txtDmgMulti);
             this.metroTabPage9.Controls.Add(this.txtDmgAvg);
@@ -2550,90 +2581,104 @@
             this.metroTabPage9.Text = "대미지 계산";
             this.metroTabPage9.VerticalScrollbarBarColor = true;
             // 
-            // metroStyleManager1
+            // metroLabel43
             // 
-            this.metroStyleManager1.Owner = null;
-            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel43.AutoSize = true;
+            this.metroLabel43.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel43.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel43.Location = new System.Drawing.Point(166, 620);
+            this.metroLabel43.Name = "metroLabel43";
+            this.metroLabel43.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel43.TabIndex = 19;
+            this.metroLabel43.Text = "22";
             // 
-            // txtDmgMin
+            // metroLabel42
             // 
-            this.txtDmgMin.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgMin.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgMin.Location = new System.Drawing.Point(8, 39);
-            this.txtDmgMin.Name = "txtDmgMin";
-            this.txtDmgMin.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgMin.TabIndex = 12;
-            this.txtDmgMin.Text = "1";
-            this.txtDmgMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgMin.TextChanged += new System.EventHandler(this.calcDmgFlat);
+            this.metroLabel42.AutoSize = true;
+            this.metroLabel42.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel42.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel42.Location = new System.Drawing.Point(166, 580);
+            this.metroLabel42.Name = "metroLabel42";
+            this.metroLabel42.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel42.TabIndex = 19;
+            this.metroLabel42.Text = "21";
             // 
-            // metroLabel15
+            // metroLabel40
             // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel15.Location = new System.Drawing.Point(8, 11);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(107, 25);
-            this.metroLabel15.TabIndex = 13;
-            this.metroLabel15.Text = "대미지 플랫";
+            this.metroLabel40.AutoSize = true;
+            this.metroLabel40.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel40.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel40.Location = new System.Drawing.Point(165, 496);
+            this.metroLabel40.Name = "metroLabel40";
+            this.metroLabel40.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel40.TabIndex = 19;
+            this.metroLabel40.Text = "19";
             // 
-            // metroLabel16
+            // metroLabel38
             // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.Location = new System.Drawing.Point(126, 42);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(25, 25);
-            this.metroLabel16.TabIndex = 14;
-            this.metroLabel16.Text = "~";
+            this.metroLabel38.AutoSize = true;
+            this.metroLabel38.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel38.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel38.Location = new System.Drawing.Point(166, 414);
+            this.metroLabel38.Name = "metroLabel38";
+            this.metroLabel38.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel38.TabIndex = 19;
+            this.metroLabel38.Text = "17";
             // 
-            // txtDmgMax
+            // metroLabel35
             // 
-            this.txtDmgMax.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgMax.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgMax.Location = new System.Drawing.Point(157, 42);
-            this.txtDmgMax.Name = "txtDmgMax";
-            this.txtDmgMax.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgMax.TabIndex = 12;
-            this.txtDmgMax.Text = "99";
-            this.txtDmgMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgMax.TextChanged += new System.EventHandler(this.calcDmgFlat);
+            this.metroLabel35.AutoSize = true;
+            this.metroLabel35.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel35.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel35.Location = new System.Drawing.Point(166, 330);
+            this.metroLabel35.Name = "metroLabel35";
+            this.metroLabel35.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel35.TabIndex = 19;
+            this.metroLabel35.Text = "15";
             // 
-            // metroLabel17
+            // metroLabel33
             // 
-            this.metroLabel17.AutoSize = true;
-            this.metroLabel17.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel17.Location = new System.Drawing.Point(8, 90);
-            this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(78, 25);
-            this.metroLabel17.TabIndex = 13;
-            this.metroLabel17.Text = "증가(%)";
+            this.metroLabel33.AutoSize = true;
+            this.metroLabel33.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel33.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel33.Location = new System.Drawing.Point(166, 244);
+            this.metroLabel33.Name = "metroLabel33";
+            this.metroLabel33.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel33.TabIndex = 19;
+            this.metroLabel33.Text = "13";
             // 
-            // metroLabel18
+            // metroLabel30
             // 
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel18.Location = new System.Drawing.Point(8, 168);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(197, 25);
-            this.metroLabel18.TabIndex = 13;
-            this.metroLabel18.Text = "추가(%) (각 별도 요소)";
+            this.metroLabel30.AutoSize = true;
+            this.metroLabel30.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel30.Location = new System.Drawing.Point(4, 620);
+            this.metroLabel30.Name = "metroLabel30";
+            this.metroLabel30.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel30.TabIndex = 19;
+            this.metroLabel30.Text = "11";
             // 
-            // txtDmgInc
+            // metroLabel28
             // 
-            this.txtDmgInc.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgInc.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgInc.Location = new System.Drawing.Point(8, 118);
-            this.txtDmgInc.Name = "txtDmgInc";
-            this.txtDmgInc.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgInc.TabIndex = 12;
-            this.txtDmgInc.Text = "0";
-            this.txtDmgInc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgInc.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel28.AutoSize = true;
+            this.metroLabel28.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel28.Location = new System.Drawing.Point(11, 538);
+            this.metroLabel28.Name = "metroLabel28";
+            this.metroLabel28.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel28.TabIndex = 19;
+            this.metroLabel28.Text = "9";
+            // 
+            // metroLabel24
+            // 
+            this.metroLabel24.AutoSize = true;
+            this.metroLabel24.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel24.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel24.Location = new System.Drawing.Point(11, 413);
+            this.metroLabel24.Name = "metroLabel24";
+            this.metroLabel24.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel24.TabIndex = 19;
+            this.metroLabel24.Text = "6";
             // 
             // metroLabel19
             // 
@@ -2646,6 +2691,94 @@
             this.metroLabel19.TabIndex = 19;
             this.metroLabel19.Text = "3";
             // 
+            // metroLabel41
+            // 
+            this.metroLabel41.AutoSize = true;
+            this.metroLabel41.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel41.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel41.Location = new System.Drawing.Point(165, 538);
+            this.metroLabel41.Name = "metroLabel41";
+            this.metroLabel41.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel41.TabIndex = 20;
+            this.metroLabel41.Text = "20";
+            // 
+            // metroLabel39
+            // 
+            this.metroLabel39.AutoSize = true;
+            this.metroLabel39.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel39.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel39.Location = new System.Drawing.Point(165, 453);
+            this.metroLabel39.Name = "metroLabel39";
+            this.metroLabel39.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel39.TabIndex = 20;
+            this.metroLabel39.Text = "18";
+            // 
+            // metroLabel36
+            // 
+            this.metroLabel36.AutoSize = true;
+            this.metroLabel36.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel36.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel36.Location = new System.Drawing.Point(165, 373);
+            this.metroLabel36.Name = "metroLabel36";
+            this.metroLabel36.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel36.TabIndex = 20;
+            this.metroLabel36.Text = "16";
+            // 
+            // metroLabel34
+            // 
+            this.metroLabel34.AutoSize = true;
+            this.metroLabel34.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel34.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel34.Location = new System.Drawing.Point(165, 287);
+            this.metroLabel34.Name = "metroLabel34";
+            this.metroLabel34.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel34.TabIndex = 20;
+            this.metroLabel34.Text = "14";
+            // 
+            // metroLabel32
+            // 
+            this.metroLabel32.AutoSize = true;
+            this.metroLabel32.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel32.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel32.Location = new System.Drawing.Point(165, 200);
+            this.metroLabel32.Name = "metroLabel32";
+            this.metroLabel32.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel32.TabIndex = 20;
+            this.metroLabel32.Text = "12";
+            // 
+            // metroLabel29
+            // 
+            this.metroLabel29.AutoSize = true;
+            this.metroLabel29.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel29.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel29.Location = new System.Drawing.Point(3, 577);
+            this.metroLabel29.Name = "metroLabel29";
+            this.metroLabel29.Size = new System.Drawing.Size(32, 25);
+            this.metroLabel29.TabIndex = 20;
+            this.metroLabel29.Text = "10";
+            // 
+            // metroLabel26
+            // 
+            this.metroLabel26.AutoSize = true;
+            this.metroLabel26.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel26.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel26.Location = new System.Drawing.Point(11, 495);
+            this.metroLabel26.Name = "metroLabel26";
+            this.metroLabel26.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel26.TabIndex = 20;
+            this.metroLabel26.Text = "8";
+            // 
+            // metroLabel23
+            // 
+            this.metroLabel23.AutoSize = true;
+            this.metroLabel23.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel23.Location = new System.Drawing.Point(11, 370);
+            this.metroLabel23.Name = "metroLabel23";
+            this.metroLabel23.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel23.TabIndex = 20;
+            this.metroLabel23.Text = "5";
+            // 
             // metroLabel20
             // 
             this.metroLabel20.AutoSize = true;
@@ -2656,6 +2789,28 @@
             this.metroLabel20.Size = new System.Drawing.Size(22, 25);
             this.metroLabel20.TabIndex = 20;
             this.metroLabel20.Text = "2";
+            // 
+            // metroLabel25
+            // 
+            this.metroLabel25.AutoSize = true;
+            this.metroLabel25.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel25.Location = new System.Drawing.Point(11, 454);
+            this.metroLabel25.Name = "metroLabel25";
+            this.metroLabel25.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel25.TabIndex = 18;
+            this.metroLabel25.Text = "7";
+            // 
+            // metroLabel22
+            // 
+            this.metroLabel22.AutoSize = true;
+            this.metroLabel22.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel22.Location = new System.Drawing.Point(11, 329);
+            this.metroLabel22.Name = "metroLabel22";
+            this.metroLabel22.Size = new System.Drawing.Size(22, 25);
+            this.metroLabel22.TabIndex = 18;
+            this.metroLabel22.Text = "4";
             // 
             // metroLabel21
             // 
@@ -2668,6 +2823,210 @@
             this.metroLabel21.TabIndex = 18;
             this.metroLabel21.Text = "1";
             // 
+            // txtDmgAdd22
+            // 
+            this.txtDmgAdd22.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd22.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd22.Location = new System.Drawing.Point(201, 619);
+            this.txtDmgAdd22.Name = "txtDmgAdd22";
+            this.txtDmgAdd22.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd22.TabIndex = 15;
+            this.txtDmgAdd22.Text = "0";
+            this.txtDmgAdd22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd22.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd21
+            // 
+            this.txtDmgAdd21.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd21.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd21.Location = new System.Drawing.Point(201, 575);
+            this.txtDmgAdd21.Name = "txtDmgAdd21";
+            this.txtDmgAdd21.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd21.TabIndex = 15;
+            this.txtDmgAdd21.Text = "0";
+            this.txtDmgAdd21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd21.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd19
+            // 
+            this.txtDmgAdd19.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd19.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd19.Location = new System.Drawing.Point(201, 492);
+            this.txtDmgAdd19.Name = "txtDmgAdd19";
+            this.txtDmgAdd19.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd19.TabIndex = 15;
+            this.txtDmgAdd19.Text = "0";
+            this.txtDmgAdd19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd19.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd17
+            // 
+            this.txtDmgAdd17.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd17.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd17.Location = new System.Drawing.Point(201, 410);
+            this.txtDmgAdd17.Name = "txtDmgAdd17";
+            this.txtDmgAdd17.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd17.TabIndex = 15;
+            this.txtDmgAdd17.Text = "0";
+            this.txtDmgAdd17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd17.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd15
+            // 
+            this.txtDmgAdd15.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd15.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd15.Location = new System.Drawing.Point(201, 326);
+            this.txtDmgAdd15.Name = "txtDmgAdd15";
+            this.txtDmgAdd15.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd15.TabIndex = 15;
+            this.txtDmgAdd15.Text = "0";
+            this.txtDmgAdd15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd15.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd13
+            // 
+            this.txtDmgAdd13.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd13.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd13.Location = new System.Drawing.Point(201, 240);
+            this.txtDmgAdd13.Name = "txtDmgAdd13";
+            this.txtDmgAdd13.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd13.TabIndex = 15;
+            this.txtDmgAdd13.Text = "0";
+            this.txtDmgAdd13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd13.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd11
+            // 
+            this.txtDmgAdd11.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd11.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd11.Location = new System.Drawing.Point(39, 617);
+            this.txtDmgAdd11.Name = "txtDmgAdd11";
+            this.txtDmgAdd11.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd11.TabIndex = 15;
+            this.txtDmgAdd11.Text = "0";
+            this.txtDmgAdd11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd11.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd9
+            // 
+            this.txtDmgAdd9.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd9.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd9.Location = new System.Drawing.Point(39, 535);
+            this.txtDmgAdd9.Name = "txtDmgAdd9";
+            this.txtDmgAdd9.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd9.TabIndex = 15;
+            this.txtDmgAdd9.Text = "0";
+            this.txtDmgAdd9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd9.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd6
+            // 
+            this.txtDmgAdd6.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd6.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd6.Location = new System.Drawing.Point(39, 410);
+            this.txtDmgAdd6.Name = "txtDmgAdd6";
+            this.txtDmgAdd6.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd6.TabIndex = 15;
+            this.txtDmgAdd6.Text = "0";
+            this.txtDmgAdd6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd6.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd20
+            // 
+            this.txtDmgAdd20.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd20.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd20.Location = new System.Drawing.Point(201, 533);
+            this.txtDmgAdd20.Name = "txtDmgAdd20";
+            this.txtDmgAdd20.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd20.TabIndex = 16;
+            this.txtDmgAdd20.Text = "0";
+            this.txtDmgAdd20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd20.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd18
+            // 
+            this.txtDmgAdd18.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd18.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd18.Location = new System.Drawing.Point(201, 451);
+            this.txtDmgAdd18.Name = "txtDmgAdd18";
+            this.txtDmgAdd18.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd18.TabIndex = 16;
+            this.txtDmgAdd18.Text = "0";
+            this.txtDmgAdd18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd18.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd16
+            // 
+            this.txtDmgAdd16.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd16.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd16.Location = new System.Drawing.Point(201, 369);
+            this.txtDmgAdd16.Name = "txtDmgAdd16";
+            this.txtDmgAdd16.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd16.TabIndex = 16;
+            this.txtDmgAdd16.Text = "0";
+            this.txtDmgAdd16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd16.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd14
+            // 
+            this.txtDmgAdd14.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd14.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd14.Location = new System.Drawing.Point(201, 283);
+            this.txtDmgAdd14.Name = "txtDmgAdd14";
+            this.txtDmgAdd14.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd14.TabIndex = 16;
+            this.txtDmgAdd14.Text = "0";
+            this.txtDmgAdd14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd14.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd12
+            // 
+            this.txtDmgAdd12.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd12.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd12.Location = new System.Drawing.Point(201, 199);
+            this.txtDmgAdd12.Name = "txtDmgAdd12";
+            this.txtDmgAdd12.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd12.TabIndex = 16;
+            this.txtDmgAdd12.Text = "0";
+            this.txtDmgAdd12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd12.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd10
+            // 
+            this.txtDmgAdd10.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd10.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd10.Location = new System.Drawing.Point(39, 576);
+            this.txtDmgAdd10.Name = "txtDmgAdd10";
+            this.txtDmgAdd10.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd10.TabIndex = 16;
+            this.txtDmgAdd10.Text = "0";
+            this.txtDmgAdd10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd10.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd8
+            // 
+            this.txtDmgAdd8.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd8.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd8.Location = new System.Drawing.Point(39, 494);
+            this.txtDmgAdd8.Name = "txtDmgAdd8";
+            this.txtDmgAdd8.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd8.TabIndex = 16;
+            this.txtDmgAdd8.Text = "0";
+            this.txtDmgAdd8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd8.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd5
+            // 
+            this.txtDmgAdd5.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd5.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd5.Location = new System.Drawing.Point(39, 369);
+            this.txtDmgAdd5.Name = "txtDmgAdd5";
+            this.txtDmgAdd5.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd5.TabIndex = 16;
+            this.txtDmgAdd5.Text = "0";
+            this.txtDmgAdd5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd5.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
             // txtDmgAdd3
             // 
             this.txtDmgAdd3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
@@ -2679,6 +3038,30 @@
             this.txtDmgAdd3.Text = "0";
             this.txtDmgAdd3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtDmgAdd3.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd7
+            // 
+            this.txtDmgAdd7.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd7.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd7.Location = new System.Drawing.Point(39, 451);
+            this.txtDmgAdd7.Name = "txtDmgAdd7";
+            this.txtDmgAdd7.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd7.TabIndex = 17;
+            this.txtDmgAdd7.Text = "0";
+            this.txtDmgAdd7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd7.TextChanged += new System.EventHandler(this.calcDmg);
+            // 
+            // txtDmgAdd4
+            // 
+            this.txtDmgAdd4.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAdd4.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAdd4.Location = new System.Drawing.Point(39, 326);
+            this.txtDmgAdd4.Name = "txtDmgAdd4";
+            this.txtDmgAdd4.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgAdd4.TabIndex = 17;
+            this.txtDmgAdd4.Text = "0";
+            this.txtDmgAdd4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAdd4.TextChanged += new System.EventHandler(this.calcDmg);
             // 
             // txtDmgAdd2
             // 
@@ -2704,225 +3087,38 @@
             this.txtDmgAdd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtDmgAdd1.TextChanged += new System.EventHandler(this.calcDmg);
             // 
-            // txtDmgAdd4
+            // metroLabel16
             // 
-            this.txtDmgAdd4.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd4.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd4.Location = new System.Drawing.Point(39, 326);
-            this.txtDmgAdd4.Name = "txtDmgAdd4";
-            this.txtDmgAdd4.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd4.TabIndex = 17;
-            this.txtDmgAdd4.Text = "0";
-            this.txtDmgAdd4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd4.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel16.Location = new System.Drawing.Point(126, 42);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(25, 25);
+            this.metroLabel16.TabIndex = 14;
+            this.metroLabel16.Text = "~";
             // 
-            // txtDmgAdd5
+            // metroLabel18
             // 
-            this.txtDmgAdd5.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd5.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd5.Location = new System.Drawing.Point(39, 369);
-            this.txtDmgAdd5.Name = "txtDmgAdd5";
-            this.txtDmgAdd5.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd5.TabIndex = 16;
-            this.txtDmgAdd5.Text = "0";
-            this.txtDmgAdd5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd5.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel18.Location = new System.Drawing.Point(8, 168);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(197, 25);
+            this.metroLabel18.TabIndex = 13;
+            this.metroLabel18.Text = "추가(%) (각 별도 요소)";
             // 
-            // txtDmgAdd6
+            // metroLabel17
             // 
-            this.txtDmgAdd6.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd6.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd6.Location = new System.Drawing.Point(39, 410);
-            this.txtDmgAdd6.Name = "txtDmgAdd6";
-            this.txtDmgAdd6.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd6.TabIndex = 15;
-            this.txtDmgAdd6.Text = "0";
-            this.txtDmgAdd6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd6.TextChanged += new System.EventHandler(this.calcDmg);
-            // 
-            // metroLabel22
-            // 
-            this.metroLabel22.AutoSize = true;
-            this.metroLabel22.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel22.Location = new System.Drawing.Point(11, 329);
-            this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel22.TabIndex = 18;
-            this.metroLabel22.Text = "4";
-            // 
-            // metroLabel23
-            // 
-            this.metroLabel23.AutoSize = true;
-            this.metroLabel23.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel23.Location = new System.Drawing.Point(11, 370);
-            this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel23.TabIndex = 20;
-            this.metroLabel23.Text = "5";
-            // 
-            // metroLabel24
-            // 
-            this.metroLabel24.AutoSize = true;
-            this.metroLabel24.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel24.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel24.Location = new System.Drawing.Point(11, 413);
-            this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel24.TabIndex = 19;
-            this.metroLabel24.Text = "6";
-            // 
-            // txtDmgAdd7
-            // 
-            this.txtDmgAdd7.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd7.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd7.Location = new System.Drawing.Point(39, 451);
-            this.txtDmgAdd7.Name = "txtDmgAdd7";
-            this.txtDmgAdd7.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd7.TabIndex = 17;
-            this.txtDmgAdd7.Text = "0";
-            this.txtDmgAdd7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd7.TextChanged += new System.EventHandler(this.calcDmg);
-            // 
-            // txtDmgAdd8
-            // 
-            this.txtDmgAdd8.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd8.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd8.Location = new System.Drawing.Point(39, 494);
-            this.txtDmgAdd8.Name = "txtDmgAdd8";
-            this.txtDmgAdd8.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd8.TabIndex = 16;
-            this.txtDmgAdd8.Text = "0";
-            this.txtDmgAdd8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd8.TextChanged += new System.EventHandler(this.calcDmg);
-            // 
-            // txtDmgAdd9
-            // 
-            this.txtDmgAdd9.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd9.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd9.Location = new System.Drawing.Point(39, 535);
-            this.txtDmgAdd9.Name = "txtDmgAdd9";
-            this.txtDmgAdd9.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd9.TabIndex = 15;
-            this.txtDmgAdd9.Text = "0";
-            this.txtDmgAdd9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd9.TextChanged += new System.EventHandler(this.calcDmg);
-            // 
-            // metroLabel25
-            // 
-            this.metroLabel25.AutoSize = true;
-            this.metroLabel25.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel25.Location = new System.Drawing.Point(11, 454);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel25.TabIndex = 18;
-            this.metroLabel25.Text = "7";
-            // 
-            // metroLabel26
-            // 
-            this.metroLabel26.AutoSize = true;
-            this.metroLabel26.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel26.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel26.Location = new System.Drawing.Point(11, 495);
-            this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel26.TabIndex = 20;
-            this.metroLabel26.Text = "8";
-            // 
-            // metroLabel28
-            // 
-            this.metroLabel28.AutoSize = true;
-            this.metroLabel28.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel28.Location = new System.Drawing.Point(11, 538);
-            this.metroLabel28.Name = "metroLabel28";
-            this.metroLabel28.Size = new System.Drawing.Size(22, 25);
-            this.metroLabel28.TabIndex = 19;
-            this.metroLabel28.Text = "9";
-            // 
-            // txtDmgAdd10
-            // 
-            this.txtDmgAdd10.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd10.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd10.Location = new System.Drawing.Point(39, 576);
-            this.txtDmgAdd10.Name = "txtDmgAdd10";
-            this.txtDmgAdd10.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd10.TabIndex = 16;
-            this.txtDmgAdd10.Text = "0";
-            this.txtDmgAdd10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd10.TextChanged += new System.EventHandler(this.calcDmg);
-            // 
-            // txtDmgAdd11
-            // 
-            this.txtDmgAdd11.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd11.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd11.Location = new System.Drawing.Point(39, 617);
-            this.txtDmgAdd11.Name = "txtDmgAdd11";
-            this.txtDmgAdd11.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd11.TabIndex = 15;
-            this.txtDmgAdd11.Text = "0";
-            this.txtDmgAdd11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd11.TextChanged += new System.EventHandler(this.calcDmg);
-            // 
-            // metroLabel29
-            // 
-            this.metroLabel29.AutoSize = true;
-            this.metroLabel29.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel29.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel29.Location = new System.Drawing.Point(3, 577);
-            this.metroLabel29.Name = "metroLabel29";
-            this.metroLabel29.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel29.TabIndex = 20;
-            this.metroLabel29.Text = "10";
-            // 
-            // metroLabel30
-            // 
-            this.metroLabel30.AutoSize = true;
-            this.metroLabel30.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel30.Location = new System.Drawing.Point(4, 620);
-            this.metroLabel30.Name = "metroLabel30";
-            this.metroLabel30.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel30.TabIndex = 19;
-            this.metroLabel30.Text = "11";
-            // 
-            // txtDmgAvg
-            // 
-            this.txtDmgAvg.Enabled = false;
-            this.txtDmgAvg.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAvg.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAvg.Location = new System.Drawing.Point(427, 42);
-            this.txtDmgAvg.Name = "txtDmgAvg";
-            this.txtDmgAvg.Size = new System.Drawing.Size(146, 35);
-            this.txtDmgAvg.TabIndex = 12;
-            this.txtDmgAvg.Text = "0";
-            this.txtDmgAvg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtResultDmg
-            // 
-            this.txtResultDmg.Enabled = false;
-            this.txtResultDmg.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtResultDmg.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtResultDmg.Location = new System.Drawing.Point(427, 118);
-            this.txtResultDmg.Name = "txtResultDmg";
-            this.txtResultDmg.Size = new System.Drawing.Size(265, 35);
-            this.txtResultDmg.TabIndex = 12;
-            this.txtResultDmg.Text = "0";
-            this.txtResultDmg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtDmgMulti
-            // 
-            this.txtDmgMulti.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgMulti.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgMulti.Location = new System.Drawing.Point(275, 42);
-            this.txtDmgMulti.Name = "txtDmgMulti";
-            this.txtDmgMulti.Size = new System.Drawing.Size(146, 35);
-            this.txtDmgMulti.TabIndex = 12;
-            this.txtDmgMulti.Text = "0";
-            this.txtDmgMulti.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgMulti.TextChanged += new System.EventHandler(this.calcDmgFlat);
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel17.Location = new System.Drawing.Point(427, 14);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(78, 25);
+            this.metroLabel17.TabIndex = 13;
+            this.metroLabel17.Text = "증가(%)";
             // 
             // metroLabel31
             // 
@@ -2935,258 +3131,265 @@
             this.metroLabel31.TabIndex = 13;
             this.metroLabel31.Text = "대미지 배율(%)";
             // 
-            // txtDmgAdd12
+            // metroLabel15
             // 
-            this.txtDmgAdd12.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd12.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd12.Location = new System.Drawing.Point(201, 199);
-            this.txtDmgAdd12.Name = "txtDmgAdd12";
-            this.txtDmgAdd12.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd12.TabIndex = 16;
-            this.txtDmgAdd12.Text = "0";
-            this.txtDmgAdd12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd12.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel15.Location = new System.Drawing.Point(8, 11);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(107, 25);
+            this.metroLabel15.TabIndex = 13;
+            this.metroLabel15.Text = "플랫 대미지";
             // 
-            // txtDmgAdd13
+            // txtDmgInc
             // 
-            this.txtDmgAdd13.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd13.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd13.Location = new System.Drawing.Point(201, 240);
-            this.txtDmgAdd13.Name = "txtDmgAdd13";
-            this.txtDmgAdd13.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd13.TabIndex = 15;
-            this.txtDmgAdd13.Text = "0";
-            this.txtDmgAdd13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd13.TextChanged += new System.EventHandler(this.calcDmg);
+            this.txtDmgInc.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgInc.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgInc.Location = new System.Drawing.Point(427, 42);
+            this.txtDmgInc.Name = "txtDmgInc";
+            this.txtDmgInc.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgInc.TabIndex = 4;
+            this.txtDmgInc.Text = "0";
+            this.txtDmgInc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgInc.TextChanged += new System.EventHandler(this.calcDmg);
             // 
-            // metroLabel32
+            // txtResultDmg
             // 
-            this.metroLabel32.AutoSize = true;
-            this.metroLabel32.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel32.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel32.Location = new System.Drawing.Point(165, 200);
-            this.metroLabel32.Name = "metroLabel32";
-            this.metroLabel32.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel32.TabIndex = 20;
-            this.metroLabel32.Text = "12";
+            this.txtResultDmg.Enabled = false;
+            this.txtResultDmg.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtResultDmg.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtResultDmg.Location = new System.Drawing.Point(610, 620);
+            this.txtResultDmg.Name = "txtResultDmg";
+            this.txtResultDmg.Size = new System.Drawing.Size(382, 35);
+            this.txtResultDmg.TabIndex = 12;
+            this.txtResultDmg.Text = "0";
+            this.txtResultDmg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // metroLabel33
+            // txtDmgMulti
             // 
-            this.metroLabel33.AutoSize = true;
-            this.metroLabel33.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel33.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel33.Location = new System.Drawing.Point(166, 244);
-            this.metroLabel33.Name = "metroLabel33";
-            this.metroLabel33.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel33.TabIndex = 19;
-            this.metroLabel33.Text = "13";
+            this.txtDmgMulti.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgMulti.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgMulti.Location = new System.Drawing.Point(275, 42);
+            this.txtDmgMulti.Name = "txtDmgMulti";
+            this.txtDmgMulti.Size = new System.Drawing.Size(146, 35);
+            this.txtDmgMulti.TabIndex = 3;
+            this.txtDmgMulti.Text = "0";
+            this.txtDmgMulti.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgMulti.TextChanged += new System.EventHandler(this.calcDmgFlat);
             // 
-            // txtDmgAdd14
+            // txtDmgAvg
             // 
-            this.txtDmgAdd14.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd14.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd14.Location = new System.Drawing.Point(201, 283);
-            this.txtDmgAdd14.Name = "txtDmgAdd14";
-            this.txtDmgAdd14.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd14.TabIndex = 16;
-            this.txtDmgAdd14.Text = "0";
-            this.txtDmgAdd14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd14.TextChanged += new System.EventHandler(this.calcDmg);
+            this.txtDmgAvg.Enabled = false;
+            this.txtDmgAvg.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAvg.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAvg.Location = new System.Drawing.Point(846, 39);
+            this.txtDmgAvg.Name = "txtDmgAvg";
+            this.txtDmgAvg.Size = new System.Drawing.Size(146, 35);
+            this.txtDmgAvg.TabIndex = 12;
+            this.txtDmgAvg.Text = "0";
+            this.txtDmgAvg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtDmgAdd15
+            // txtDmgMax
             // 
-            this.txtDmgAdd15.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd15.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd15.Location = new System.Drawing.Point(201, 326);
-            this.txtDmgAdd15.Name = "txtDmgAdd15";
-            this.txtDmgAdd15.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd15.TabIndex = 15;
-            this.txtDmgAdd15.Text = "0";
-            this.txtDmgAdd15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd15.TextChanged += new System.EventHandler(this.calcDmg);
+            this.txtDmgMax.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgMax.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgMax.Location = new System.Drawing.Point(157, 42);
+            this.txtDmgMax.Name = "txtDmgMax";
+            this.txtDmgMax.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgMax.TabIndex = 2;
+            this.txtDmgMax.Text = "99";
+            this.txtDmgMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgMax.TextChanged += new System.EventHandler(this.calcDmgFlat);
             // 
-            // metroLabel34
+            // txtDmgMin
             // 
-            this.metroLabel34.AutoSize = true;
-            this.metroLabel34.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel34.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel34.Location = new System.Drawing.Point(165, 287);
-            this.metroLabel34.Name = "metroLabel34";
-            this.metroLabel34.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel34.TabIndex = 20;
-            this.metroLabel34.Text = "14";
+            this.txtDmgMin.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgMin.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgMin.Location = new System.Drawing.Point(8, 39);
+            this.txtDmgMin.Name = "txtDmgMin";
+            this.txtDmgMin.Size = new System.Drawing.Size(112, 35);
+            this.txtDmgMin.TabIndex = 1;
+            this.txtDmgMin.Text = "1";
+            this.txtDmgMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgMin.TextChanged += new System.EventHandler(this.calcDmgFlat);
             // 
-            // metroLabel35
+            // metroStyleManager1
             // 
-            this.metroLabel35.AutoSize = true;
-            this.metroLabel35.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel35.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel35.Location = new System.Drawing.Point(166, 330);
-            this.metroLabel35.Name = "metroLabel35";
-            this.metroLabel35.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel35.TabIndex = 19;
-            this.metroLabel35.Text = "15";
+            this.metroStyleManager1.Owner = null;
+            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
-            // txtDmgAdd16
+            // metroLabel44
             // 
-            this.txtDmgAdd16.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd16.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd16.Location = new System.Drawing.Point(201, 369);
-            this.txtDmgAdd16.Name = "txtDmgAdd16";
-            this.txtDmgAdd16.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd16.TabIndex = 16;
-            this.txtDmgAdd16.Text = "0";
-            this.txtDmgAdd16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd16.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel44.AutoSize = true;
+            this.metroLabel44.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel44.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel44.Location = new System.Drawing.Point(201, 90);
+            this.metroLabel44.Name = "metroLabel44";
+            this.metroLabel44.Size = new System.Drawing.Size(119, 25);
+            this.metroLabel44.TabIndex = 13;
+            this.metroLabel44.Text = "심화 효과(%)";
             // 
-            // txtDmgAdd17
+            // txtAffliction
             // 
-            this.txtDmgAdd17.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd17.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd17.Location = new System.Drawing.Point(201, 410);
-            this.txtDmgAdd17.Name = "txtDmgAdd17";
-            this.txtDmgAdd17.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd17.TabIndex = 15;
-            this.txtDmgAdd17.Text = "0";
-            this.txtDmgAdd17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd17.TextChanged += new System.EventHandler(this.calcDmg);
+            this.txtAffliction.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtAffliction.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtAffliction.Location = new System.Drawing.Point(201, 118);
+            this.txtAffliction.Name = "txtAffliction";
+            this.txtAffliction.Size = new System.Drawing.Size(112, 35);
+            this.txtAffliction.TabIndex = 12;
+            this.txtAffliction.Text = "0";
+            this.txtAffliction.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAffliction.TextChanged += new System.EventHandler(this.calcDmg);
             // 
-            // metroLabel36
+            // metroLabel45
             // 
-            this.metroLabel36.AutoSize = true;
-            this.metroLabel36.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel36.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel36.Location = new System.Drawing.Point(165, 373);
-            this.metroLabel36.Name = "metroLabel36";
-            this.metroLabel36.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel36.TabIndex = 20;
-            this.metroLabel36.Text = "16";
+            this.metroLabel45.AutoSize = true;
+            this.metroLabel45.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel45.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel45.Location = new System.Drawing.Point(3, 90);
+            this.metroLabel45.Name = "metroLabel45";
+            this.metroLabel45.Size = new System.Drawing.Size(199, 25);
+            this.metroLabel45.TabIndex = 13;
+            this.metroLabel45.Text = "상태이상 획득/추가(%)";
             // 
-            // metroLabel38
+            // txtDmgAilment
             // 
-            this.metroLabel38.AutoSize = true;
-            this.metroLabel38.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel38.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel38.Location = new System.Drawing.Point(166, 414);
-            this.metroLabel38.Name = "metroLabel38";
-            this.metroLabel38.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel38.TabIndex = 19;
-            this.metroLabel38.Text = "17";
+            this.txtDmgAilment.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAilment.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAilment.Location = new System.Drawing.Point(8, 118);
+            this.txtDmgAilment.Name = "txtDmgAilment";
+            this.txtDmgAilment.Size = new System.Drawing.Size(187, 35);
+            this.txtDmgAilment.TabIndex = 12;
+            this.txtDmgAilment.Text = "0";
+            this.txtDmgAilment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDmgAilment.TextChanged += new System.EventHandler(this.calcDmg);
             // 
-            // txtDmgAdd18
+            // metroLabel46
             // 
-            this.txtDmgAdd18.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd18.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd18.Location = new System.Drawing.Point(201, 451);
-            this.txtDmgAdd18.Name = "txtDmgAdd18";
-            this.txtDmgAdd18.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd18.TabIndex = 16;
-            this.txtDmgAdd18.Text = "0";
-            this.txtDmgAdd18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd18.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel46.AutoSize = true;
+            this.metroLabel46.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel46.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel46.Location = new System.Drawing.Point(519, 90);
+            this.metroLabel46.Name = "metroLabel46";
+            this.metroLabel46.Size = new System.Drawing.Size(0, 0);
+            this.metroLabel46.TabIndex = 13;
             // 
-            // txtDmgAdd19
+            // metroLabel47
             // 
-            this.txtDmgAdd19.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd19.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd19.Location = new System.Drawing.Point(201, 492);
-            this.txtDmgAdd19.Name = "txtDmgAdd19";
-            this.txtDmgAdd19.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd19.TabIndex = 15;
-            this.txtDmgAdd19.Text = "0";
-            this.txtDmgAdd19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd19.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel47.AutoSize = true;
+            this.metroLabel47.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel47.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel47.Location = new System.Drawing.Point(846, 8);
+            this.metroLabel47.Name = "metroLabel47";
+            this.metroLabel47.Size = new System.Drawing.Size(148, 25);
+            this.metroLabel47.TabIndex = 13;
+            this.metroLabel47.Text = "최종 기본 대미지";
             // 
-            // metroLabel39
+            // metroLabel48
             // 
-            this.metroLabel39.AutoSize = true;
-            this.metroLabel39.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel39.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel39.Location = new System.Drawing.Point(165, 453);
-            this.metroLabel39.Name = "metroLabel39";
-            this.metroLabel39.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel39.TabIndex = 20;
-            this.metroLabel39.Text = "18";
+            this.metroLabel48.AutoSize = true;
+            this.metroLabel48.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel48.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel48.Location = new System.Drawing.Point(775, 90);
+            this.metroLabel48.Name = "metroLabel48";
+            this.metroLabel48.Size = new System.Drawing.Size(225, 25);
+            this.metroLabel48.TabIndex = 13;
+            this.metroLabel48.Text = "최종 기본 상태이상 대미지";
             // 
-            // metroLabel40
+            // txtDmgAilmentAvg
             // 
-            this.metroLabel40.AutoSize = true;
-            this.metroLabel40.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel40.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel40.Location = new System.Drawing.Point(165, 496);
-            this.metroLabel40.Name = "metroLabel40";
-            this.metroLabel40.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel40.TabIndex = 19;
-            this.metroLabel40.Text = "19";
+            this.txtDmgAilmentAvg.Enabled = false;
+            this.txtDmgAilmentAvg.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDmgAilmentAvg.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtDmgAilmentAvg.Location = new System.Drawing.Point(777, 118);
+            this.txtDmgAilmentAvg.Name = "txtDmgAilmentAvg";
+            this.txtDmgAilmentAvg.Size = new System.Drawing.Size(215, 35);
+            this.txtDmgAilmentAvg.TabIndex = 12;
+            this.txtDmgAilmentAvg.Text = "0";
+            this.txtDmgAilmentAvg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtDmgAdd20
+            // metroLabel49
             // 
-            this.txtDmgAdd20.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd20.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd20.Location = new System.Drawing.Point(201, 533);
-            this.txtDmgAdd20.Name = "txtDmgAdd20";
-            this.txtDmgAdd20.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd20.TabIndex = 16;
-            this.txtDmgAdd20.Text = "0";
-            this.txtDmgAdd20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd20.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel49.AutoSize = true;
+            this.metroLabel49.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel49.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel49.Location = new System.Drawing.Point(610, 586);
+            this.metroLabel49.Name = "metroLabel49";
+            this.metroLabel49.Size = new System.Drawing.Size(107, 25);
+            this.metroLabel49.TabIndex = 13;
+            this.metroLabel49.Text = "최종 대미지";
             // 
-            // txtDmgAdd21
+            // metroLabel50
             // 
-            this.txtDmgAdd21.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd21.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd21.Location = new System.Drawing.Point(201, 575);
-            this.txtDmgAdd21.Name = "txtDmgAdd21";
-            this.txtDmgAdd21.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd21.TabIndex = 15;
-            this.txtDmgAdd21.Text = "0";
-            this.txtDmgAdd21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd21.TextChanged += new System.EventHandler(this.calcDmg);
+            this.metroLabel50.AutoSize = true;
+            this.metroLabel50.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel50.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel50.Location = new System.Drawing.Point(610, 515);
+            this.metroLabel50.Name = "metroLabel50";
+            this.metroLabel50.Size = new System.Drawing.Size(184, 25);
+            this.metroLabel50.TabIndex = 13;
+            this.metroLabel50.Text = "최종 상태이상 대미지";
             // 
-            // metroLabel41
+            // txtResultAilDmg
             // 
-            this.metroLabel41.AutoSize = true;
-            this.metroLabel41.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel41.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel41.Location = new System.Drawing.Point(165, 538);
-            this.metroLabel41.Name = "metroLabel41";
-            this.metroLabel41.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel41.TabIndex = 20;
-            this.metroLabel41.Text = "20";
+            this.txtResultAilDmg.Enabled = false;
+            this.txtResultAilDmg.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtResultAilDmg.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtResultAilDmg.Location = new System.Drawing.Point(610, 543);
+            this.txtResultAilDmg.Name = "txtResultAilDmg";
+            this.txtResultAilDmg.Size = new System.Drawing.Size(382, 35);
+            this.txtResultAilDmg.TabIndex = 12;
+            this.txtResultAilDmg.Text = "0";
+            this.txtResultAilDmg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // metroLabel42
+            // metroLabel51
             // 
-            this.metroLabel42.AutoSize = true;
-            this.metroLabel42.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel42.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel42.Location = new System.Drawing.Point(166, 580);
-            this.metroLabel42.Name = "metroLabel42";
-            this.metroLabel42.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel42.TabIndex = 19;
-            this.metroLabel42.Text = "21";
+            this.metroLabel51.AutoSize = true;
+            this.metroLabel51.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel51.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel51.Location = new System.Drawing.Point(326, 90);
+            this.metroLabel51.Name = "metroLabel51";
+            this.metroLabel51.Size = new System.Drawing.Size(166, 25);
+            this.metroLabel51.TabIndex = 13;
+            this.metroLabel51.Text = "상태이상 중첩 갯수";
             // 
-            // txtDmgAdd22
+            // txtAilmentStack
             // 
-            this.txtDmgAdd22.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtDmgAdd22.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtDmgAdd22.Location = new System.Drawing.Point(201, 619);
-            this.txtDmgAdd22.Name = "txtDmgAdd22";
-            this.txtDmgAdd22.Size = new System.Drawing.Size(112, 35);
-            this.txtDmgAdd22.TabIndex = 15;
-            this.txtDmgAdd22.Text = "0";
-            this.txtDmgAdd22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtDmgAdd22.TextChanged += new System.EventHandler(this.calcDmg);
+            this.txtAilmentStack.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtAilmentStack.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtAilmentStack.Location = new System.Drawing.Point(355, 118);
+            this.txtAilmentStack.Name = "txtAilmentStack";
+            this.txtAilmentStack.Size = new System.Drawing.Size(112, 35);
+            this.txtAilmentStack.TabIndex = 12;
+            this.txtAilmentStack.Text = "0";
+            this.txtAilmentStack.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAilmentStack.TextChanged += new System.EventHandler(this.calcDmg);
             // 
-            // metroLabel43
+            // dgvFrameView
             // 
-            this.metroLabel43.AutoSize = true;
-            this.metroLabel43.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel43.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel43.Location = new System.Drawing.Point(166, 620);
-            this.metroLabel43.Name = "metroLabel43";
-            this.metroLabel43.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel43.TabIndex = 19;
-            this.metroLabel43.Text = "22";
+            this.dgvFrameView.AllowUserToAddRows = false;
+            this.dgvFrameView.AllowUserToDeleteRows = false;
+            this.dgvFrameView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFrameView.Location = new System.Drawing.Point(277, 27);
+            this.dgvFrameView.Name = "dgvFrameView";
+            this.dgvFrameView.ReadOnly = true;
+            this.dgvFrameView.RowHeadersVisible = false;
+            this.dgvFrameView.RowTemplate.Height = 23;
+            this.dgvFrameView.Size = new System.Drawing.Size(598, 428);
+            this.dgvFrameView.TabIndex = 8;
+            // 
+            // metroLabel52
+            // 
+            this.metroLabel52.AutoSize = true;
+            this.metroLabel52.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel52.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel52.Location = new System.Drawing.Point(277, 458);
+            this.metroLabel52.Name = "metroLabel52";
+            this.metroLabel52.Size = new System.Drawing.Size(466, 75);
+            this.metroLabel52.TabIndex = 2;
+            this.metroLabel52.Text = "서버 틱: 0.033초 / 1 초: 30 프레임 / 1 프레임 = 0.033초\r\n그러나, 매 프레임 마다 정확하게 계산되지는 않기 때문에\r\n1 프" +
+    "레임 보다 살짝 늦은 시간 0.034초 기준으로 계산 함.";
             // 
             // Main
             // 
@@ -3205,10 +3408,10 @@
             this.mainTab.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage2.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage3.PerformLayout();
-            this.metroTabPage8.ResumeLayout(false);
-            this.metroTabPage8.PerformLayout();
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage4.PerformLayout();
             this.metroTabPage5.ResumeLayout(false);
@@ -3219,11 +3422,12 @@
             this.metroPanel1.PerformLayout();
             this.metroTabPage7.ResumeLayout(false);
             this.metroTabPage7.PerformLayout();
-            this.metroTabPage2.ResumeLayout(false);
-            this.metroTabPage2.PerformLayout();
+            this.metroTabPage8.ResumeLayout(false);
+            this.metroTabPage8.PerformLayout();
             this.metroTabPage9.ResumeLayout(false);
             this.metroTabPage9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFrameView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3462,6 +3666,21 @@
         private MetroFramework.Controls.MetroTextBox txtDmgAdd16;
         private MetroFramework.Controls.MetroTextBox txtDmgAdd14;
         private MetroFramework.Controls.MetroTextBox txtDmgAdd12;
+        private MetroFramework.Controls.MetroLabel metroLabel44;
+        private MetroFramework.Controls.MetroTextBox txtAffliction;
+        private MetroFramework.Controls.MetroLabel metroLabel45;
+        private MetroFramework.Controls.MetroTextBox txtDmgAilment;
+        private MetroFramework.Controls.MetroLabel metroLabel46;
+        private MetroFramework.Controls.MetroLabel metroLabel48;
+        private MetroFramework.Controls.MetroLabel metroLabel47;
+        private MetroFramework.Controls.MetroTextBox txtDmgAilmentAvg;
+        private MetroFramework.Controls.MetroLabel metroLabel50;
+        private MetroFramework.Controls.MetroLabel metroLabel49;
+        private MetroFramework.Controls.MetroLabel metroLabel51;
+        private MetroFramework.Controls.MetroTextBox txtAilmentStack;
+        private MetroFramework.Controls.MetroTextBox txtResultAilDmg;
+        private System.Windows.Forms.DataGridView dgvFrameView;
+        private MetroFramework.Controls.MetroLabel metroLabel52;
     }
 }
 
