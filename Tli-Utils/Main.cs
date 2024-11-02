@@ -1032,6 +1032,7 @@ namespace Tli_Utils
                 decimal dResult = 0.0m;
                 decimal baseDmg = Decimal.Parse(txtDmgAvg.Text);
                 decimal resultDmg = 0.0m;
+                decimal resultAilDmg = 0.0m;
                 // 상태이상 획득/추가 계산
                 decimal baseAilment = Decimal.Parse(txtDmgAilment.Text);
                 if (baseAilment > 0)
@@ -1047,6 +1048,8 @@ namespace Tli_Utils
                         baseAffliction = Common.CalcPercent(baseAffliction);
                         dAilmentDmgAVg = dAilmentDmgAVg * (1 + baseAffliction);
                         txtDmgAilmentAvg.Text = Common.FormatWithComma(dAilmentDmgAVg);
+                        decimal baseAilmentStack = Decimal.Parse(txtAilmentStack.Text);
+                        resultAilDmg = dAilmentDmgAVg * baseAilmentStack;
                     }
                 }
 
@@ -1063,6 +1066,7 @@ namespace Tli_Utils
                     resultDmg = resultDmg * (1 + Common.CalcPercent(dResult));
                 }
 
+                txtResultAilDmg.Text = Common.FormatWithComma(resultAilDmg);
                 txtResultDmg.Text = Common.FormatWithComma(resultDmg);
             }
         }
