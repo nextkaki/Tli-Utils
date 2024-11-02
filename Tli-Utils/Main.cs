@@ -530,7 +530,7 @@ namespace Tli_Utils
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.youtube.com/@Kaki_TV");
+            System.Diagnostics.Process.Start("https://www.youtube.com/@KakiGameHub");
         }
 
         private void metroLink2_Click(object sender, EventArgs e)
