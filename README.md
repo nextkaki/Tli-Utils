@@ -7,7 +7,8 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
-## 현재 진행 상태(24.11.02~)
+## 현재 진행 상태(24.11.15~)
+- 쿨타임 계산기 - 서버 틱 계산 기능 추가(Added Cooldown calculator - Server Tick time feature)
 - 셀레나 히어로 특성 계산(Selena Hero Trait Calculation)
 - 더 이상 필요하지 않은 기능 삭제(Removing Menu that are no longer needed)
 - 수치 변경에 따른 수치 최신화(Updating numbers as they change)
