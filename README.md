@@ -8,6 +8,7 @@
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
 ## 현재 진행 상태(24.11.15~)
+- MP 봉인 계산기 - 진행 중 (Added Seal MP Calculator - Developing)
 - 쿨타임 계산기 - 서버 틱 계산 기능 추가(Added Cooldown calculator - Server Tick time feature)
 - 셀레나 히어로 특성 계산(Selena Hero Trait Calculation)
 - 더 이상 필요하지 않은 기능 삭제(Removing Menu that are no longer needed)
