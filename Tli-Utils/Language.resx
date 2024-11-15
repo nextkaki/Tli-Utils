@@ -153,6 +153,9 @@
   <data name="Lightning Shadow" xml:space="preserve">
     <value>Lightning Shadow</value>
   </data>
+  <data name="MPSeal" xml:space="preserve">
+    <value>MP봉인 계산</value>
+  </data>
   <data name="strCzz" xml:space="preserve">
     <value>chzzk</value>
   </data>
@@ -170,6 +173,9 @@
   </data>
   <data name="tab_1" xml:space="preserve">
     <value>Cooldown Calc</value>
+  </data>
+  <data name="tab_10" xml:space="preserve">
+    <value>MP봉인 계산</value>
   </data>
   <data name="tab_1_Goal_Skill_Cooldown" xml:space="preserve">
     <value>Goal) Skill Cooldown(s)</value>

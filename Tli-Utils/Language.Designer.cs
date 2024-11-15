@@ -169,6 +169,15 @@ namespace Tli_Utils {
         }
         
         /// <summary>
+        ///   MP봉인 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string MPSeal {
+            get {
+                return ResourceManager.GetString("MPSeal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   chzzk과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string strCzz {
@@ -273,6 +282,15 @@ namespace Tli_Utils {
         public static string tab_1_Whether_cooldown {
             get {
                 return ResourceManager.GetString("tab_1_Whether_cooldown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MP봉인 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_10 {
+            get {
+                return ResourceManager.GetString("tab_10", resourceCulture);
             }
         }
         

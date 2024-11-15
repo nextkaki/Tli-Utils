@@ -150,6 +150,9 @@
   <data name="Lightning Shadow" xml:space="preserve">
     <value>라이트닝 쉐도우</value>
   </data>
+  <data name="MPSeal" xml:space="preserve">
+    <value>MP봉인 계산</value>
+  </data>
   <data name="strCzz" xml:space="preserve">
     <value>치지직</value>
   </data>
@@ -167,6 +170,9 @@
   </data>
   <data name="tab_1" xml:space="preserve">
     <value>쿨타임 계산기</value>
+  </data>
+  <data name="tab_10" xml:space="preserve">
+    <value>MP봉인 계산</value>
   </data>
   <data name="tab_1_Goal_Skill_Cooldown" xml:space="preserve">
     <value>목표) 스킬 쿨타임(s)</value>

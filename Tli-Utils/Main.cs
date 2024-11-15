@@ -18,15 +18,15 @@ namespace Tli_Utils
     {
         string gLanguage = "KR";
         string[] arrLanguage = new string[]
-        { 
+        {
             DefineValues.KR,
             DefineValues.EN,
             DefineValues.RU
         };
 
         bool gCheckPopup = false;
-        string gCurrentVersion = ""; 
-        string gLatestVersion = ""; 
+        string gCurrentVersion = "";
+        string gLatestVersion = "";
         int[] gMonsterArmorByLevel = new int[DefineValues.BASE_MAX_MONSTER_LEVEL];
         CultureInfo gCulture = CultureInfo.InvariantCulture;
 
@@ -74,6 +74,7 @@ namespace Tli_Utils
             btnArmorCalc.Text = Language.Calculating_Armor_Reduction;
             btnSelena.Text = Language.calcSelena;
             btnDMG.Text = Language.calcDMG;
+            btnMPSeal.Text = Language.MPSeal;
             btnNotice.Text = Language.txtAnnouncements;
             btnCheckVersion.Text = Language.txtVersionCheck;
 
@@ -85,11 +86,13 @@ namespace Tli_Utils
 
 
             //메인가기
-            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain3, btnMain4, btnMain5, btnMain6,  };
+            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain3, btnMain4, btnMain5, btnMain6, btnMain7, btnMain8, btnMain9 };
             foreach (var goHome in arrGoHome)
             {
-                if (goHome != null) {
+                if (goHome != null)
+                {
                     goHome.Text = Language.strGoMain;
+                    goHome.Click += btnHome_Click;
                 }
             }
 
@@ -196,14 +199,19 @@ namespace Tli_Utils
             lbx_Language.Items.AddRange(arrLanguage);
 
             var sortedPages = mainTab.TabPages.Cast<TabPage>()
-                .OrderBy(tp => tp.Name)
+                .OrderBy(tp =>
+                {
+                    // 숫자 추출
+                    var number = int.Parse(new string(tp.Name.SkipWhile(c => !char.IsDigit(c)).TakeWhile(char.IsDigit).ToArray()));
+                    return number;
+                })
                 .ToList();
 
             mainTab.TabPages.Clear();
             for (int i = 0; i < sortedPages.Count; i++)
             {
                 var tabPage = sortedPages[i];
-                tabPage.Text = GetTabPageText(i).Trim() ;
+                tabPage.Text = GetTabPageText(i).Trim();
                 mainTab.TabPages.Add(tabPage);
             }
 
@@ -222,6 +230,7 @@ namespace Tli_Utils
             btnArmorCalc.Tag = DefineValues.TAB_ARMOR_CALC;
             btnSelena.Tag = DefineValues.TAB_SELENA_CALC;
             btnDMG.Tag = DefineValues.TAB_DMG_CALC;
+            btnMPSeal.Tag = DefineValues.TAB_MP_SEAL;
 
             createMonsterArmor();
             LoadReadMeAsync();
@@ -337,6 +346,7 @@ namespace Tli_Utils
                 case 6: return Language.tab_7;
                 case 7: return Language.tab_8;
                 case 8: return Language.tab_9;
+                case 9: return Language.tab_10;
 
 
                 default: return $"Tab {index + 1}";
@@ -420,7 +430,7 @@ namespace Tli_Utils
         }
         private void setFrameView(decimal baseTime)
         {
-            if(baseTime <= 0)
+            if (baseTime <= 0)
                 return;
 
             // DataTable 생성
@@ -435,7 +445,7 @@ namespace Tli_Utils
             decimal extraDelay = 0.001m;  // 프레임당 추가 오차 시간
             int targetFrame = 30;       // 목표 프레임 수 초기값
 
-            for (int frame = targetFrame; frame >= 10; frame--)
+            for (int frame = targetFrame; frame >= 1; frame--)
             {
                 // 오차를 포함한 쿨타임 시간 계산
                 //decimal targetCooldownTime = baseCooldown * frame / targetFrame + extraDelay;
@@ -478,11 +488,13 @@ namespace Tli_Utils
             decimal dResultCool = Common.ParseTextBoxToDecimal(txtResultCoolTime, gCulture);
             decimal dTargetCool = Common.ParseTextBoxToDecimal(txtTargetCool, gCulture);
 
-            if (dResultCool <= dTargetCool) {
+            if (dResultCool <= dTargetCool)
+            {
                 txtYNCool.Text = DefineValues.NOT_NEED;
                 txtYNCool.ForeColor = Color.Green;
             }
-            else {
+            else
+            {
                 txtYNCool.Text = DefineValues.NEED;
                 txtYNCool.ForeColor = Color.Red;
             }
@@ -526,7 +538,7 @@ namespace Tli_Utils
 
         }
 
-       
+
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
@@ -587,13 +599,13 @@ namespace Tli_Utils
             }
 
             decimal dRampageCool = Common.ParseTextBoxToDecimal(txtResultRampageCool, gCulture);
-            if(dRampageCool == 0)
+            if (dRampageCool == 0)
             {
                 decimal dResultRapageCool = DefineValues.BASE_FROSTFIRE_RAMPAGE_COOL;
                 txtResultRampageCool.Text = dResultRapageCool.ToString("F2");
                 dRampageCool = DefineValues.BASE_FROSTFIRE_RAMPAGE_COOL;
             }
-            
+
             decimal dResult = dRampageCool - dRampageDuration;
             if (dResult > 0)
             {
@@ -610,12 +622,13 @@ namespace Tli_Utils
             calcNewGod();
         }
 
-     
+
         public void calcNewGod()
         {
-            MetroTextBox[] txtNewGod = { txtNewGodPoint, txtNewGodCnt, txtNewGodEtcEffect};
+            MetroTextBox[] txtNewGod = { txtNewGodPoint, txtNewGodCnt, txtNewGodEtcEffect };
             bool bPass = true;
-            foreach (MetroTextBox control in txtNewGod) {
+            foreach (MetroTextBox control in txtNewGod)
+            {
                 if (control != null)
                 {
                     if (!Common.IsNumericInputValid(control))
@@ -635,7 +648,7 @@ namespace Tli_Utils
                 txtExNewGodPoint.Text = dBasePoint.ToString("F2");
 
                 decimal dCnt = Common.ParseTextBoxToDecimal(txtNewGod[1], gCulture);
-                if (dCnt >= 0 )
+                if (dCnt >= 0)
                 {
                     bool bPeacefulRealm = cbPeacefulRealm.Checked; //만계의 일상,재난
                     decimal dRateRealm = bPeacefulRealm ? DefineValues.BASE_NEW_GOD_REALM : 0;
@@ -645,7 +658,7 @@ namespace Tli_Utils
 
                     decimal dFirstEffectCalc = dBasePoint * (1 + dRatePoint);
                     decimal dSecondEffectCalc = dFirstEffectCalc * (1 + dRateRealm);
-                    
+
                     txtEachEffect.Text = dSecondEffectCalc.ToString("F2");
                 }
             }
@@ -670,16 +683,19 @@ namespace Tli_Utils
             bool bPass = true;
             foreach (MetroTextBox control in txtWind)
             {
-                if (control != null) { 
-                    if (!Common.IsNumericInputValid(control)) {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
                         bPass = false; // 하나라도 유효하지 않으면 false로 설정
                     }
                 }
-                else { 
+                else
+                {
                     bPass = false;
                 }
             }
-            if(bPass)
+            if (bPass)
             {
                 decimal dPlayerCast = Common.ParseTextBoxToDecimal(txtPlayerCast, gCulture);
                 decimal dPlayerCastAdd = Common.ParseTextBoxToDecimal(txtPlayerCastAdd, gCulture);
@@ -687,17 +703,17 @@ namespace Tli_Utils
 
                 decimal dWindCastValue = Common.ParseTextBoxToDecimal(txtWindCastSum, gCulture);
 
-                decimal dResultWindCool = dResultCast * (dWindCastValue/100.0m);
+                decimal dResultWindCool = dResultCast * (dWindCastValue / 100.0m);
 
                 int nPlayerCool = int.Parse(txtPlayerCool.Text.Trim());
 
-                decimal dResultBaseCool = (decimal)(dResultWindCool + nPlayerCool) / 100 ;
-                
+                decimal dResultBaseCool = (decimal)(dResultWindCool + nPlayerCool) / 100;
+
                 decimal dRateCool = Common.getCoolDown(dResultBaseCool);
                 decimal dWindCool = Common.ParseTextBoxToDecimal(txtWindCool, gCulture);
 
                 decimal dResultCool = dWindCool * dRateCool;
-                if(dResultCool > 0)
+                if (dResultCool > 0)
                 {
                     txtWindResultCool.Text = dResultCool.ToString("F2");
 
@@ -731,9 +747,9 @@ namespace Tli_Utils
                 int nMonsterLv = int.Parse(txtMonsterLv.Text.Trim());
                 nMonsterLv = nMonsterLv > 90 ? 90 : nMonsterLv;
                 nMonsterLv = nMonsterLv < 1 ? 1 : nMonsterLv;
-                txtMonsterArmor.Text = gMonsterArmorByLevel[nMonsterLv-1].ToString();
+                txtMonsterArmor.Text = gMonsterArmorByLevel[nMonsterLv - 1].ToString();
 
-                decimal dResultPhyReduceDmg = Common.getUserArmorPhysicalDamageReduction(nUserArmor,nMonsterLv);
+                decimal dResultPhyReduceDmg = Common.getUserArmorPhysicalDamageReduction(nUserArmor, nMonsterLv);
                 decimal dResultNonPhyReduceDmg = Common.getUserArmorNonPhysicalDamageReduction(dResultPhyReduceDmg);
                 txtUserPhyReduce.Text = (dResultPhyReduceDmg * 100).ToString("F2") + "%";
                 txtUserNonPhyReduce.Text = (dResultNonPhyReduceDmg * 100).ToString("F2") + "%";
@@ -742,7 +758,7 @@ namespace Tli_Utils
 
         private void calcArmorDmg(object sender, EventArgs e)
         {
-            MetroTextBox[] txtArmorDmg = { txtMonsterBaseResist,txtUserArmorPen,txtUserResistPen,txtUserBaseDmg };
+            MetroTextBox[] txtArmorDmg = { txtMonsterBaseResist, txtUserArmorPen, txtUserResistPen, txtUserBaseDmg };
             bool bPass = true;
             foreach (MetroTextBox control in txtArmorDmg)
             {
@@ -775,12 +791,12 @@ namespace Tli_Utils
                 decimal dResultMonsterResistReduce = dMonsterResist - dUserResistPen;
                 txtMonsterResistReduce.Text = dResultMonsterResistReduce.ToString("F2") + "%";
 
-                decimal dFinalPhyReduce = (1 - dResultMonsterPhyReduce) -1;
-                txtMonsterFinalPhyReduce.Text = ((1 + dFinalPhyReduce)*100).ToString("F2") + "%";
-                
+                decimal dFinalPhyReduce = (1 - dResultMonsterPhyReduce) - 1;
+                txtMonsterFinalPhyReduce.Text = ((1 + dFinalPhyReduce) * 100).ToString("F2") + "%";
+
                 decimal dFinalNonPhyReduce =
-                    (1 - dResultMonsterNonPhyReduce) * (1 - (dResultMonsterResistReduce/100)) - 1;
-                txtMonsterFinalNonPhyReduce.Text = ((1 + dFinalNonPhyReduce)*100).ToString("F2") + "%";
+                    (1 - dResultMonsterNonPhyReduce) * (1 - (dResultMonsterResistReduce / 100)) - 1;
+                txtMonsterFinalNonPhyReduce.Text = ((1 + dFinalNonPhyReduce) * 100).ToString("F2") + "%";
 
                 string _strUserBaseDmg = Common.removeComma(txtUserBaseDmg.Text.Trim());
                 decimal dBaseUserDmg = decimal.Parse(_strUserBaseDmg);
@@ -927,7 +943,7 @@ namespace Tli_Utils
             {
                 dResult += Common.ParseTextBoxToDecimal(control, gCulture);
             }
-            Result_Tide_Effect = Base_Tide_Effect * (1+Common.CalcPercent(dResult));
+            Result_Tide_Effect = Base_Tide_Effect * (1 + Common.CalcPercent(dResult));
 
             //추가 계산
             dResult = 0;
@@ -967,7 +983,7 @@ namespace Tli_Utils
                     dResult += Common.ParseTextBoxToDecimal(control, gCulture);
                 }
                 decimal duration1 = 6.0m;
-                duration1 = duration1 * (1- Math.Abs(Common.CalcPercent(dResult)));
+                duration1 = duration1 * (1 - Math.Abs(Common.CalcPercent(dResult)));
 
                 decimal duration2 = 4.0m;
                 duration2 = duration2 * (1 - Math.Abs(Common.CalcPercent(dResult)));
@@ -978,7 +994,7 @@ namespace Tli_Utils
 
         private void calcDmgFlat(object sender, EventArgs e)
         {
-            MetroTextBox[] txtCalc = { txtDmgMin,txtDmgMax };
+            MetroTextBox[] txtCalc = { txtDmgMin, txtDmgMax };
             bool bPass = true;
             foreach (MetroTextBox control in txtCalc)
             {
@@ -1074,6 +1090,47 @@ namespace Tli_Utils
         private void calcDmg(object sender, EventArgs e)
         {
             calcDmg();
+        }
+
+        private void calcMpSealValue(object sender, EventArgs e)
+        {
+            MetroTextBox[] arrTxtSeal = { txtSeal_1, txtSeal_2, txtSeal_3 };
+            MetroTextBox[] arrTxtSealBonus = { txtSeal_Bonus_1, txtSeal_Bonus_2, txtSeal_Bonus_3 };
+            bool bPass = true;
+            foreach (MetroTextBox control in arrTxtSeal)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            foreach (MetroTextBox control in arrTxtSealBonus)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                //스킬 1번째 점유 계산
+
+            }
+
         }
     }
 }
