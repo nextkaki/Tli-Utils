@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Tli_Utils
 {
@@ -86,7 +87,7 @@ namespace Tli_Utils
 
 
             //메인가기
-            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain3, btnMain4, btnMain5, btnMain6, btnMain7, btnMain8, btnMain9 };
+            MetroTile[] arrGoHome = { btnMain0, btnMain1, btnMain3, btnMain4, btnMain5, btnMain6, btnMain7, btnMain8, btnMain9, btnMain10 };
             foreach (var goHome in arrGoHome)
             {
                 if (goHome != null)
@@ -184,6 +185,9 @@ namespace Tli_Utils
             lbl_tide_add.Text = Language.tab_8_tide_add;
             lbl_tide_duration.Text = Language.tab_8_tide_duration;
 
+            //지속시간 계산
+
+
         }
 
         private void ReloadUI()
@@ -231,6 +235,7 @@ namespace Tli_Utils
             btnSelena.Tag = DefineValues.TAB_SELENA_CALC;
             btnDMG.Tag = DefineValues.TAB_DMG_CALC;
             btnMPSeal.Tag = DefineValues.TAB_MP_SEAL;
+            btnSkillDuration.Tag = DefineValues.TAB_SKILL_DURATION;
 
             createMonsterArmor();
             LoadReadMeAsync();
@@ -347,6 +352,7 @@ namespace Tli_Utils
                 case 7: return Language.tab_8;
                 case 8: return Language.tab_9;
                 case 9: return Language.tab_10;
+                case 10: return Language.tab_11;
 
 
                 default: return $"Tab {index + 1}";
@@ -1131,6 +1137,80 @@ namespace Tli_Utils
 
             }
 
+        }
+
+        private void calc_Skill_Duation(object sender, EventArgs e)
+        {
+            MetroTextBox[] arrTxtIncDuration = { txtIncSkillDuration1, txtIncSkillDuration2, txtIncSkillDuration3 };
+            MetroTextBox[] arrTxtMulDuration = { txtmulSkillDuration1, txtmulSkillDuration2, txtmulSkillDuration3 };
+            bool bPass = true;
+            foreach (MetroTextBox control in arrTxtIncDuration)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            foreach (MetroTextBox control in arrTxtMulDuration)
+            {
+                if (control != null)
+                {
+                    if (!Common.IsNumericInputValid(control))
+                    {
+                        bPass = false; // 하나라도 유효하지 않으면 false로 설정
+                    }
+                }
+                else
+                {
+                    bPass = false;
+                }
+            }
+            if (bPass)
+            {
+                if (Common.IsNumericInputValid(txtBaseSkillDuration))
+                {
+                    Decimal dBaseSkillDuration = Common.ParseTextBoxToDecimal(txtBaseSkillDuration, gCulture);
+                    Decimal dSum = 0.0m;
+                    Decimal dResult = 0.0m;
+                    // 증가 합산 계산
+                    foreach (MetroTextBox control in arrTxtIncDuration)
+                    {
+                        dSum += Common.ParseTextBoxToDecimal(control, gCulture);
+                    }
+                    dResult = dBaseSkillDuration * (1 + Common.CalcPercent(dSum));
+
+                    // 추가 계산
+                    foreach (MetroTextBox control in arrTxtMulDuration)
+                    {
+                        dSum = Common.ParseTextBoxToDecimal(control, gCulture);
+                        dResult = dResult * (1 + Common.CalcPercent(dSum));
+                    }
+                    txtResultSkillDuration.Text = dResult.ToString();
+
+                    if (Common.IsNumericInputValid(txtSkillCool))
+                    {
+                        Decimal dResultCool = Common.ParseTextBoxToDecimal(txtSkillCool, gCulture);
+
+                        if(dResult >= dResultCool)
+                        {
+                            //지속시간이 쿨보다 길면 정상 작동
+                            txtSkillResult.Text = "지속시간이 쿨타임 보다 길어 무한 작동 합니다.";
+                        }
+                        else
+                        {
+                            //지속시간이 쿨보다 짧다
+                            txtSkillResult.Text = "지속시간이 쿨타임 보다 짧아 끊깁니다.";
+                        }
+                    }
+                }
+            }
         }
     }
 }

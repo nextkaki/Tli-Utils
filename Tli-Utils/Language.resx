@@ -175,7 +175,10 @@
     <value>Cooldown Calc</value>
   </data>
   <data name="tab_10" xml:space="preserve">
-    <value>MP봉인 계산</value>
+    <value>예정)MP봉인 계산</value>
+  </data>
+  <data name="tab_11" xml:space="preserve">
+    <value>지속시간 계산</value>
   </data>
   <data name="tab_1_Goal_Skill_Cooldown" xml:space="preserve">
     <value>Goal) Skill Cooldown(s)</value>

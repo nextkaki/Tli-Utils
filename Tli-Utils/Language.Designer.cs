@@ -286,11 +286,20 @@ namespace Tli_Utils {
         }
         
         /// <summary>
-        ///   MP봉인 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   예정)MP봉인 계산과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string tab_10 {
             get {
                 return ResourceManager.GetString("tab_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   지속시간 계산과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string tab_11 {
+            get {
+                return ResourceManager.GetString("tab_11", resourceCulture);
             }
         }
         
