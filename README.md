@@ -7,9 +7,8 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/nextkaki/Tli-Utils/total.svg)
 ![GitHub](https://img.shields.io/github/license/nextkaki/Tli-Utils.svg)
 
-## 현재 진행 상태(25.01.16~)
-- 스킬 지속시간 계산기 추가 완료(Added Skill Duration Calculator - Done)
-- MP 봉인 계산기 - 진행 중 (Added Seal MP Calculator - Developing)
+## 현재 진행 상태(25.05.05~)
+- 전반적인 기능 Web 으로 변경 진행 중.
 - 유튜브: https://www.youtube.com/@KakiGameHub
 - 건의, 피드백, 버그 신고는 라운지 이용 바람.
 
